@@ -1,0 +1,42 @@
+.conteiner-input {
+    margin-bottom: 1rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+}
+
+.rigth {
+    display: flex;
+    justify-content: right;
+    font-size: 18px;
+    text-align: right;
+}
+
+.left {
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    text-align: left;
+}
+
+.justify {
+    display: flex;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 18px;
+}
+
+.cut-text {
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    overflow-wrap: break-word;
+}
+
+.input-control {
+    border-radius: "1.5rem";
+}

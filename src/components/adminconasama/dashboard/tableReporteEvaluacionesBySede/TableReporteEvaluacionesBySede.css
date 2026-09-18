@@ -1,0 +1,267 @@
+.tabs-sedes {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.tab-sede-btn {
+  background: #f3f6fa;
+  color: #5f6c7b;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  margin-bottom: 6px;
+}
+.tab-sede-btn.active {
+  background: linear-gradient(135deg, #1c6ed5, #4dabf7);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.tab-sede-btn:hover:not(.active) {
+  background: #e4ecf7;
+  color: #1c6ed5;
+}
+
+.sede-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.sede-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1c6ed5;
+}
+.badge-sede {
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 6px 16px;
+  margin-left: 8px;
+}
+
+@media (max-width: 600px) {
+  .tabs-sedes {
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .tab-sede-btn {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+  .sede-header {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .sede-title {
+    font-size: 1.05rem;
+  }
+  .badge-sede {
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    margin-left: 4px;
+  }
+  .sede-table-container {
+    padding: 8px;
+  }
+}
+.tabs-sedes {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.tab-sede-btn {
+  background: #f3f6fa;
+  color: #5f6c7b;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 120px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.tab-sede-btn.active {
+  background: linear-gradient(135deg, #1c6ed5, #4dabf7);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.tab-sede-btn:hover:not(.active) {
+  background: #e4ecf7;
+  color: #1c6ed5;
+}
+
+.sede-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.sede-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1c6ed5;
+}
+.badge-sede {
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 6px 16px;
+  margin-left: 8px;
+}
+.nivel-riesgo-tabs-container {
+  margin-top: 20px;
+}
+
+.sede-table-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.sede-title {
+  margin-bottom: 20px;
+  color: #495057;
+  font-weight: 600;
+}
+
+.badge-riesgo {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: normal;
+  line-height: 1.4;
+  text-align: center;
+  min-width: 200px;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-default {
+  background-color: #6c757d;
+  color: white;
+}
+
+.nivel-riesgo-tabs-container .nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.nivel-riesgo-tabs-container .nav-tabs .nav-link {
+  color: #495057;
+  font-weight: 500;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.nivel-riesgo-tabs-container .nav-tabs .nav-link:hover {
+  border-color: transparent;
+  background-color: #f8f9fa;
+}
+
+.nivel-riesgo-tabs-container .nav-tabs .nav-link.active {
+  color: #007bff;
+  border-color: transparent transparent #007bff transparent;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.btn-asignar-paciente {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-asignar-paciente:hover {
+  transform: scale(1.1);
+}
+
+.customTabs {
+  border-bottom: none !important;
+}
+
+.customTabs :global(.nav-link) {
+  border-radius: 12px !important;
+  margin-right: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #5f6c7b;
+  background-color: #f3f6fa;
+  border: none !important;
+  transition: all 0.25s ease;
+}
+
+.customTabs :global(.nav-link:hover) {
+  background-color: #e4ecf7;
+  color: #1c6ed5;
+}
+
+.customTabs :global(.nav-link.active) {
+  background: linear-gradient(135deg, #1c6ed5, #4dabf7);
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.btn-export-excel{
+  margin-left: 15px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-export-excel:hover{
+  background: #1b5e20;
+}
+
+.table-search{
+  margin-bottom: 10px;
+}
+
+.table-search input{
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 1050px;
+}
+
+.clear-search{
+  background:#e53935;
+  color:white;
+  border:none;
+  padding:5px 10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.clear-search:hover{
+  background:#c62828;
+}

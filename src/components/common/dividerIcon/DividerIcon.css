@@ -1,0 +1,41 @@
+.divider-icon {
+  text-align: center;
+  margin-top: 2em !important;
+  margin-bottom: 1em;
+  width: 100%;
+  position: relative;
+}
+
+.divider-icon_title {
+  font-family: OpenSansBold;
+  color: #132962;
+}
+
+.divider-icon_left {
+  background: #c0c0c0;
+  width: 40px;
+  height: 1px;
+  left: 50%;
+  margin-left: -52px;
+  position: relative;
+  float: left;
+}
+
+.divider-icon_right {
+  background: #c0c0c0;
+  width: 40px;
+  height: 1px;
+  right: 50%;
+  margin-right: -52px;
+  position: relative;
+  float: right;
+}
+
+.divider-icon_icon {
+  color: #516d89;
+  font-size: 13px;
+  margin-top: -6px;
+  margin-left: -6px;
+  position: absolute;
+  left: 50%;
+}

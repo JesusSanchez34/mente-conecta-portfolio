@@ -1,0 +1,112 @@
+.smile-icon {
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.bienvenida-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bienvenida-cards-container {
+    flex: 1;
+    padding: 40px 20px;
+    /* Cambiamos a Grid para distribuir mejor las tarjetas a lo ancho */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Margen entre tarjetas aumentado */
+    max-width: 1200px; /* Máximo de ancho para que se vea bien en pantallas muy grandes */
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bienvenida-card {
+    border-radius: 30px;
+    padding: 50px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px; /* Las hacemos más altas para que la imagen luzca mejor */
+    /* Añadimos estilos para ajustar la imagen en todas las tarjetas */
+    background-size: cover;
+    background-position: center;
+    background-color: #2c3e50; /* Color base de respaldo */
+}
+
+.bienvenida-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bienvenida-card h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.8)
+    ); /* Ligeramente más oscuro para que el texto resalte bien */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+/* Bordes de colores para cada tarjeta */
+.card-socio {
+    border: 4px solid #5ba8d1; /* Azul */
+}
+
+.card-mental {
+    border: 4px solid #4dbdc4; /* Turquesa */
+}
+
+.card-fisica {
+    border: 4px solid #9b88ed; /* Lila */
+}
+
+.card-determinantes {
+    border: 4px solid #f1c40f; /* Amarillo/Dorado */
+}
+
+.card-nom035 {
+    border: 4px solid #e74c3c; /* Rojo/Coral */
+}
+
+@media (max-width: 768px) {
+    .bienvenida-cards-container {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .bienvenida-card {
+        min-height: 180px;
+        padding: 30px 15px;
+    }
+    
+    .bienvenida-card h2 {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,30 @@
+.especificar-respuesta__wrapper {
+  margin-top: 12px;
+}
+
+.especificar-respuesta__label {
+  font-size: 13px;
+  color: #7c5c6e;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.especificar-respuesta__textarea {
+  border-radius: 10px !important;
+  border: 1.5px solid #d4b8c8 !important;
+  font-size: 14px !important;
+  color: #4a3f3f !important;
+  resize: vertical !important;
+  min-height: 80px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.especificar-respuesta__textarea:focus {
+  border-color: #6b3a5c !important;
+  box-shadow: 0 0 0 3px rgba(107, 58, 92, 0.15) !important;
+}
+
+.especificar-respuesta__textarea:disabled {
+  background-color: #f7f3f5 !important;
+  opacity: 0.75 !important;
+}

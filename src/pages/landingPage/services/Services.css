@@ -1,0 +1,86 @@
+
+.services-body {
+    display: grid;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.services-header {
+    flex: 1;
+    text-align: center;
+    color: #04547B;
+    margin-bottom: 60px;
+}
+
+.services-header h1 {
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.services-header p {
+    font-size: 18px;
+    color: #04547B;
+    padding-inline: 20px;
+    font-weight: 700;
+}
+
+.services-cards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-inline: 20px;
+}
+
+.card {
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    border: 1.25px solid #0000001A;
+}
+
+.card-image {
+    border-radius: 16px 16px 0 0;
+}
+
+.services-card-icon {
+    background: linear-gradient(#71BEE9, #04547B);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    width: 35px;
+    height: 35px;
+    cursor: none;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #04547B;
+    margin-left: 10px;
+    line-height: 28px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #7A7A7A;
+    padding-top: 10px;
+    padding-left: 15%;
+    line-height: 25px;
+}
+
+.card-list {
+    border-radius: 16px;
+    background-color: #71BEE91A;
+    margin: 0 15px;
+    padding: 10px 20px;
+}
+
+.list-element {
+    font-size: 14px;
+    font-weight: 400;
+    color: #04547B;
+    margin-left: 10px;
+    line-height: 30px;
+}

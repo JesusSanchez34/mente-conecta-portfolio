@@ -1,0 +1,240 @@
+/* ===================================================
+   BienvenidaISEMPage — Pantalla principal del paciente
+   Rediseño institucional moderno
+   =================================================== */
+
+/* ── Import Google Fonts ───────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── Contenedor raíz ──────────────────── */
+.bienvenida-isem {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    animation: bienvenidaFadeIn 0.5s ease-out;
+}
+
+@keyframes bienvenidaFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================================================
+   HEADER INSTITUCIONAL GUINDA
+   =================================================== */
+.bienvenida-isem__header {
+    background: linear-gradient(135deg, #7B1B3A 0%, #9B2150 40%, #A52854 100%);
+    color: #fff;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 20px rgba(123, 27, 58, 0.3);
+}
+
+/* Decorative subtle pattern overlay */
+.bienvenida-isem__header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bienvenida-isem__header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bienvenida-isem__header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ── Saludo ─────────────────────────────── */
+.bienvenida-isem__saludo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0 52px; /* Margin-left to leave space for transparent hamburger button */
+    letter-spacing: -0.3px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    line-height: 1.3;
+}
+
+/* ── Logos institucionales ──────────────── */
+.bienvenida-isem__logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.bienvenida-isem__logo-img {
+    height: 48px;
+    object-fit: contain;
+    filter: brightness(1.1);
+    transition: transform 0.2s ease;
+}
+
+.bienvenida-isem__logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================================
+   BODY / CONTENIDO PRINCIPAL
+   =================================================== */
+.bienvenida-isem__body {
+    flex: 1;
+    padding: 32px 32px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===================================================
+   GRID DE SECCIONES / TARJETAS
+   =================================================== */
+.bienvenida-isem__sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* ===================================================
+   FOOTER DE CONFIDENCIALIDAD
+   =================================================== */
+.bienvenida-isem__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 16px;
+    margin-top: auto;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.bienvenida-isem__footer-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.bienvenida-isem__footer-text {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: 0.2px;
+}
+
+/* ===================================================
+   RESPONSIVE — Tablet
+   =================================================== */
+@media (max-width: 991px) {
+    .bienvenida-isem__header-content {
+        padding: 20px 24px;
+    }
+
+    .bienvenida-isem__saludo {
+        font-size: 1.25rem;
+        margin-left: 44px; /* Space for hamburger */
+    }
+
+    .bienvenida-isem__logo-img {
+        height: 40px;
+    }
+
+    .bienvenida-isem__body {
+        padding: 24px 24px 20px;
+    }
+
+    .bienvenida-isem__sections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ===================================================
+   RESPONSIVE — Móvil
+   =================================================== */
+@media (max-width: 576px) {
+    .bienvenida-isem__header {
+        border-radius: 0 0 18px 18px;
+    }
+
+    .bienvenida-isem__header-content {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .bienvenida-isem__saludo {
+        font-size: 1.1rem;
+        margin-left: 36px; /* Space for smaller hamburger */
+        order: 1;
+    }
+
+    .bienvenida-isem__logos {
+        order: 2;
+    }
+
+    .bienvenida-isem__logo-img {
+        height: 34px;
+    }
+
+    .bienvenida-isem__body {
+        padding: 20px 16px 16px;
+    }
+
+    .bienvenida-isem__sections {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .bienvenida-isem__footer {
+        padding: 16px 12px;
+    }
+
+    .bienvenida-isem__footer-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* ── Estilos de Carga y Error Refactorizados ───────────────── */
+.bienvenida-isem__loading-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.bienvenida-isem__loading-spinner {
+    color: #6b3a5c !important;
+}
+
+.bienvenida-isem__error-container {
+    text-align: center;
+    color: #c62828;
+    padding: 40px;
+}
+

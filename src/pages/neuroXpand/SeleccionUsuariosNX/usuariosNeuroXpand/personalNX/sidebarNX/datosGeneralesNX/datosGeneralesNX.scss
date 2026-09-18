@@ -1,0 +1,177 @@
+.datosNX-container {
+    min-height: 100vh;
+    background: #f7f1f6;
+    padding: 40px 50px 120px 50px; 
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+.datosNX-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px; 
+    position: relative; 
+
+    h1 {
+        font-size: 38px;
+        font-weight: 600;
+        color: #2d232e;
+        margin: 0 auto; 
+        text-align: center;
+    }
+}
+
+.back-btn-datosNX {
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 14px;
+    background: #ffffff; 
+    color: #4a324d; 
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    transition: all 0.2s ease;
+    
+    position: absolute; 
+    left: 0;
+
+    &:hover {
+        background: #fcf8fc;
+        transform: translateX(-4px); 
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.datosNX-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px; 
+    margin-top: 10px; 
+}
+
+.datosNX-familiar-box {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 800px; 
+}
+
+.datosNX-familiar-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4a324d;
+    margin-bottom: 10px;
+}
+
+.datosNX-familiar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.datosNX-familiar-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(90, 67, 94, 0.12);
+    box-shadow: 0 6px 18px rgba(90, 67, 94, 0.08);
+    min-width: 0;
+
+    .icon {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: #f2edf5;
+        color: #4a324d;
+        flex-shrink: 0;
+    }
+
+    strong {
+        display: block;
+        font-size: 18px;
+        color: #2d232e;
+        margin-bottom: 4px;
+    }
+
+    p {
+        margin: 0;
+        color: #5c6570;
+        font-size: 14px;
+    }
+
+    small {
+        display: inline-block;
+        margin-top: 4px;
+        color: #7d6b86;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+}
+
+.datoNX-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 30px; 
+    border-radius: 18px; 
+    font-size: 20px;
+    font-weight: 500;
+    color: #2d232e;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(90, 67, 94, 0.05); 
+    border: 1px solid rgba(90, 67, 94, 0.08); 
+    width: 100%; 
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: translateX(6px); 
+        border-color: rgba(90, 67, 94, 0.2);
+        box-shadow: 0 6px 24px rgba(90, 67, 94, 0.08);
+    }
+
+    .icon {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        flex-shrink: 0; 
+    }
+}
+
+.morado {
+    .icon {
+        background: #f3edf4;
+        color: #4a324d;
+    }
+}
+
+.gris-datosNX {
+    .icon {
+        background: #f0f2f5;
+        color: #626f7a;
+    }
+}

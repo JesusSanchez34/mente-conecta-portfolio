@@ -1,0 +1,178 @@
+.marcadores-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #eef4f9;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.marcadores-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #eef4f9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #d0e0ef;
+}
+
+.marcadores-header h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin: 0;
+}
+
+.marcadores-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.marcadores-card {
+    background-color: rgba(176, 210, 250, 0.5);
+    border-radius: 10px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.15s;
+}
+
+.marcadores-card:hover {
+    transform: scale(1.01);
+}
+
+.marcadores-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1a202c;
+    white-space: pre-line;
+}
+
+.marcadores-play-icon {
+    font-size: 1.8rem;
+    color: rgba(5, 111, 233, 0.5);
+}
+
+.marcadores-skeleton {
+    height: 70px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #e0eaf4 25%, #f0f6fb 50%, #e0eaf4 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.marcadores-footer {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 10px;
+    opacity: 0.6;
+}
+
+.back-icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #1a202c;
+    position: absolute;
+    left: 20px;
+}
+
+.header-small-logo {
+    position: absolute;
+    right: 15px;
+    height: 45px;
+    width: auto;
+}
+
+.footer-image-watermark {
+    width: 85%;
+    max-width: 320px;
+}
+
+/* Aviso médico modal */
+.aviso-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.aviso-modal {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 22px;
+    width: 90%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.aviso-logo {
+    width: 60%;
+    max-width: 180px;
+}
+
+.aviso-text {
+    font-size: 0.95rem;
+    color: #2d3748;
+    text-align: center;
+    line-height: 1.5;
+    white-space: pre-line;
+    margin: 0;
+}
+
+.aviso-btns {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.aviso-btn-primary {
+    flex: 1;
+    background: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aviso-btn-secondary {
+    flex: 1;
+    background: transparent;
+    color: #2196F3;
+    border: 2px solid #2196F3;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}

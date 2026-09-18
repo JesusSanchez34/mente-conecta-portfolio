@@ -1,0 +1,376 @@
+@use '../../../assets/stylesBasica/variables' as *;
+
+.lwb {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.lwb__char {
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+  height: 80vh;
+  max-height: 560px;
+  object-fit: contain;
+  object-position: bottom;
+
+  &--left  { left: -10px; }
+  &--right { right: -10px; }
+}
+
+.lwb__deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--sep-deco-opacity, 0.9);
+  filter: var(--sep-deco-filter, none);
+  top: 0;
+  height: 100%;
+  object-fit: contain;
+
+  &--left  { left: 200px; }
+  &--right { right: 200px; transform: scaleX(-1); }
+}
+
+.lwb__center {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 560px;
+  margin-block: auto;
+}
+
+.lwb__card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 18px 24px 20px;
+  border-radius: 22px;
+}
+
+.lwb__logo {
+  width: min(220px, 68%);
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.lwb__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1883f2;
+  margin-bottom: 6px;
+}
+
+.lwb__subtitle {
+  max-width: 620px;
+  font-size: 0.78rem;
+  color: var(--sep-text-primary, #333);
+  line-height: 1.35;
+}
+
+.lwb__card-form {
+  padding: 22px 24px 26px;
+  border-radius: 22px;
+}
+
+.lwb__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.lwb__field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lwb__field-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #428cff;
+}
+
+.lwb__input-error {
+  color: var(--sep-error-text, #e85d75);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+.lwb__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.lwb__remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--sep-text-primary, #333);
+
+  input[type='checkbox'] {
+    width: 17px;
+    height: 17px;
+    accent-color: #2f85d8;
+    cursor: pointer;
+  }
+}
+
+.lwb__forgot {
+  font-size: 0.82rem;
+  color: #428cff;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: right;
+
+  &:hover { text-decoration: underline; }
+}
+
+.lwb .input-wrap__field {
+  min-height: 42px;
+  border: 2px solid #fb8f35;
+  border-radius: 21px;
+  padding: 0 15px;
+  background: var(--sep-input-bg, #fff);
+}
+
+.lwb .input-wrap__field:focus-within {
+  border-color: #fb8f35;
+  box-shadow: 0 0 0 3px rgba(251, 143, 53, 0.14);
+}
+
+.lwb .input-wrap__field--error,
+.lwb .input-wrap__field--error:focus-within {
+  border-color: #e85d75;
+}
+
+.lwb .input-wrap__icon {
+  margin-right: 10px;
+}
+
+.lwb .input-wrap__icon svg,
+.lwb .input-wrap__eye svg {
+  width: 19px;
+  height: 19px;
+}
+
+.lwb .input-wrap__input {
+  min-width: 0;
+  font-size: 0.84rem;
+  padding: 9px 0;
+}
+
+.lwb .input-wrap__eye {
+  flex: 0 0 auto;
+  margin-left: 8px;
+}
+
+.lwb .sep-btn {
+  min-height: 42px;
+  border-radius: 21px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .lwb__char,
+  .lwb__deco { display: none; }
+
+  .lwb {
+    align-items: center;
+    padding: 24px clamp(16px, 5vw, 36px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .lwb__center {
+    max-width: 520px;
+    margin: auto;
+    gap: 16px;
+  }
+
+  .lwb__card-top {
+    padding: 22px clamp(18px, 5vw, 24px) 24px;
+    border-radius: 28px;
+  }
+
+  .lwb__card-form {
+    padding: 22px clamp(18px, 5vw, 24px) 26px;
+    border-radius: 28px;
+  }
+
+  .lwb__logo {
+    width: min(220px, 76%);
+    margin-bottom: 12px;
+  }
+
+  .lwb__title {
+    font-size: clamp(1.18rem, 4.8vw, 1.42rem);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .lwb__subtitle {
+    font-size: clamp(0.84rem, 3.4vw, 0.96rem);
+    line-height: 1.35;
+  }
+
+  .lwb__field-label {
+    font-size: clamp(0.92rem, 3.5vw, 1rem);
+  }
+
+  .lwb .input-wrap__field {
+    min-height: 48px;
+    border-radius: 24px;
+    padding: 0 16px;
+  }
+
+  .lwb .input-wrap__input {
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    padding: 9px 0;
+  }
+
+  .lwb__row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .lwb__remember {
+    font-size: clamp(0.84rem, 3.3vw, 0.94rem);
+  }
+
+  .lwb__forgot {
+    max-width: 100%;
+    margin-left: auto;
+    font-size: clamp(0.84rem, 3.3vw, 0.94rem);
+  }
+
+  .lwb .sep-btn {
+    min-height: 48px;
+    font-size: clamp(0.92rem, 3.5vw, 1rem);
+  }
+}
+
+@media (max-width: 390px) {
+  .lwb {
+    padding-inline: 14px;
+  }
+
+  .lwb__card-top,
+  .lwb__card-form {
+    border-radius: 24px;
+  }
+
+  .lwb .input-wrap__field {
+    min-height: 46px;
+    padding: 0 14px;
+  }
+
+  .lwb .input-wrap__icon {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .lwb {
+    padding-inline: clamp(28px, 3vw, 64px);
+  }
+
+  .lwb__char {
+    height: min(72vh, 660px);
+    max-height: 660px;
+  }
+
+  .lwb__deco {
+    &--left  { left: max(220px, calc(50% - 760px)); }
+    &--right { right: max(220px, calc(50% - 760px)); }
+  }
+
+  .lwb__center {
+    max-width: clamp(600px, 40vw, 680px);
+    gap: 14px;
+  }
+
+  .lwb__card-top {
+    padding: 22px 30px 24px;
+    border-radius: 26px;
+  }
+
+  .lwb__card-form {
+    padding: 26px 30px 30px;
+    border-radius: 26px;
+  }
+
+  .lwb__logo {
+    width: min(250px, 66%);
+  }
+
+  .lwb__title {
+    font-size: clamp(1.25rem, 1.3vw, 1.5rem);
+  }
+
+  .lwb__subtitle {
+    font-size: clamp(0.88rem, 0.8vw, 1rem);
+  }
+
+  .lwb__field-label {
+    font-size: clamp(0.94rem, 0.82vw, 1.02rem);
+  }
+
+  .lwb__remember,
+  .lwb__forgot {
+    font-size: clamp(0.88rem, 0.78vw, 0.98rem);
+  }
+
+  .lwb .input-wrap__field {
+    min-height: 48px;
+    border-radius: 24px;
+    padding-inline: 18px;
+  }
+
+  .lwb .input-wrap__input {
+    font-size: clamp(0.92rem, 0.8vw, 1rem);
+  }
+
+  .lwb .sep-btn {
+    min-height: 48px;
+    border-radius: 24px;
+    font-size: clamp(0.96rem, 0.84vw, 1.05rem);
+  }
+}
+
+@media (min-width: 1440px) and (min-height: 900px) {
+  .lwb {
+    padding-block: 32px;
+  }
+
+  .lwb__center {
+    gap: 18px;
+  }
+
+  .lwb__char {
+    height: min(74vh, 700px);
+    max-height: 700px;
+  }
+}

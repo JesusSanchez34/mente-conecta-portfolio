@@ -1,0 +1,99 @@
+/* ===================================================
+   CuestionarioCard — Tarjeta individual de cuestionario
+   =================================================== */
+
+.cuestionario-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 22px 24px;
+    background: #a38271; /* Earthy coffee/terracotta tone matching the image */
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.cuestionario-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.cuestionario-card:active {
+    transform: translateY(0);
+}
+
+/* Nombre del cuestionario */
+.cuestionario-card__nombre {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: left;
+    flex: 1;
+    padding-right: 16px;
+}
+
+/* Botón "REALIZAR" */
+.cuestionario-card__action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.cuestionario-card__play-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #00E676; /* Bright green matching the screenshot */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 230, 118, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.cuestionario-card:hover .cuestionario-card__play-icon {
+    transform: scale(1.1);
+}
+
+.cuestionario-card__action-text {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #ffffff; /* Always white action text as per references */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.cuestionario-card--completed {
+    background: #a38271; /* Background stays the same coffee brown */
+    opacity: 1;
+}
+
+.cuestionario-card--completed .cuestionario-card__play-icon {
+    background-color: transparent !important; /* No circle background, just a raw checkmark */
+    color: #00E676 !important; /* Bright green checkmark icon */
+    box-shadow: none !important;
+}
+
+.cuestionario-card--completed .cuestionario-card__action-text {
+    color: #ffffff !important; /* White 'COMPLETO' text */
+}
+
+@media (max-width: 576px) {
+    .cuestionario-card {
+        padding: 18px 16px;
+        border-radius: 14px;
+    }
+
+    .cuestionario-card__nombre {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,8 @@
+.table-pacientes-sensibles__boton {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.table-pacientes-sensibles__boton:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap');
+
+/* ── Configuración Paciente Page ── */
+.config-page-container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #f5e3fc 0%, #e0c3fc 40%, #cde4ff 100%);
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+
+/* ── Header ── */
+.config-top-bar {
+    width: 100%;
+    background: #07afb8;
+    display: flex;
+    align-items: center;
+    padding: 1.1rem 1.5rem;
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(7, 175, 184, 0.3);
+}
+
+.config-back-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.config-back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.config-top-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    padding-right: 2.2rem;
+    font-family: 'Outfit', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Floating Background Icons ── */
+.config-floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.config-floating-icon {
+    position: absolute;
+    color: #7c4dff;
+    opacity: 0.08;
+    animation: configFloat 15s ease-in-out infinite alternate;
+}
+
+.c-icon-1 { font-size: 8rem; top: 8%;  left: 4%;  animation-duration: 12s; }
+.c-icon-2 { font-size: 6rem; top: 22%; right: 4%; animation-duration: 16s; animation-direction: reverse; }
+.c-icon-3 { font-size: 7rem; bottom: 22%; left: 6%; animation-duration: 14s; }
+.c-icon-4 { font-size: 9rem; bottom: 8%;  right: 5%; animation-duration: 18s; animation-direction: reverse; }
+.c-icon-5 { font-size: 5rem; top: 48%; left: 42%; animation-duration: 20s; }
+.c-icon-6 { font-size: 4rem; bottom: 48%; right: 42%; animation-duration: 13s; animation-direction: reverse; }
+
+@keyframes configFloat {
+    0%   { transform: translateY(0) rotate(0deg); }
+    50%  { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(10px) rotate(-10deg); }
+}
+
+/* ── Main Content ── */
+.config-content {
+    width: 100%;
+    max-width: 560px;
+    padding: 2rem 1.5rem 6rem;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ── Config Card ── */
+.config-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 30px rgba(142, 97, 219, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.config-card-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.config-card-subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* ── Slider ── */
+.config-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #f8fafc;
+    border-radius: 50px;
+    padding: 0.8rem 1.4rem;
+    border: 1.5px solid #e2e8f0;
+}
+
+.config-slider-label-sm {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.config-slider-label-lg {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.config-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #07afb8, #07afb8);
+    outline: none;
+    cursor: pointer;
+}
+
+.config-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #07afb8;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(7, 175, 184, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.config-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.config-slider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #07afb8;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(7, 175, 184, 0.4);
+}
+
+.config-slider-ticks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.4rem;
+}
+
+.config-slider-ticks span {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.config-slider-ticks span.active {
+    color: #07afb8;
+    font-weight: 800;
+}
+
+/* ── Theme Selector ── */
+.config-theme-row {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.config-theme-btn {
+    flex: 1;
+    background: transparent;
+    border: 2px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.config-theme-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.config-theme-btn.selected {
+    border-color: #07afb8;
+    box-shadow: 0 4px 14px rgba(7, 175, 184, 0.2);
+}
+
+.config-theme-preview {
+    width: 100%;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.light-preview {
+    background: linear-gradient(135deg, #fce4ec, #f8f9fa);
+    border: 1.5px solid #e2e8f0;
+}
+
+.dark-preview {
+    background: linear-gradient(135deg, #1a1a2e, #6b3fa0);
+}
+
+.theme-preview-icon {
+    font-size: 1.8rem;
+    opacity: 0.5;
+}
+
+.light-preview .theme-preview-icon {
+    color: #e91e8c;
+}
+
+.dark-preview .theme-preview-icon {
+    color: #d177f8;
+}
+
+.config-theme-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #334155;
+    font-family: 'Outfit', sans-serif;
+}
+
+.config-theme-check {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 2px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: white;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.config-theme-check.checked {
+    background: #07afb8;
+    border-color: #07afb8;
+}
+
+/* ── Reading Mode ── */
+.config-reading-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.config-reading-btn {
+    flex: 1;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.2rem 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.25s ease;
+}
+
+.config-reading-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.config-reading-btn.selected {
+    border-color: #07afb8;
+    background: rgba(7, 175, 184, 0.05);
+    box-shadow: 0 4px 14px rgba(7, 175, 184, 0.15);
+}
+
+.config-reading-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.config-reading-label-aa {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    font-family: 'Outfit', sans-serif;
+}
+
+.config-reading-label-dyslexia {
+    font-family: serif;
+    letter-spacing: 0.05em;
+}
+
+.config-reading-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+/* ── Save Button ── */
+.config-save-btn {
+    width: 100%;
+    padding: 1.1rem 2rem;
+    background: linear-gradient(135deg, #07afb8, #00a896);
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    box-shadow: 0 8px 24px rgba(7, 175, 184, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+.config-save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(7, 175, 184, 0.45);
+}
+
+.config-save-btn:active {
+    transform: translateY(0);
+}
+
+/* ── High Contrast ── */
+.patient-high-contrast .config-top-bar {
+    background: #111111 !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+
+.patient-high-contrast .config-card {
+    background: #111111 !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+}
+
+.patient-high-contrast .config-card-title,
+.patient-high-contrast .config-card-subtitle,
+.patient-high-contrast .config-theme-label,
+.patient-high-contrast .config-reading-name {
+    color: #ffffff !important;
+}
+
+.patient-high-contrast .config-floating-bg {
+    display: none !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .config-content {
+        padding: 1.5rem 1rem 5rem;
+    }
+
+    .config-card {
+        padding: 1.4rem;
+        border-radius: 20px;
+    }
+
+    .config-theme-preview {
+        height: 65px;
+    }
+
+    .config-reading-btn {
+        padding: 1rem 0.7rem;
+    }
+}
+
+/* ══════════════════════════════════════════
+   MODO OSCURO — aplica inmediatamente
+══════════════════════════════════════════ */
+.config-dark-mode {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1030 50%, #0d1b2a 100%) !important;
+}
+
+.config-dark-mode .config-top-bar {
+    background: #05878e !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+.config-dark-mode .config-floating-icon {
+    color: #a855f7;
+    opacity: 0.12;
+}
+
+.config-dark-mode .config-card {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.config-dark-mode .config-card-title {
+    color: #f1f5f9 !important;
+}
+
+.config-dark-mode .config-card-subtitle {
+    color: #94a3b8 !important;
+}
+
+.config-dark-mode .config-slider-row {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.config-dark-mode .config-slider-label-sm,
+.config-dark-mode .config-slider-label-lg {
+    color: #cbd5e1 !important;
+}
+
+.config-dark-mode .config-slider-ticks span {
+    color: #64748b !important;
+}
+
+.config-dark-mode .config-slider-ticks span.active {
+    color: #07afb8 !important;
+}
+
+.config-dark-mode .config-theme-btn {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.config-dark-mode .config-theme-btn.selected {
+    border-color: #07afb8 !important;
+    box-shadow: 0 4px 14px rgba(7, 175, 184, 0.3) !important;
+}
+
+.config-dark-mode .config-theme-label {
+    color: #e2e8f0 !important;
+}
+
+.config-dark-mode .config-reading-btn {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.config-dark-mode .config-reading-btn.selected {
+    background: rgba(7, 175, 184, 0.15) !important;
+    border-color: #07afb8 !important;
+}
+
+.config-dark-mode .config-reading-label-aa,
+.config-dark-mode .config-reading-name {
+    color: #f1f5f9 !important;
+}
+
+.config-dark-mode .config-save-btn {
+    background: linear-gradient(135deg, #07afb8, #0891b2) !important;
+    box-shadow: 0 8px 24px rgba(7, 175, 184, 0.25) !important;
+}
+
+/* ══════════════════════════════════════════
+   MODO DISLEXIA — fuente amigable
+══════════════════════════════════════════ */
+.config-dyslexia,
+.config-dyslexia * {
+    font-family: 'Open-Dyslexic', 'OpenDyslexic', 'Lexend', 'Arial', sans-serif !important;
+    letter-spacing: 0.05em;
+    word-spacing: 0.15em;
+    line-height: 1.8;
+}
+
+.config-dyslexia .config-card-title {
+    letter-spacing: 0.06em;
+}
+
+/* ══════════════════════════════════════════
+   TAMAÑOS DE TEXTO — preview en vivo
+══════════════════════════════════════════ */
+.patient-text-sm .config-top-title  { font-size: 1.1rem; }
+.patient-text-sm .config-card-title { font-size: 1rem; }
+.patient-text-sm .config-card-subtitle { font-size: 0.82rem; }
+.patient-text-sm .config-reading-name { font-size: 0.8rem; }
+.patient-text-sm .config-save-btn  { font-size: 0.95rem; }
+
+.patient-text-lg .config-top-title  { font-size: 1.5rem; }
+.patient-text-lg .config-card-title { font-size: 1.3rem; }
+.patient-text-lg .config-card-subtitle { font-size: 1rem; }
+.patient-text-lg .config-reading-name { font-size: 1rem; }
+.patient-text-lg .config-save-btn  { font-size: 1.15rem; }

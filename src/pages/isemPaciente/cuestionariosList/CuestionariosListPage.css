@@ -1,0 +1,403 @@
+/* ===================================================
+   CuestionariosListPage — Lista de cuestionarios
+   =================================================== */
+
+.cuestionarios-list {
+    max-width: 720px;
+    margin: 0 auto;
+    animation: listFadeIn 0.4s ease-out;
+    padding: 1.5rem;
+}
+
+@keyframes listFadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header con back + título ────────── */
+.cuestionarios-list__header {
+    padding: 0 0 24px;
+}
+
+.cuestionarios-list__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #6b3a5c;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.cuestionarios-list__back:hover {
+    background-color: rgba(107, 58, 92, 0.06);
+    color: #962346;
+}
+
+.cuestionarios-list__back-icon {
+    font-size: 1.2rem;
+}
+
+.cuestionarios-list__title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #333;
+    margin: 0;
+}
+
+/* ── Lista de cards ──────────────────── */
+.cuestionarios-list__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ── Estado vacío / error ────────────── */
+.cuestionarios-list__empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+    font-size: 1rem;
+}
+
+.cuestionarios-list__empty-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    opacity: 0.5;
+}
+
+@media (max-width: 576px) {
+    .cuestionarios-list__title {
+        font-size: 1.25rem;
+    }
+
+    .cuestionarios-list__cards {
+        gap: 12px;
+    }
+}
+
+/* ── Estilos de Carga y Error Refactorizados ───────────────── */
+.cuestionarios-list__loading-spinner {
+    color: #6b3a5c !important;
+}
+
+.cuestionarios-list__loading-text {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #6b5e6b;
+}
+
+.cuestionarios-list__error-wrapper {
+    padding: 0 16px;
+    margin-bottom: 12px;
+}
+
+.cuestionarios-list__error-text {
+    color: #c62828;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ── SKELETON SHIMMER LOADERS (UX Flutter paridad) ────────── */
+.cuestionario-card-skeleton {
+    height: 90px;
+    background: #fdfdfd;
+    border: 1px solid #f2edf0;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cuestionario-card-skeleton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 20%,
+        rgba(255, 255, 255, 0.9) 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.cuestionario-card-skeleton__title {
+    width: 60%;
+    height: 18px;
+    background-color: #efeaed;
+    border-radius: 4px;
+}
+
+.cuestionario-card-skeleton__action {
+    width: 100px;
+    height: 36px;
+    background-color: #efeaed;
+    border-radius: 18px;
+}
+
+/* ── QUICKALERT STYLE MODALS (Coherencia Visual con Flutter) ── */
+.qalert-modal__dialog {
+    max-width: 420px !important;
+}
+
+.qalert-modal .modal-content {
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.qalert-modal__header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.qalert-modal__header svg {
+    animation: bulbDrop 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes bulbDrop {
+    0% {
+        transform: translateY(-90px) scaleY(0.7);
+        opacity: 0;
+    }
+    55% {
+        transform: translateY(15px) scaleY(1.25);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-8px) scaleY(0.85);
+    }
+    90% {
+        transform: translateY(3px) scaleY(1.05);
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+.qalert-modal__header--info {
+    background: #ffb822 !important; /* solid QuickAlert yellow bulb header */
+}
+
+.qalert-modal__header--success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.qalert-modal__body {
+    padding: 2.2rem 2rem 1.5rem !important;
+}
+
+.qalert-modal__body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 0.85rem;
+    text-align: center;
+}
+
+.qalert-modal__text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #5f5f5f;
+    text-align: center;
+}
+
+.qalert-modal__instructions {
+    background-color: #f7f5f7;
+    border: 1px solid #efecef;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1.25rem;
+}
+
+.qalert-modal__footer {
+    border-top: none !important;
+    padding: 0 2rem 2.2rem !important;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.qalert-modal__footer--stack {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0 !important;
+}
+
+.qalert-modal__btn--wide {
+    width: 100%;
+}
+
+.qalert-modal__btn-back {
+    border: none !important;
+    background-color: #f0edf0 !important;
+    color: #4a4548 !important;
+    font-weight: 700 !important;
+    border-radius: 30px !important;
+    padding: 0.6rem 1.5rem !important;
+    font-size: 0.9rem !important;
+    transition: all 0.2s ease !important;
+    flex: 1;
+}
+
+.qalert-modal__btn-back:hover {
+    background-color: #e5e0e5 !important;
+}
+
+.qalert-modal__btn-confirm {
+    border: none !important;
+    background: linear-gradient(135deg, #962346, #6b3a5c) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    border-radius: 30px !important;
+    padding: 0.6rem 1.5rem !important;
+    font-size: 0.9rem !important;
+    box-shadow: 0 4px 12px rgba(107, 58, 92, 0.2) !important;
+    transition: all 0.2s ease !important;
+    flex: 1;
+}
+
+.qalert-modal__btn-confirm:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(107, 58, 92, 0.3) !important;
+}
+
+/* ── OVERLAY DE PRE-CARGA FLUTTER ──────────────────────────── */
+.qalert-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeInOverlay 0.2s ease;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.qalert-loading-box {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.25);
+    max-width: 320px;
+    width: 90%;
+    overflow: hidden;
+    transform: scale(0.9);
+    animation: scaleUpBox 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scaleUpBox {
+    to { transform: scale(1); }
+}
+
+.qalert-loading-header {
+    background: #00a2ff; /* Bright blue solid matching user image loader */
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qalert-loading-body {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.qalert-loading-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.qalert-loading-body p {
+    font-size: 1.1rem;
+    color: #777;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ── 4 DOTS ROTATING LOADER (QuickAlert.loading paridad) ── */
+.qalert-loading-dots {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    animation: qalertSpin 1.4s linear infinite;
+}
+
+.qalert-loading-dots .dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.dot--1 { top: 0; left: 0; }
+.dot--2 { top: 0; right: 0; }
+.dot--3 { bottom: 0; left: 0; }
+.dot--4 { bottom: 0; right: 0; }
+
+@keyframes qalertSpin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.qalert-modal__footer--center {
+    justify-content: center !important;
+    padding-bottom: 2rem !important;
+}
+
+.qalert-modal__btn-ok {
+    border: none !important;
+    background: #2196f3 !important; /* bright blue pill button */
+    color: white !important;
+    font-weight: 700 !important;
+    border-radius: 30px !important;
+    padding: 0.6rem 3.5rem !important;
+    font-size: 1rem !important;
+    box-shadow: 0 4px 14px rgba(33, 150, 243, 0.35) !important;
+    transition: all 0.2s ease !important;
+}
+
+.qalert-modal__btn-ok:hover {
+    background: #1e88e5 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(33, 150, 243, 0.45) !important;
+}
+

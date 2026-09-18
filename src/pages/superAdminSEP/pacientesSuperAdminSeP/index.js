@@ -1,0 +1,1 @@
+export { PacientesSuperAdminSeP } from './PacientesSuperAdminSeP';

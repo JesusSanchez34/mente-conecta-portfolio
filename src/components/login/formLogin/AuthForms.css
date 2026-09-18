@@ -1,0 +1,146 @@
+.auth-form-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #FEFAFA; /* Light off-white/pinkish background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    color: #1a1a1a;
+}
+
+.auth-form-header {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.auth-back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    transition: transform 0.2s;
+}
+
+.auth-back-btn:hover {
+    transform: translateX(-3px);
+}
+
+.auth-form-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    color: #1b1b1b;
+}
+
+.auth-form-content {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.auth-form-description {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+}
+
+.auth-input-wrapper {
+    width: 100%;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #4a4a4a;
+    background-color: #FEFAFA;
+    font-size: 1rem;
+    color: #1a1a1a;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.auth-input:focus {
+    border-color: #8c5d8a;
+}
+
+.auth-select {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #4a4a4a;
+    background-color: #FEFAFA;
+    font-size: 1rem;
+    color: #555555;
+    outline: none;
+    appearance: none; /* Remove default arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a4a4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.auth-select:focus {
+    border-color: #8c5d8a;
+}
+
+.auth-submit-btn {
+    background: none;
+    border: none;
+    color: #8c5d8a;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 1rem;
+}
+
+.auth-submit-btn:hover {
+    opacity: 0.8;
+}
+
+/* Button style matching the second screenshot */
+.auth-purple-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    background-color: #F8F0F6; /* Light purple tint */
+    border: 1px solid #E8D8E6;
+    color: #8c5d8a;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.auth-purple-btn:hover {
+    background-color: #EEDFEA;
+}
+
+.auth-legal-footer {
+    font-size: 0.85rem;
+    color: #333333;
+    line-height: 1.4;
+    margin-top: 2rem;
+    padding: 0 15px;
+}

@@ -1,0 +1,188 @@
+.quien-realiza-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.quien-realiza-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02), 0 20px 48px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    border: 1px solid #f1f5f9;
+    height: auto !important; /* Forces it to expand, overriding QuienRealizaPage.css global bleed */
+}
+
+.quien-realiza-title {
+    font-size: 2.2rem;
+    font-weight: 850;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+    margin-bottom: 12px;
+}
+
+.quien-realiza-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 45px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.option-item {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 35px 25px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Fix for the option-personal image */
+.option-personal .icon-wrapper.image-avatar-wrapper {
+    background-color: transparent !important;
+    width: 100% !important;
+    height: 140px !important;
+    position: relative !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+}
+
+/* The blue circle in the background */
+.option-personal .icon-wrapper.image-avatar-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #eff6ff;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* The image itself */
+.option-personal .icon-wrapper.image-avatar-wrapper img.avatar-image {
+    position: relative !important;
+    z-index: 1;
+    height: 130px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+.option-encuestador .icon-wrapper {
+    background-color: #ecfdf5;
+    color: #059669;
+}
+
+.option-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.option-info p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Efectos Hover Premium */
+.option-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.option-personal:hover {
+    border-color: #3b82f6;
+}
+
+
+.option-encuestador:hover {
+    border-color: #10b981;
+}
+
+.option-encuestador:hover .icon-wrapper {
+    background-color: #059669;
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .quien-realiza-card {
+        padding: 35px 20px;
+        border-radius: 20px;
+    }
+    .quien-realiza-title {
+        font-size: 1.8rem;
+    }
+    .quien-realiza-subtitle {
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .option-item {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quien-realiza-card {
+        padding: 25px 15px;
+        border-radius: 16px;
+    }
+    .quien-realiza-title {
+        font-size: 1.5rem;
+    }
+    .option-info h3 {
+        font-size: 1.25rem;
+    }
+    .option-info p {
+        font-size: 0.85rem;
+    }
+    .icon-wrapper {
+        width: 75px;
+        height: 75px;
+    }
+}

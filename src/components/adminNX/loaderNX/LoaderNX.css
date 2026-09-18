@@ -1,0 +1,82 @@
+.nx-loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.nx-loader-card {
+  width: min(400px, 100%);
+  border-radius: 25px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border: none;
+  animation: nxScaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes nxScaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.nx-loader-top {
+  background: #8c5d8a;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nx-spinner-container {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  animation: nxRotate 2.5s linear infinite;
+}
+
+@keyframes nxRotate {
+  100% { transform: rotate(360deg); }
+}
+
+.nx-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  animation: nxDotPulse 1.5s ease-in-out infinite;
+}
+
+.nx-dot-1 { top: 0; left: 23px; animation-delay: 0s; }
+.nx-dot-2 { top: 23px; right: 0; animation-delay: -0.3s; }
+.nx-dot-3 { bottom: 0; left: 23px; animation-delay: -0.6s; }
+.nx-dot-4 { top: 23px; left: 0; animation-delay: -0.9s; }
+
+@keyframes nxDotPulse {
+  0%, 100% { transform: scale(0.7); opacity: 0.5; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+.nx-loader-body {
+  padding: 30px 20px;
+}
+
+.nx-loader-body h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.nx-loader-body p {
+  margin: 0;
+  color: #555555;
+  font-size: 1rem;
+}

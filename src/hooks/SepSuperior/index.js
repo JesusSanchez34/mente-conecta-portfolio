@@ -1,0 +1,1 @@
+export { useGraficasSuperiorSeP } from './useGraficasSuperiorSeP';

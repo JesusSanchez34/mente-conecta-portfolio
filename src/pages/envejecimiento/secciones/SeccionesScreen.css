@@ -1,0 +1,220 @@
+.secciones-bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: #eef4f9;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    overflow-y: auto;
+}
+
+.secciones-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    background-color: #eef4f9;
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.secciones-header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin: 0;
+}
+
+.secciones-logo {
+    position: absolute;
+    right: 30px;
+    height: 110px;
+    width: auto;
+}
+
+.secciones-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 30px 20px;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Animaciones de aparición en cascada */
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccion-card {
+    position: relative;
+    width: 300px;
+    height: 210px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: fadeInCard 1s forwards;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 4px solid transparent;
+}
+
+.seccion-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+.seccion-card.delay-0 {
+    animation-delay: 0ms;
+}
+
+.seccion-card.delay-1 {
+    animation-delay: 500ms;
+}
+
+.seccion-card.delay-2 {
+    animation-delay: 1000ms;
+}
+
+.seccion-card.delay-3 {
+    animation-delay: 1500ms;
+}
+
+.seccion-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seccion-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.seccion-title {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    letter-spacing: 0.03em;
+}
+
+
+/* MODAL DE INTRODUCCIÓN */
+.intro-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.intro-modal-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 25px;
+    width: 90%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: modalPopIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.intro-modal-logo {
+    width: 75%;
+    min-width: 220px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.intro-modal-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.intro-modal-text {
+    font-size: 1.05rem;
+    color: #2d3748;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.intro-modal-warning {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.intro-modal-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.intro-modal-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.intro-modal-checkbox-label {
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.intro-modal-btn {
+    background-color: #2196F3;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.intro-modal-btn:hover {
+    background-color: #1976D2;
+}

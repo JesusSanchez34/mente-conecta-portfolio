@@ -1,0 +1,85 @@
+@use '../../../assets/stylesBasica/variables' as *;
+
+.sep-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: $radius-md;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, filter 0.2s, opacity 0.2s;
+
+  &--primary {
+    background-color: var(--sep-primary-orange, #ff9b44);
+    border: 2px solid #d97717;
+    color: $white;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+      background-color: var(--sep-primary-orange, #ff9b44);
+      border-color: #d97717;
+      color: $white;
+      box-shadow: none;
+    }
+
+    &:hover:not(:disabled) {
+      filter: brightness(0.95);
+    }
+
+    &:active:not(:disabled) {
+      filter: brightness(0.9);
+      transform: none;
+    }
+
+    &:focus-visible {
+      outline: 3px solid rgba(255, 155, 68, 0.38);
+      outline-offset: 3px;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:focus,
+    &:disabled:focus-visible {
+      background-color: var(--sep-primary-orange, #ff9b44);
+      border-color: #d97717;
+      color: $white;
+      filter: none;
+      transform: none;
+    }
+  }
+
+  &--secondary {
+    background: var(--sep-primary-green, $primary-green);
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+      color: $white;
+    }
+
+    &:hover {
+      filter: brightness(0.92);
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &:active:not(.sep-btn--primary) {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

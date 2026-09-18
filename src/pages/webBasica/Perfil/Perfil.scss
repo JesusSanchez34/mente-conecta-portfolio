@@ -1,0 +1,323 @@
+@import '../../../assets/stylesBasica/variables';
+
+.perfil {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 26px 16px 48px;
+  color: var(--sep-text-primary, #333);
+
+  &--loading {
+    align-items: center;
+  }
+
+  &__deco {
+    position: absolute;
+    width: clamp(88px, 9vw, 140px);
+    opacity: var(--sep-deco-opacity, 0.5);
+    filter: var(--sep-deco-filter, none);
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    &--left  { left: clamp(8px, 5vw, 80px); }
+    &--right { right: clamp(8px, 5vw, 80px); transform: translateY(-50%) scaleX(-1); }
+  }
+
+  &__center {
+    width: 100%;
+    max-width: 620px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+  }
+
+  &__spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--sep-border, #e0e0e0);
+    border-top-color: var(--sep-primary-green, #53c055);
+    border-radius: 50%;
+    animation: perfil-spin 0.8s linear infinite;
+  }
+
+  &__avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--sep-surface, #fff);
+    border: 6px solid #9b1f8e;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9b1f8e;
+    overflow: hidden;
+    svg { width: 54px; height: 54px; stroke-width: 2.1; }
+    margin-bottom: 2px;
+  }
+
+  &__avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__nombre {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--sep-text-primary, #333);
+    margin: 0;
+  }
+
+  &__fecha {
+    font-size: 0.74rem;
+    color: #202020;
+    background: #fff;
+    border-radius: 999px;
+    padding: 5px 13px;
+    margin: 0 0 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  }
+
+  &__card {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 0;
+    padding: 20px 12px 0;
+    border: 0;
+    border-top: 2px solid var(--sep-primary-orange, #ff9b44);
+    box-shadow: none;
+  }
+
+  &__section-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--sep-text-primary, #333);
+    margin: 0 0 16px;
+  }
+
+  &__field { margin-bottom: 10px; }
+
+  &__field-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 7px;
+    color: var(--sep-text-secondary, #555);
+    font-size: 0.76rem;
+    font-weight: 600;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: var(--sep-primary-orange, #ff9b44);
+    }
+  }
+
+  &__input-wrap {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid var(--sep-primary-orange, #FF9B44);
+    border-radius: 10px;
+    padding: 11px 13px;
+    background: var(--sep-input-bg, #fff);
+
+    &--error {
+      border-color: #e05252;
+      background: var(--sep-error-bg, #fff4f4);
+    }
+  }
+
+  &__input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--sep-text-primary, #333);
+    width: 100%;
+    &::placeholder { color: var(--sep-placeholder, #bbb); }
+  }
+
+  &__field-error {
+    margin: 4px 0 0;
+    color: #e05252;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  &__btn {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    transition: opacity 0.2s;
+    &:hover { opacity: 0.85; }
+    &:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    &--guardar {
+      background: var(--sep-neutral-button-bg, #8e8e8e);
+      color: #fff;
+    }
+
+    &--logout {
+      background: #e53935;
+      color: #fff;
+      svg { width: 18px; height: 18px; }
+    }
+
+    svg { width: 17px; height: 17px; flex: 0 0 auto; }
+  }
+}
+
+body.sep-dark-mode .login-layout .perfil {
+  &__avatar {
+    background: #000;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &__fecha {
+    background: #fff;
+    color: #111;
+  }
+}
+
+@keyframes perfil-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+  .perfil {
+    padding: 18px 12px 34px;
+
+    &__deco {
+      width: 72px;
+      opacity: 0.34;
+    }
+
+    &__deco--left { left: 6px; }
+    &__deco--right { right: 6px; }
+
+    &__card {
+      padding: 18px 0 0;
+    }
+
+    &__btn {
+      min-height: 44px;
+      line-height: 1.2;
+      white-space: normal;
+    }
+
+    &__nombre,
+    &__fecha,
+    &__section-title,
+    &__input {
+      overflow-wrap: anywhere;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .perfil {
+    padding: 32px clamp(28px, 4vw, 72px) 52px;
+
+    &__deco {
+      width: clamp(150px, 10vw, 190px);
+      &--left  { left: clamp(72px, 6vw, 130px); }
+      &--right { right: clamp(72px, 6vw, 130px); }
+    }
+
+    &__center {
+      max-width: clamp(680px, 42vw, 780px);
+      margin-block: auto;
+      gap: 12px;
+    }
+
+    &__avatar {
+      width: 108px;
+      height: 108px;
+      svg { width: 60px; height: 60px; }
+    }
+
+    &__nombre {
+      font-size: clamp(1.15rem, 1.05vw, 1.3rem);
+    }
+
+    &__fecha {
+      padding: 6px 16px;
+      font-size: clamp(0.8rem, 0.72vw, 0.9rem);
+    }
+
+    &__card {
+      padding: 24px 16px 0;
+    }
+
+    &__section-title {
+      font-size: clamp(0.98rem, 0.88vw, 1.08rem);
+      margin-bottom: 18px;
+    }
+
+    &__field {
+      margin-bottom: 12px;
+    }
+
+    &__field-label {
+      font-size: clamp(0.82rem, 0.76vw, 0.94rem);
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__input-wrap {
+      min-height: 50px;
+      padding: 12px 16px;
+    }
+
+    &__input {
+      font-size: clamp(0.94rem, 0.84vw, 1.05rem);
+    }
+
+    &__btn {
+      min-height: 50px;
+      padding: 13px 16px;
+      font-size: clamp(0.98rem, 0.86vw, 1.08rem);
+    }
+  }
+}
+
+@media (min-width: 1440px) and (min-height: 900px) {
+  .perfil {
+    padding-block: 42px 60px;
+
+    &__avatar {
+      width: 116px;
+      height: 116px;
+    }
+  }
+}

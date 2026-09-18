@@ -1,0 +1,360 @@
+.registro-fullscreen-container {
+    background-color: #FFF9F9; 
+    width: 100vw;              
+    min-height: calc(100vh - 80px); 
+    padding: 30px 40px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    .registro-header {
+        display: grid;
+        grid-template-columns: 50px 1fr 50px; 
+        align-items: center;
+        width: 100%;
+        max-width: 1400px;
+        margin-bottom: 40px;
+        padding-bottom: 15px;
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin: 0;
+            text-align: center; 
+            font-weight: 400;
+        }
+
+        .btn-icon-minimal {
+            background: #FFF;
+            border: 1px solid #E2E2E2;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 8px;
+            color: #555;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+
+            &:hover {
+                background: #F9F9F9;
+                border-color: #CCCCCC;
+                color: #000;
+            }
+        }
+
+        .back-arrow { justify-self: start; }
+        .home-icon { justify-self: end; }
+    }
+
+    &.legal-flow-container {
+        max-width: 100vw;
+        height: 100vh;
+        overflow: hidden; 
+    }
+
+    .legal-card {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(125, 72, 151, 0.05);
+        border: 1px solid #E5D6EA;
+        width: 100%;
+        max-width: 850px; 
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+
+        .terminos-contenido {
+            padding: 25px 45px 40px 45px;
+            overflow-y: auto;
+            text-align: left;
+            color: #3b424a; 
+            line-height: 1.75; 
+
+            h1, h2, h3 {
+                color: #7D4897; 
+                font-size: 1.5rem; 
+                margin-top: 32px;
+                margin-bottom: 16px;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+
+                &:first-child {
+                    margin-top: 0 !important;
+                }
+            }
+
+            p {
+                font-size: 1.15rem; 
+                margin-bottom: 20px;
+                color: #4a5568;
+
+                &:first-child {
+                    margin-top: 0 !important;
+                }
+            }
+
+            ul, ol {
+                margin-bottom: 20px;
+                padding-left: 24px;
+                
+                li {
+                    font-size: 1.15rem; 
+                    margin-bottom: 10px;
+                    color: #4a5568;
+                }
+            }
+
+            strong {
+                color: #1a202c;
+                font-weight: 600;
+                font-size: 1.18rem; 
+            }
+        }
+        
+        &.proposito-card {
+            max-width: 700px;
+            .terminos-contenido {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                p {
+                    font-size: 1.1rem;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .legal-footer-controls {
+        width: 100%;
+        max-width: 850px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .legal-checkbox-container {
+            background: #FFF;
+            padding: 12px 30px;
+            border-radius: 35px; 
+            border: 1px solid #D1D1D1;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                border-color: #7D4897;
+                background-color: #FAF6FB;
+            }
+
+            input[type="checkbox"] {
+                cursor: pointer;
+                accent-color: #7D4897; 
+                width: 16px;
+                height: 16px;
+            }
+
+            span {
+                font-size: 0.95rem;
+                color: #444;
+                margin-left: 10px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .btn-terminos {
+        background-color: #F6EFF7;
+        color: #7D4897;
+        border: 1px solid #E5D6EA;
+        border-radius: 30px;
+        padding: 14px 80px; 
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover:not(:disabled) {
+            background-color: #7D4897;
+            color: #FFF;
+        }
+
+        &:disabled {
+            background-color: #EAEAEA;
+            border-color: #DCDCDC;
+            color: #999;
+            cursor: not-allowed;
+        }
+    }
+
+    .terminos-contenido::-webkit-scrollbar {
+        width: 8px;
+    }
+    .terminos-contenido::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .terminos-contenido::-webkit-scrollbar-thumb {
+        background: #E5D6EA;
+        border-radius: 10px;
+        &:hover { background: #7D4897; }
+    }
+
+    .registro-form-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 35px 40px; 
+        align-items: end;
+        width: 100%;
+        max-width: 1400px; 
+        margin: 0 auto;
+
+        .input-group {
+            position: relative;
+            width: 100%;
+
+            input {
+                width: 100%;
+                padding: 15px 45px 15px 22px; 
+                border: 1px solid #D1D1D1;
+                border-radius: 35px !important; 
+                font-size: 1.05rem;
+                outline: none;
+                background: #FFF;
+                box-sizing: border-box;
+                transition: border-color 0.2s;
+
+                &:focus {
+                    border-color: #6C42BF;
+                }
+
+                &::-ms-reveal,
+                &::-ms-clear {
+                    display: none !important; 
+                }
+            }
+        }
+
+        .curp-group {
+            .char-counter {
+                position: absolute;
+                right: 25px;
+                bottom: -20px;
+                font-size: 0.8rem;
+                color: #777;
+            }
+        }
+
+        .password-group {
+            position: relative;
+            
+            input {
+                border-radius: 35px !important; 
+            }
+            
+            .toggle-password-btn {
+                position: absolute;
+                right: 22px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                opacity: 0.7;
+                transition: opacity 0.2s;
+
+                &:hover { opacity: 1; }
+            }
+        }
+
+        .select-group {
+            position: relative;
+            width: 100%;
+            border-bottom: 2px solid #6C42BF;
+            padding: 5px 10px;
+
+            select {
+                width: 100%;
+                border: none;
+                background: transparent;
+                font-size: 1.05rem;
+                color: #444;
+                outline: none;
+                cursor: pointer;
+                padding: 10px 0;
+            }
+        }
+
+        .form-footer-full {
+            grid-column: span 3; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 35px;
+
+            .btn-submit-registro {
+                background-color: #F6EFF7;
+                color: #7D4897;
+                border: 1px solid #E5D6EA;
+                border-radius: 30px;
+                padding: 15px 85px; 
+                font-size: 1.15rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background-color: #7D4897;
+                    color: #FFF;
+                }
+            }
+
+            .legals-text {
+                font-size: 0.85rem;
+                color: #666;
+                text-align: center;
+                margin-top: 20px;
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .registro-fullscreen-container {
+        padding: 20px;
+
+        .legal-card {
+            height: 60vh;
+            .terminos-contenido {
+                padding: 20px;
+            }
+        }
+
+        .registro-form-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+
+            .form-footer-full {
+                grid-column: span 1;
+                .btn-submit-registro {
+                    width: 100%;
+                    padding: 14px;
+                }
+            }
+        }
+    }
+}

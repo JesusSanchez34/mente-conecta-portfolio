@@ -1,0 +1,142 @@
+.nx-wrapper-group {
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+
+  .nx-input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 35px;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+    padding: 0 22px;
+    box-sizing: border-box;
+
+    &:focus-within {
+      border-color: #6c42bf;
+      box-shadow: 0 0 0 3px rgba(108, 66, 191, 0.1);
+    }
+
+    // &.nx-input-error {
+    //   border-color: #dc3545 !important;
+    // }
+  }
+
+  .nx-field {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 1.05rem;
+    color: #444;
+    outline: none;
+    padding: 15px 0;
+
+    &::placeholder {
+      color: #999;
+    }
+    &::-ms-reveal,
+    &::-ms-clear {
+      display: none !important;
+    }
+  }
+
+  .nx-select {
+    cursor: pointer;
+  }
+
+  .nx-icon-left {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    color: #666;
+  }
+
+  .nx-right-element {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .nx-native-tooltip {
+    position: absolute;
+    top: calc(100% - 15px);
+    left: 50%; 
+    transform: translateX(
+      -50%
+    ); 
+    background: #ffffff;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    z-index: 10;
+    font-family: sans-serif;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%; 
+      border: solid transparent;
+      height: 0;
+      width: 0;
+      pointer-events: none;
+    }
+
+    &::before {
+      border-color: rgba(200, 200, 200, 0);
+      border-bottom-color: #c8c8c8;
+      border-width: 8px;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #ffffff;
+      border-width: 7px;
+      transform: translateX(-50%);
+    }
+
+    .nx-tooltip-icon {
+      background-color: #f39c12; 
+      color: white;
+      font-weight: bold;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      margin-right: 8px;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .nx-tooltip-message {
+      color: #333333;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.container-card-info-1 {
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
+    text-decoration: none;
+    cursor: text;
+  }
+  min-width: 90%;
+  max-width: 90%;
+
+  /* Main card container - SIN colores específicos */
+  .risk-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 32px 0;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    border-left: 5px solid #A0AEC0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* Nivel 1: Riesgo Bajo (Azul - Seguridad) */
+  .risk-card.risk-level-1 {
+    border-left-color: #3182CE;
+  }
+
+  .risk-card.risk-level-1 .card-icon-container-navigation {
+    background-color: #BEE3F8;
+  }
+
+  .risk-card.risk-level-1 .card-icon-navigation {
+    color: #2B6CB0;
+  }
+
+  .risk-card.risk-level-1 .patient-count {
+    color: #3182CE;
+  }
+
+  /* Nivel 2: Riesgo Medio (Amarillo - Precaución) */
+  .risk-card.risk-level-2 {
+    border-left-color: #D69E2E;
+  }
+
+  .risk-card.risk-level-2 .card-icon-container-navigation {
+    background-color: #FEFCBF;
+  }
+
+  .risk-card.risk-level-2 .card-icon-navigation {
+    color: #B7791F;
+  }
+
+  .risk-card.risk-level-2 .patient-count {
+    color: #D69E2E;
+  }
+
+  /* Nivel 3: Riesgo Alto (Rojo - Alerta) */
+  .risk-card.risk-level-3 {
+    border-left-color: #E53E3E;
+  }
+
+  .risk-card.risk-level-3 .card-icon-container-navigation {
+    background-color: #FED7D7;
+  }
+
+  .risk-card.risk-level-3 .card-icon-navigation {
+    color: #C53030;
+  }
+
+  .risk-card.risk-level-3 .patient-count {
+    color: #E53E3E;
+  }
+
+
+  .risk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-header-navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .card-icon-container-navigation {
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+  }
+
+  .card-icon-navigation {
+    font-size: 24px;
+  }
+
+  .card-title-navigation {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2D3748;
+    margin: 0;
+  }
+
+  .card-body-navigation {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .patient-count {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .card-subtitle-navigation {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-top: 8px;
+  }
+
+  .card-footer-navigation {
+    text-align: center;
+  }
+
+  .footer-link-navigation {
+    color: #2B6CB0;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .risk-card:hover .footer-link-navigation {
+    text-decoration: underline;
+  }
+
+}

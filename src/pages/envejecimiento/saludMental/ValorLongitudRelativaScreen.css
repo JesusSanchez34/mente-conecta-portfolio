@@ -1,0 +1,199 @@
+.vlr-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #eef4f9;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.edad-celular-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    background: #eef4f9;
+    border-bottom: 1px solid #d0e0ef;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-left h2 {
+    font-size: 1.3rem;
+    color: #1a202c;
+    margin: 0;
+}
+
+.back-icon {
+    font-size: 1.3rem;
+    color: #1a202c;
+    cursor: pointer;
+}
+
+.edad-celular-info-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    color: #2196F3;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.vlr-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.vlr-input-display {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.vlr-floating-label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: #eef4f9;
+    padding: 0 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.vlr-input-value {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 400;
+}
+
+.vlr-formula-text {
+    font-size: 0.95rem;
+    color: #999;
+    text-align: center;
+    margin: 0;
+    margin-top: -10px;
+}
+
+.vlr-gauge-container {
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.vlr-arrow {
+    position: absolute;
+    top: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: left 0.3s;
+    color: #333;
+}
+
+.vlr-gradient-bar {
+    height: 30px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #48bb78, #ed8936, #e53e3e);
+}
+
+.vlr-risk-box {
+    background: #f8dbdb; /* default slightly red background, we can just use #fff if we want, but screenshot has a slight pinkish tint or just white with red border. The screenshot looks like a light gray/white box with red border. */
+    background: #eef4f9; /* matching background but with border */
+    border: 1.5px solid;
+    border-radius: 6px;
+    padding: 20px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vlr-risk-lr-text {
+    font-size: 1.2rem;
+    color: #000;
+    margin: 0;
+    font-weight: 500;
+}
+
+.vlr-risk-title {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.vlr-risk-desc {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.vlr-note-box {
+    background: #e8f4fd;
+    border: 1px solid #b3d4fc;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.vlr-note-icon {
+    color: #2196F3;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.vlr-note-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #1976D2;
+    line-height: 1.4;
+}
+
+.vlr-loading,
+.vlr-no-data {
+    text-align: center;
+    color: #718096;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+.vlr-btn {
+    background: #1976D2;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 24px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: background 0.2s;
+    width: 200px;
+    align-self: center;
+}
+
+.vlr-btn:hover {
+    background: #1565C0;
+}

@@ -1,0 +1,141 @@
+.card-select-login {
+  display: flex; 
+  width: 100%;
+  justify-content: center;  
+  align-items: center;       
+  gap: 2rem;                 
+  flex-wrap: wrap;          
+  padding: 2rem 0; 
+  a {
+        all: unset;
+        text-decoration: none;
+    }         
+}
+
+/* ── ESTILOS PARA LA VISTA CARD ISEM DENTRO DEL SELECTOR ── */
+.isem-card-sel-view {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 0 10px;
+  animation: isemCardFadeIn 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes isemCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.isem-card-sel-header {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(4, 84, 123, 0.12);
+  margin-bottom: 1.25rem;
+}
+
+.isem-card-sel-header-img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.isem-card-sel-escudo-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: -50px auto 0.75rem; /* Efecto overlap flotante muy premium */
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 5px;
+  box-shadow: 0 6px 16px rgba(4, 84, 123, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.isem-card-sel-escudo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.isem-card-sel-title {
+  color: #04547B;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 0.5rem 0 0.15rem 0;
+  letter-spacing: -0.01em;
+}
+
+.isem-card-sel-subtitle {
+  color: #557d93;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.isem-card-sel-body {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(4, 84, 123, 0.08);
+  padding: 0.75rem;
+}
+
+.isem-card-sel-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed #d1dde5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.isem-card-sel-footer-img {
+  max-height: 24px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.isem-card-sel-footer-text {
+  color: #8aabbf;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* responsive adaptability */
+@media (max-width: 480px) {
+  .isem-card-sel-header-img {
+    max-height: 120px;
+  }
+  
+  .isem-card-sel-escudo-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-top: -45px;
+  }
+  
+  .isem-card-sel-title {
+    font-size: 1.15rem;
+  }
+}
+

@@ -1,0 +1,323 @@
+/* ===================================================
+   ResultadosPage.css — Pantalla de resultados (Diseño paridad apk)
+   =================================================== */
+
+.resultados-pantalla {
+    background: linear-gradient(180deg, #1e90ff 0%, #1565c0 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #ffffff;
+}
+
+.resultados-pantalla__container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    animation: successFadeIn 0.4s ease-out;
+}
+
+@keyframes successFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.resultados-pantalla__title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resultados-pantalla__subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: -1rem 0 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Lista de tarjetas */
+.resultados-pantalla__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Tarjeta individual de resultado */
+.resultado-item-card {
+    background: #ffffff; /* Premium white background for better contrast */
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resultado-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.resultado-item-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+.resultado-item-card__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.resultado-item-card__check-wrapper {
+    color: #0d9488; /* Emerald teal matching the check icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #f0fdf4;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.resultado-item-card__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.resultado-item-card__specialty {
+    color: #1e293b; /* Dark slate text */
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.resultado-item-card__score {
+    color: #64748b; /* Slate-500 */
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.resultado-item-card__status {
+    color: #0d9488; /* Green text 'LISTO' matching apk */
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* Badge de Riesgo (Semáforo) */
+.resultado-item-card__risk-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 1px solid;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* Descripción del Diagnóstico */
+.resultado-item-card__description {
+    background: #f8fafc; /* Very light cool grey */
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+    border-left: 4px solid #3b82f6; /* Modern blue accent line */
+}
+
+.resultado-item-card__description p {
+    color: #334155; /* Slate-700 */
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Sección de Especialistas Recomendados */
+.resultado-item-card__specialists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.25rem;
+}
+
+.resultado-item-card__specialists-title {
+    color: #0f172a; /* Slate-900 */
+    font-size: 0.88rem;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.2px;
+}
+
+.resultado-item-card__specialists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Tarjeta individual de Especialista */
+.specialist-item-card {
+    background: #f1f5f9; /* Slate-100 */
+    border-radius: 12px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.specialist-item-card:hover {
+    background: #e2e8f0;
+}
+
+.specialist-item-card__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #cbd5e1; /* Slate-300 avatar placeholder */
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.specialist-item-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.specialist-item-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.specialist-item-card__name {
+    color: #1e293b;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.specialist-item-card__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.specialist-item-card__contact-link {
+    color: #2563eb !important; /* Premium royal blue links */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.15s ease;
+}
+
+.specialist-item-card__contact-link:hover {
+    opacity: 0.8;
+}
+
+/* Botón 'Cuestionarios' central */
+.resultados-pantalla__btn-cuestionarios {
+    display: inline-block;
+    padding: 0.75rem 2.5rem;
+    background: #fff5f5 !important; /* Soft white/light pink matching image */
+    color: #1e90ff !important; /* Sky blue matching screenshot button text */
+    border: none !important;
+    border-radius: 30px !important;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.15s ease, opacity 0.2s, box-shadow 0.2s !important;
+    margin-top: 1.5rem;
+    outline: none;
+}
+
+.resultados-pantalla__btn-cuestionarios:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.resultados-pantalla__btn-cuestionarios:active {
+    transform: scale(1);
+}
+
+/* Carga y Error fallbacks */
+.resultados-pantalla__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.resultados-pantalla__spinner {
+    color: #ffffff;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.resultados-pantalla__error-card {
+    text-align: center;
+    background: #ffffff;
+    color: #333333;
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.resultados-pantalla__error-icon {
+    font-size: 3.5rem;
+    color: #ef4444;
+}
+
+.resultados-pantalla__error-card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.resultados-pantalla__error-card p {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1.5;
+}

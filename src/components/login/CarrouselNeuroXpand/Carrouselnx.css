@@ -1,0 +1,169 @@
+.carousel-fullscreen-bg-nx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #000;
+}
+
+.swiper-full-nx {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #8c5d8a !important; 
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #a777a5 !important; 
+    transform: scale(1.1); 
+}
+
+.fase1-slide-wrapper-nx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-overlay-nx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.slide-inner-content-nx {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+    padding: 2rem;
+    max-height: 85vh; 
+    overflow-y: auto; 
+    scrollbar-width: thin; 
+    scrollbar-color: #8c5d8a transparent; 
+}
+
+.slide-inner-content-nx::-webkit-scrollbar {
+    width: 8px; 
+}
+.slide-inner-content-nx::-webkit-scrollbar-track {
+    background: transparent; 
+}
+.slide-inner-content-nx::-webkit-scrollbar-thumb {
+    background: #8c5d8a; 
+    border-radius: 10px;
+}
+.slide-inner-content-nx::-webkit-scrollbar-thumb:hover {
+    background: #6a4468;
+}
+
+.slide-title-nx {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.slide-text-nx {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.secciones-list-nx {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+}
+
+.secciones-list-nx strong {
+    font-weight: 700;
+}
+
+.btn-carousel-action-nx {
+    background-color: #8c5d8a;
+    color: white;
+    border: none;
+    padding: 18px 80px; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    border-radius: 50px; 
+    cursor: pointer;
+    margin-top: 2rem; 
+    box-shadow: 0 8px 20px rgba(140, 93, 138, 0.4); 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.btn-carousel-action-nx:hover {
+    background-color: #6a4468;
+    transform: scale(1.05);
+}
+
+
+.time-cards-container-nx {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    width: 100%; 
+    max-width: 900px; 
+    margin: 2.5rem auto; 
+}
+
+.time-card-nx {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.8rem; 
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.time-card-nx:hover {
+    transform: scale(1.02);
+}
+
+.time-card-image-nx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.4);
+}
+
+.time-card-nx span {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.9);
+}

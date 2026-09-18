@@ -1,0 +1,7 @@
+.button-color {
+    background: linear-gradient(to bottom, #183b79, #284d91, #3860a9);
+}
+
+.button-color:hover {
+    background: linear-gradient(to bottom, #3276eb, #4883f1, #2267e7);
+}

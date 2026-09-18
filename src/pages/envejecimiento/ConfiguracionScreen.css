@@ -1,0 +1,231 @@
+.cfg-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #E6EDF2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 20px 60px;
+    box-sizing: border-box;
+}
+
+.cfg-wrapper {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.cfg-back-btn {
+    position: absolute;
+    top: 0;
+    left: -8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: #222;
+    display: flex;
+    align-items: center;
+}
+
+.cfg-back-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+.cfg-title-card {
+    background-color: #FFF9FA;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cfg-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+    text-align: center;
+}
+
+.cfg-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 20px 24px;
+}
+
+.cfg-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 14px;
+}
+
+.cfg-font-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.cfg-font-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 8px;
+    border: 2px solid #dce5ed;
+    border-radius: 10px;
+    background: #f7fafc;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    color: #333;
+    font-weight: 500;
+}
+
+.cfg-font-btn--active {
+    border-color: #355A8A;
+    background-color: #e8f0f9;
+}
+
+.cfg-font-btn:hover:not(.cfg-font-btn--active) {
+    border-color: #a0b8cb;
+}
+
+.cfg-font-btn-label {
+    font-size: 0.78rem;
+    color: #555;
+}
+
+.cfg-font-icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 28px;
+    line-height: 1;
+    font-weight: 700;
+    color: #333;
+}
+
+.cfg-font-a {
+    font-weight: 800;
+    line-height: 1;
+}
+
+.cfg-font-minus,
+.cfg-font-plus {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1px;
+}
+
+.cfg-font-tt {
+    gap: 1px;
+}
+
+.cfg-font-t-big {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.cfg-font-t-small {
+    font-size: 15px;
+    font-weight: 700;
+    align-self: flex-end;
+    margin-bottom: 1px;
+}
+
+.cfg-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cfg-toggle-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.cfg-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.cfg-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cfg-slider {
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 26px;
+    transition: background-color 0.2s;
+}
+
+.cfg-slider::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.cfg-switch input:checked + .cfg-slider {
+    background-color: rgba(74, 144, 226, 0.85);
+}
+
+.cfg-switch input:checked + .cfg-slider::before {
+    transform: translateX(22px);
+}
+
+.cfg-success {
+    font-size: 0.9rem;
+    color: #27ae60;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+}
+
+.cfg-save-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #355A8A;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.cfg-save-btn:hover {
+    background-color: #2a4a73;
+}

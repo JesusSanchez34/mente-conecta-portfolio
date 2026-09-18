@@ -1,0 +1,580 @@
+/* ===== COLORES CORPORATIVOS HOSPITAL ===== */
+:root {
+    --primary-hospital: #0F4C75;
+    --secondary-hospital: #1B6FA3;
+    --accent-hospital: #2E8BC0;
+    --light-hospital: #E8F1F5;
+    --border-hospital: #D0DFE8;
+    --text-dark: #1A1A1A;
+    --text-muted: #666666;
+    --danger-score: #DC3545;
+    --warning-score: #FFC107;
+    --success-score: #28A745;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container-graficas-sep {
+    padding: 24px;
+    background: linear-gradient(135deg, #f8fafb 0%, #eef2f5 100%);
+    min-height: 100vh;
+    margin-top: 0;
+}
+
+/* ===== HEADER GRÁFICAS ===== */
+.header-graficas {
+    text-align: center;
+    padding: 50px 40px;
+    background: linear-gradient(135deg, var(--primary-hospital) 0%, var(--secondary-hospital) 100%);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 48px rgba(15, 76, 117, 0.25);
+    margin-bottom: 50px;
+    animation: slideDown 0.6s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-graficas::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.header-graficas h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    position: relative;
+    z-index: 1;
+}
+
+.header-graficas .lead {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== FILTROS EN CASCADA ===== */
+.filtros-container-graficas {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    animation: fadeIn 0.5s ease-out 0.1s backwards;
+}
+
+.filtro-wrapper {
+    background: white;
+    padding: 28px 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(15, 76, 117, 0.12);
+    border: 2px solid var(--light-hospital);
+    width: 100%;
+    max-width: 320px;
+    animation: fadeInUp 0.5s ease-out;
+    flex: 1;
+    min-width: 260px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.filtro-wrapper:hover {
+    box-shadow: 0 12px 36px rgba(15, 76, 117, 0.18);
+    border-color: var(--secondary-hospital);
+    transform: translateY(-4px);
+}
+
+.filtro-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-hospital), var(--accent-hospital));
+    border-radius: 14px 14px 0 0;
+}
+
+.filtro-label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-hospital);
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.filtro-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-hospital);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F4C75' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+.filtro-select:hover {
+    border-color: var(--secondary-hospital);
+    box-shadow: 0 6px 20px rgba(27, 111, 163, 0.18);
+}
+
+.filtro-select:focus {
+    outline: none;
+    border-color: var(--accent-hospital);
+    box-shadow: 0 0 0 5px rgba(46, 139, 192, 0.12);
+    background-color: rgba(232, 241, 245, 0.5);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESUMEN DEL ESTADO ===== */
+.estado-resumen {
+    background: white;
+    padding: 36px 40px;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(15, 76, 117, 0.12);
+    border-left: 6px solid var(--secondary-hospital);
+    animation: fadeInUp 0.5s ease-out 0.15s backwards;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.estado-resumen::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, var(--light-hospital), rgba(232, 241, 245, 0));
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.resumen-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.resumen-titulo {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-hospital);
+    letter-spacing: -0.5px;
+}
+
+.resumen-subtitulo {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* ===== CONTENEDOR GRÁFICAS ===== */
+.graficas-container {
+    animation: fadeInUp 0.5s ease-out 0.2s backwards;
+}
+
+/* Grid responsivo para gráficas */
+.graficas-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 28px;
+    padding: 0;
+    margin: 0;
+}
+
+.grafica-card {
+    width: 100%;
+}
+
+/* ===== TARJETAS DE GRÁFICAS ===== */
+.grafica-card .h-100 {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(15, 76, 117, 0.12);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: cardEnter 0.5s ease-out;
+    position: relative;
+    border: 2px solid var(--border-hospital);
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    min-height: 480px;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Barra superior de color */
+.grafica-card .h-100::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--secondary-hospital) 0%, var(--accent-hospital) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+/* Efecto hover */
+.grafica-card .h-100:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 24px 48px rgba(15, 76, 117, 0.22);
+    border-color: var(--secondary-hospital);
+}
+
+.grafica-card .h-100:hover::before {
+    transform: scaleX(1);
+}
+
+.grafica-card .recharts-surface {
+    overflow: visible !important;
+    filter: drop-shadow(0 1px 3px rgba(15, 76, 117, 0.08)) !important;
+}
+
+/* Estilo para PolarGrid */
+.grafica-card .recharts-polar-grid-horizontal line,
+.grafica-card .recharts-polar-grid-concentric-polygon {
+    stroke: var(--border-hospital) !important;
+    stroke-width: 2 !important;
+    opacity: 0.9 !important;
+}
+
+/* Estilo para los ejes polares */
+.grafica-card .recharts-polar-angle-axis-tick {
+    fill: var(--primary-hospital) !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    opacity: 0.95 !important;
+}
+
+.grafica-card .recharts-polar-angle-axis-tick text {
+    fill: var(--primary-hospital) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+/* Estilo para PolarRadiusAxis */
+.grafica-card .recharts-polar-radius-axis-tick {
+    fill: var(--text-muted) !important;
+    font-size: 12px !important;
+    opacity: 0.75 !important;
+}
+
+/* Líneas de datos - Radar */
+.grafica-card .recharts-radar {
+    filter: drop-shadow(0 3px 8px rgba(15, 76, 117, 0.18)) !important;
+}
+
+.grafica-card .recharts-radar-dot {
+    fill: var(--accent-hospital) !important;
+    stroke: white !important;
+    stroke-width: 3 !important;
+    opacity: 0.95 !important;
+    transition: all 0.3s ease !important;
+    r: 5 !important;
+}
+
+.grafica-card .recharts-radar-dot:hover {
+    opacity: 1 !important;
+    r: 7 !important;
+    filter: drop-shadow(0 2px 8px rgba(46, 139, 192, 0.6)) !important;
+}
+
+/* Línea del radar */
+.grafica-card .recharts-radar-line {
+    stroke: var(--accent-hospital) !important;
+    stroke-width: 3 !important;
+    fill: var(--accent-hospital) !important;
+    fill-opacity: 0.12 !important;
+    opacity: 0.95 !important;
+    filter: drop-shadow(0 2px 4px rgba(46, 139, 192, 0.25)) !important;
+}
+
+/* Tooltip personalizado */
+.grafica-card .recharts-tooltip-wrapper {
+    z-index: 10 !important;
+}
+
+.grafica-card .recharts-default-tooltip {
+    background: white !important;
+    border: 2.5px solid var(--secondary-hospital) !important;
+    border-radius: 10px !important;
+    padding: 14px 18px !important;
+    box-shadow: 0 10px 32px rgba(15, 76, 117, 0.25) !important;
+}
+
+.grafica-card .recharts-tooltip-label {
+    color: var(--primary-hospital) !important;
+    font-weight: 800 !important;
+    margin-bottom: 6px !important;
+    font-size: 14px !important;
+}
+
+.grafica-card .recharts-tooltip-item {
+    color: var(--primary-hospital) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+}
+
+/* ===== ANIMACIONES RECHARTS ===== */
+@keyframes radarPulse {
+    0%, 100% {
+        filter: drop-shadow(0 3px 8px rgba(15, 76, 117, 0.18));
+    }
+    50% {
+        filter: drop-shadow(0 6px 16px rgba(15, 76, 117, 0.3));
+    }
+}
+
+.grafica-card .recharts-radar:hover {
+    animation: radarPulse 0.6s ease-in-out;
+}
+
+/* ===== RESPONSIVE PARA GRÁFICAS ===== */
+@media (max-width: 1200px) {
+    .graficas-grid-responsive {
+        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+        gap: 26px;
+    }
+
+    .grafica-card h4 {
+        font-size: 1.25rem;
+        padding: 14px 14px 8px 14px !important;
+    }
+
+    .grafica-card .recharts-wrapper {
+        height: 420px !important;
+    }
+
+    .grafica-card .recharts-responsive-container {
+        height: 420px !important;
+    }
+
+    .grafica-card .h-100 {
+        min-height: 520px;
+    }
+
+    .grafica-card .recharts-polar-angle-axis-tick {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .graficas-grid-responsive {
+        grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+        gap: 24px;
+    }
+
+    .grafica-card h4 {
+        font-size: 1.15rem;
+        padding: 13px 13px 7px 13px !important;
+    }
+
+    .grafica-card .recharts-wrapper {
+        height: 400px !important;
+    }
+
+    .grafica-card .recharts-responsive-container {
+        height: 400px !important;
+    }
+
+    .grafica-card .recharts-polar-angle-axis-tick {
+        font-size: 10px !important;
+    }
+
+    .grafica-card .h-100 {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .graficas-grid-responsive {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 20px;
+    }
+
+    .grafica-card h4 {
+        font-size: 1.1rem;
+        padding: 13px 13px 7px 13px !important;
+    }
+
+    .grafica-card .h-100 {
+        box-shadow: 0 6px 20px rgba(15, 76, 117, 0.1);
+        min-height: 470px;
+    }
+
+    .grafica-card .recharts-wrapper {
+        height: 380px !important;
+    }
+
+    .grafica-card .recharts-responsive-container {
+        height: 380px !important;
+    }
+
+    .grafica-card .recharts-polar-angle-axis-tick {
+        font-size: 10px !important;
+    }
+
+    .grafica-card .recharts-polar-radius-axis-tick {
+        font-size: 10px !important;
+    }
+
+    .grafica-card .recharts-radar-dot {
+        r: 4 !important;
+    }
+
+    .grafica-card .recharts-radar-dot:hover {
+        r: 6 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .graficas-grid-responsive {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .grafica-card h4 {
+        font-size: 1.1rem;
+        padding: 12px 12px 6px 12px !important;
+    }
+
+    .grafica-card h4::before {
+        width: 45px;
+        height: 3px;
+    }
+
+    .grafica-card .h-100 {
+        border-radius: 12px;
+        min-height: 440px;
+    }
+
+    .grafica-card .recharts-wrapper {
+        height: 350px !important;
+    }
+
+    .grafica-card .recharts-responsive-container {
+        height: 350px !important;
+    }
+
+    .grafica-card .recharts-polar-angle-axis-tick {
+        font-size: 10px !important;
+    }
+
+    .grafica-card .recharts-radar-dot {
+        r: 3 !important;
+        stroke-width: 2 !important;
+    }
+
+    .grafica-card .recharts-radar-dot:hover {
+        r: 5 !important;
+    }
+}
+
+/* ===== LOADING STATE ===== */
+.loading-container-graficas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px;
+    min-height: 600px;
+}
+
+.loading-spinner-graficas {
+    width: 70px;
+    height: 70px;
+    border: 5px solid var(--light-hospital);
+    color: var(--primary-hospital);
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text-graficas {
+    margin-top: 32px;
+    color: var(--primary-hospital);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

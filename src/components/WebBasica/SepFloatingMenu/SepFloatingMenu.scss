@@ -1,0 +1,116 @@
+.sep-floating-menu {
+  position: fixed;
+  right: clamp(18px, 3vw, 40px);
+  bottom: clamp(18px, 3vw, 32px);
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.sep-floating-menu__items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.sep-floating-menu__item,
+.sep-floating-menu__toggle {
+  width: 47px;
+  height: 47px;
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(27, 60, 48, 0.26);
+  cursor: pointer;
+  transition: transform 0.16s ease, filter 0.16s ease;
+}
+
+.sep-floating-menu__item:hover,
+.sep-floating-menu__toggle:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+.sep-floating-menu__item svg,
+.sep-floating-menu__toggle svg {
+  width: 29px;
+  height: 29px;
+}
+
+.sep-floating-menu__toggle {
+  background: #168b25;
+}
+
+body.sep-dark-mode .sep-floating-menu__item,
+body.sep-dark-mode .sep-floating-menu__toggle {
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.38);
+}
+
+@media (min-width: 1440px) {
+  .sep-floating-menu {
+    right: clamp(40px, 3vw, 64px);
+    bottom: clamp(28px, 3vw, 48px);
+    gap: clamp(12px, 1.2vw, 16px);
+  }
+
+  .sep-floating-menu__items {
+    gap: clamp(12px, 1.2vw, 16px);
+  }
+
+  .sep-floating-menu__item,
+  .sep-floating-menu__toggle {
+    width: clamp(56px, 3.2vw, 64px);
+    height: clamp(56px, 3.2vw, 64px);
+    border-radius: 9px;
+  }
+
+  .sep-floating-menu__item svg,
+  .sep-floating-menu__toggle svg {
+    width: clamp(32px, 1.9vw, 38px);
+    height: clamp(32px, 1.9vw, 38px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sep-floating-menu {
+    right: 18px;
+    bottom: 18px;
+    gap: 10px;
+  }
+
+  .sep-floating-menu__items {
+    gap: 10px;
+  }
+
+  .sep-floating-menu__item,
+  .sep-floating-menu__toggle {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+  }
+
+  .sep-floating-menu__item svg,
+  .sep-floating-menu__toggle svg {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+@media (max-width: 390px) {
+  .sep-floating-menu {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .sep-floating-menu__item,
+  .sep-floating-menu__toggle {
+    width: 48px;
+    height: 48px;
+  }
+}

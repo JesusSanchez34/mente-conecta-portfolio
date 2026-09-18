@@ -1,0 +1,57 @@
+.validar-codigo-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 20px;
+    padding-bottom: 20vh;
+}
+
+.validar-codigo-header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centered without back button */
+    padding: 20px 15px;
+    background-color: transparent;
+}
+
+.validar-codigo-header h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a202c;
+    margin: 0;
+}
+
+.validar-codigo-otp-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+    gap: 8px; /* Pequeña separación */
+}
+
+.validar-codigo-input {
+    width: 50px;
+    height: 68px;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px; /* Slightly rounded squares */
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2d3748;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.validar-codigo-input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+/* Reusing .forgot-pwd-bg, .forgot-pwd-text, .forgot-pwd-btn from ForgotPassword.css 
+   We will import that CSS or just rely on the fact they are loaded globally, 
+   but it's better to explicitly add specific classes here if needed, or just reuse the class names.
+*/

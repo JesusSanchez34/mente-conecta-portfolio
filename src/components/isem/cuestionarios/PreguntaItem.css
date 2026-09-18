@@ -1,0 +1,47 @@
+.pregunta-item__card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 16px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #ede8e8;
+  box-shadow: 0 1px 4px rgba(107, 58, 92, 0.06);
+}
+
+.pregunta-item__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.pregunta-item__text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2c1f2c;
+  line-height: 1.45;
+  margin: 0;
+  flex: 1;
+}
+
+.pregunta-item__info-badge {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #7c5c6e;
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 1px;
+  transition: color 0.15s ease;
+}
+
+.pregunta-item__info-badge:hover {
+  color: #6b3a5c;
+}
+
+.pregunta-item__divider {
+  border: none;
+  border-top: 1px solid #ede8e8;
+  margin: 10px 0 0;
+}

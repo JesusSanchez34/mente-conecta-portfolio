@@ -1,0 +1,25 @@
+.customTabs {
+  border-bottom: none !important;
+}
+
+.customTabs :global(.nav-link) {
+  border-radius: 12px !important;
+  margin-right: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #5f6c7b;
+  background-color: #f3f6fa;
+  border: none !important;
+  transition: all 0.25s ease;
+}
+
+.customTabs :global(.nav-link:hover) {
+  background-color: #e4ecf7;
+  color: #1c6ed5;
+}
+
+.customTabs :global(.nav-link.active) {
+  background: linear-gradient(135deg, #1c6ed5, #4dabf7);
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}

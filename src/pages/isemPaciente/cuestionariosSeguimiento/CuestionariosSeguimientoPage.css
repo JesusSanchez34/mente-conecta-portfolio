@@ -1,0 +1,313 @@
+/* ===================================================
+   CuestionariosSeguimientoPage.css
+   "Sala de espera" — tarjetas de cuestionarios derivados.
+   Paleta: marrón tierra (#a38271) idéntica a CuestionarioCard,
+   fondo claro, animación de entrada.
+   =================================================== */
+
+/* ── Contenedor raíz ──────────────────────────────── */
+.seguimiento-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: seguimientoFadeIn 0.4s ease-out;
+}
+
+@keyframes seguimientoFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header ───────────────────────────────────────── */
+.seguimiento-page__header {
+  padding-bottom: 24px;
+}
+
+.seguimiento-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #6b3a5c;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.seguimiento-page__back:hover {
+  background-color: rgba(107, 58, 92, 0.06);
+  color: #962346;
+}
+
+.seguimiento-page__back-icon {
+  font-size: 1.2rem;
+}
+
+.seguimiento-page__title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #333;
+  margin: 0;
+}
+
+/* ── Lista de tarjetas ────────────────────────────── */
+.seguimiento-page__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+/* ── Tarjeta individual ───────────────────────────── */
+.seguimiento-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 22px 24px;
+  background: #a38271;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.seguimiento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.seguimiento-card:active {
+  transform: translateY(0);
+}
+
+/* Estado completado: sin cambio de color de fondo (igual al diseño) */
+.seguimiento-card--completed {
+  background: #a38271;
+}
+
+/* Nombre del cuestionario */
+.seguimiento-card__nombre {
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex: 1;
+  padding-right: 16px;
+}
+
+/* Área de acción (ícono + texto) */
+.seguimiento-card__action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.seguimiento-card__icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.seguimiento-card:hover .seguimiento-card__icon-wrapper {
+  transform: scale(1.1);
+}
+
+/* Ícono pendiente (reloj) */
+.seguimiento-card__icon--pending {
+  color: #fff;
+}
+
+.seguimiento-card:not(.seguimiento-card--completed) .seguimiento-card__icon-wrapper {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Ícono completado (check verde) */
+.seguimiento-card--completed .seguimiento-card__icon-wrapper {
+  background: transparent;
+}
+
+.seguimiento-card__icon--check {
+  color: #00e676;
+}
+
+.seguimiento-card__action-text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ── Footer con botón Ver Resultados ──────────────── */
+.seguimiento-page__footer {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 2rem;
+}
+
+.seguimiento-page__btn-resultados {
+  background: #6b3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(107, 58, 92, 0.35);
+  transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease, opacity 0.2s ease;
+  letter-spacing: 0.2px;
+}
+
+.seguimiento-page__btn-resultados:hover:not(:disabled) {
+  background: #962346;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(107, 58, 92, 0.45);
+}
+
+.seguimiento-page__btn-resultados:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+/* Estado deshabilitado: visualmente apagado, cursor no permitido */
+.seguimiento-page__btn-resultados:disabled {
+  background: #c4a8ba;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.seguimiento-page__hint {
+  font-size: 0.82rem;
+  color: #9e8a9e;
+  text-align: center;
+  margin: 0;
+  padding: 0 16px;
+}
+
+/* ── Carga y error ────────────────────────────────── */
+.seguimiento-page__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 16px;
+}
+
+.seguimiento-page__spinner {
+  color: #6b3a5c !important;
+}
+
+.seguimiento-page__loading-text {
+  color: #6b5e6b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.seguimiento-page__error {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.seguimiento-page__error-text {
+  color: #c62828;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.seguimiento-page__btn-retry {
+  background: none;
+  border: 2px solid #6b3a5c;
+  color: #6b3a5c;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.seguimiento-page__btn-retry:hover {
+  background: rgba(107, 58, 92, 0.06);
+}
+
+.seguimiento-page__empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* ── Esqueleto shimmer (carga inicial) ────────────── */
+.seguimiento-card-skeleton {
+  height: 80px;
+  background: #fdfdfd;
+  border: 1px solid #f2edf0;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.seguimiento-card-skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 20%,
+    rgba(255, 255, 255, 0.9) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmerSeguimiento 1.5s infinite;
+}
+
+@keyframes shimmerSeguimiento {
+  100% { transform: translateX(100%); }
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 576px) {
+  .seguimiento-page {
+    padding: 1.25rem;
+  }
+
+  .seguimiento-page__title {
+    font-size: 1.25rem;
+  }
+
+  .seguimiento-card {
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  .seguimiento-card__nombre {
+    font-size: 0.82rem;
+  }
+}

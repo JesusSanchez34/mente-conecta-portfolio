@@ -1,0 +1,121 @@
+/* Overlay para oscurecer el fondo y evitar clics fuera (cuando barrierDismissible es false) */
+.alerta-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Contenedor base de las alertas */
+.alerta-modal-container {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Alerta Genérica: Bordes muy redondeados (como Flutter BorderRadius.circular(20)) */
+.alerta-modal-container.generica {
+    border-radius: 20px;
+}
+
+/* Alerta Aviso Médico: Bordes sutiles (BorderRadius.circular(10)) */
+.alerta-modal-container.aviso-medico {
+    border-radius: 10px;
+}
+
+/* Cabecera y Logo */
+.alerta-modal-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.alerta-modal-logo {
+    width: 60%;
+    max-width: 250px;
+    object-fit: contain;
+}
+
+/* Contenido (Títulos y Textos) */
+.alerta-modal-content {
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.alerta-modal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.alerta-modal-desc {
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Botones */
+.alerta-modal-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 20px 20px;
+}
+
+.alerta-modal-footer.dual {
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.alerta-btn-primary {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.2s;
+}
+
+.alerta-btn-primary:hover {
+    background-color: #1e88e5;
+}
+
+.alerta-btn-secondary {
+    background-color: white;
+    color: #2196F3;
+    border: 2px solid #2196F3;
+    padding: 15px 40px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.2s;
+}
+
+.alerta-btn-secondary:hover {
+    background-color: #f5f5f5;
+}

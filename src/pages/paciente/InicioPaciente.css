@@ -1,0 +1,1201 @@
+.patient-landing-container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #f5e3fc 0%, #e0c3fc 40%, #cde4ff 100%);
+    position: relative;
+    overflow-x: hidden;
+    padding: 2rem 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Banner */
+.patient-header {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 3.5rem;
+    z-index: 10;
+}
+
+.patient-header-card {
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 1.2rem 2.5rem;
+    box-shadow: 0 10px 30px rgba(142, 97, 219, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transform: translateY(0);
+    animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.patient-header-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+/* Main Cards Grid wrapper */
+.patient-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 1100px;
+    width: 100%;
+    z-index: 10;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Base Card Styles - Landscape view inside flex grid */
+.new-card {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(142, 97, 219, 0.12);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: #ffffff;
+}
+
+.new-card:hover {
+    transform: translateY(-12px);
+}
+
+/* Colorful glowing borders matching each card category */
+.card-personal {
+    border: 5px solid #3da5d9;
+}
+
+.card-personal:hover {
+    box-shadow: 0 20px 35px rgba(61, 165, 217, 0.25);
+}
+
+.card-salud {
+    border: 5px solid #00a896;
+}
+
+.card-salud:hover {
+    box-shadow: 0 20px 35px rgba(0, 168, 150, 0.25);
+}
+
+.card-familiar {
+    border: 5px solid #9d4edd;
+}
+
+.card-familiar:hover {
+    box-shadow: 0 20px 35px rgba(157, 78, 221, 0.25);
+}
+
+/* Background image handling with scale transition */
+.card-bg-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.new-card:hover .card-bg-image {
+    transform: scale(1.08);
+}
+
+/* Dark gradient overlay for extreme readability of centered text */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.15) 0%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.75) 100%);
+    transition: background 0.4s ease;
+}
+
+.new-card:hover .card-overlay {
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.65) 100%);
+}
+
+/* Title text overlay positioned perfectly in the center */
+.card-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+/* Floating Action Button (FAB) */
+.patient-fab-btn {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+}
+
+.patient-fab-btn:hover {
+    background: #4a2893;
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(74, 40, 147, 0.4);
+}
+
+.patient-fab-btn:active {
+    transform: scale(0.95);
+}
+
+/* Floating Background Icons */
+.patient-floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.patient-floating-icon {
+    position: absolute;
+    color: #7c4dff;
+    opacity: 0.08;
+    transition: all 0.5s ease;
+}
+
+/* Icon Sizes & Placements with Custom Floating Durations */
+.p-icon-1 {
+    font-size: 8rem;
+    top: 15%;
+    left: 5%;
+    animation: float 12s ease-in-out infinite alternate;
+}
+
+.p-icon-2 {
+    font-size: 6rem;
+    top: 20%;
+    right: 8%;
+    animation: float 15s ease-in-out infinite alternate-reverse;
+}
+
+.p-icon-3 {
+    font-size: 7rem;
+    bottom: 25%;
+    left: 10%;
+    animation: float 14s ease-in-out infinite alternate;
+}
+
+.p-icon-4 {
+    font-size: 9rem;
+    bottom: 15%;
+    right: 6%;
+    animation: float 16s ease-in-out infinite alternate-reverse;
+}
+
+.p-icon-5 {
+    font-size: 5rem;
+    top: 45%;
+    left: 45%;
+    animation: float 18s ease-in-out infinite alternate;
+}
+
+.p-icon-6 {
+    font-size: 4rem;
+    bottom: 45%;
+    right: 45%;
+    animation: float 13s ease-in-out infinite alternate-reverse;
+}
+
+/* Keyframes animations */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(10px) rotate(-10deg);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .patient-landing-container {
+        padding: 1.5rem 1rem 5rem;
+    }
+
+    .patient-header {
+        margin-bottom: 2rem;
+    }
+
+    .patient-header-card {
+        padding: 1rem 1.5rem;
+        border-radius: 30px;
+    }
+
+    .patient-header-title {
+        font-size: 1.4rem;
+        letter-spacing: 0.05em;
+    }
+
+    .patient-options-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.8rem;
+    }
+
+    .new-card {
+        width: 100%;
+        max-width: 320px;
+        height: 180px;
+    }
+
+    .patient-fab-btn {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+/* Consentimiento Informado Premium Redesign Styles */
+
+.consent-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.consent-back-btn {
+    position: absolute;
+    left: 0;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    color: #4a2893;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.consent-back-btn:hover {
+    background-color: rgba(74, 40, 147, 0.08);
+    transform: scale(1.1);
+}
+
+.consent-header-icon {
+    font-size: 1.8rem;
+    color: #911d80;
+}
+
+.consent-view-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1.5rem;
+    z-index: 10;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.consent-paper-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 35px rgba(142, 97, 219, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Custom Scrollbar for the consent paper card */
+.consent-paper-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.consent-paper-card::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+.consent-paper-card::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 10px;
+}
+
+.consent-paper-card::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.consent-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.consent-section-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.consent-stripe {
+    width: 5px;
+    height: 24px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.stripe-blue-purple .consent-stripe {
+    background: linear-gradient(180deg, #5dade2 0%, #9b59b6 100%);
+}
+
+.stripe-purple-green .consent-stripe {
+    background: linear-gradient(180deg, #9b59b6 0%, #00c851 100%);
+}
+
+.stripe-green-orange .consent-stripe {
+    background: linear-gradient(180deg, #00c851 0%, #ff9800 100%);
+}
+
+.stripe-orange-blue .consent-stripe {
+    background: linear-gradient(180deg, #ff9800 0%, #5dade2 100%);
+}
+
+.consent-section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.consent-text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #4a5568;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Shaded box for Declaración de Consentimiento */
+.consent-declaration-box {
+    background: linear-gradient(90deg, rgba(93, 173, 226, 0.08) 0%, rgba(155, 89, 182, 0.08) 100%);
+    border-left: 5px solid #911d80;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.declaration-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.lock-icon-blue {
+    font-size: 1.2rem;
+    color: #5dade2;
+}
+
+.declaration-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0;
+}
+
+.declaration-body-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2d3748;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Checkbox Card styles */
+.consent-checkbox-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1.5px solid #07afb8;
+    box-shadow: 0 10px 25px rgba(7, 175, 184, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.consent-checkbox-card:hover {
+    box-shadow: 0 12px 30px rgba(7, 175, 184, 0.15);
+    transform: translateY(-2px);
+}
+
+.checkbox-label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+}
+
+.consent-checkbox-input {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #07afb8;
+}
+
+.checkbox-label-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3748;
+    user-select: none;
+}
+
+/* Loader / Spinner */
+.consent-spinner-inline {
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgba(7, 175, 184, 0.2);
+    border-radius: 50%;
+    border-top-color: #07afb8;
+    animation: spin 1s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Continue Button with gradient and animation */
+.consent-action-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.consent-continue-btn {
+    width: 100%;
+    max-width: 400px;
+    height: 55px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.consent-continue-btn.enabled {
+    background: linear-gradient(180deg, #07afb8 0%, #911d80 100%);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.consent-continue-btn.enabled:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(145, 29, 128, 0.35);
+}
+
+.consent-continue-btn.disabled {
+    background: linear-gradient(180deg, rgba(7, 175, 184, 0.4) 0%, rgba(145, 29, 128, 0.4) 100%);
+    cursor: not-allowed;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .consent-paper-card {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .consent-section-title {
+        font-size: 1.15rem;
+    }
+
+    .consent-text {
+        font-size: 0.95rem;
+    }
+
+    .checkbox-label-text {
+        font-size: 0.9rem;
+    }
+
+    .consent-continue-btn {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .consent-back-btn {
+        font-size: 1.1rem;
+    }
+}
+
+/* Simple Centered Consent Header Styles */
+.consent-simple-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+}
+
+.consent-back-btn-simple {
+    position: absolute;
+    left: 0;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #4a2893;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.consent-back-btn-simple:hover {
+    background-color: rgba(74, 40, 147, 0.08);
+    transform: scale(1.15);
+}
+
+.consent-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.consent-header-icon-simple {
+    font-size: 2.2rem;
+    color: #911d80;
+}
+
+.consent-title-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    .consent-simple-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .consent-title-text {
+        font-size: 1.4rem;
+    }
+
+    .consent-header-icon-simple {
+        font-size: 1.6rem;
+    }
+
+    .consent-back-btn-simple {
+        font-size: 1.25rem;
+    }
+}
+
+/* ===================================================
+   WELCOME / MODULES SCREEN STYLES
+   =================================================== */
+
+/* Container override */
+.patient-landing-container.welcome-screen-active {
+    padding: 0;
+    background: linear-gradient(160deg, #eef2ff 0%, #ede9fe 50%, #dbeafe 100%);
+    align-items: stretch;
+}
+
+/* ── Teal top header bar ── */
+.welcome-top-bar {
+    width: 100%;
+    background: #07afb8;
+    display: flex;
+    align-items: center;
+    padding: 1.1rem 1.5rem;
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(7, 175, 184, 0.3);
+}
+
+.welcome-back-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.welcome-back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.welcome-top-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    padding-right: 2rem; /* compensate back-btn */
+}
+
+/* ── Modules container: centered column ── */
+.welcome-modules-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 2rem 1.25rem 6rem;
+    width: 100%;
+    z-index: 10;
+    animation: fadeIn 0.7s ease-out;
+}
+
+/* ── Module card: colored bg, image inset-left, text right ── */
+.welcome-module-card {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    max-width: 380px;
+    min-height: 100px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-clip: padding-box;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s ease;
+    position: relative;
+    /* background-color set via inline style from JS */
+}
+
+.welcome-module-card:hover {
+    transform: translateY(-5px) scale(1.025);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* ── Image: square, rounded, floating inset ── */
+.module-img-wrapper {
+    flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    margin: 8px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.module-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Text section ── */
+.module-info {
+    flex: 1;
+    padding: 0.8rem 1rem 0.8rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+    text-align: center;
+}
+
+.module-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.07em;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.module-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+    line-height: 1.45;
+    font-weight: 400;
+}
+
+/* ── FAB menu button ── */
+.welcome-fab-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(180, 190, 220, 0.65);
+    backdrop-filter: blur(8px);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.welcome-fab-btn:hover {
+    background: rgba(7, 175, 184, 0.8);
+    transform: scale(1.1);
+    box-shadow: 0 10px 24px rgba(7, 175, 184, 0.35);
+}
+
+.welcome-fab-icon {
+    font-size: 1.4rem;
+    color: #1a2a4a;
+    line-height: 1;
+}
+
+.welcome-fab-btn:hover .welcome-fab-icon {
+    color: #ffffff;
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width: 480px) {
+    .welcome-top-bar {
+        padding: 0.9rem 1rem;
+    }
+
+    .welcome-top-title {
+        font-size: 1.1rem;
+        padding-right: 1.5rem;
+    }
+
+    .welcome-modules-container {
+        padding: 1.4rem 0.85rem 5rem;
+        gap: 0.9rem;
+    }
+
+    .welcome-module-card {
+        max-width: 100%;
+        border-radius: 18px;
+        min-height: 88px;
+    }
+
+    .module-img-wrapper {
+        width: 76px;
+        height: 76px;
+        margin: 7px;
+        border-radius: 11px;
+    }
+
+    .module-title {
+        font-size: 0.88rem;
+    }
+
+    .module-desc {
+        font-size: 0.76rem;
+    }
+
+    .welcome-fab-btn {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+    }
+}
+
+/* ── Responsive: tablet/desktop ── */
+@media (min-width: 600px) {
+    .welcome-modules-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem 6rem;
+        gap: 1.5rem;
+    }
+
+    .welcome-module-card {
+        flex: 1 1 320px;
+        max-width: 380px;
+        min-height: 110px;
+        border-radius: 24px;
+    }
+
+    .module-img-wrapper {
+        width: 100px;
+        height: 100px;
+        margin: 9px;
+        border-radius: 16px;
+    }
+
+    .module-title {
+        font-size: 1.05rem;
+    }
+
+    .module-desc {
+        font-size: 0.87rem;
+    }
+}
+
+/* =====================================================
+   SHARED INTRODUCTION MODAL STYLES (introModalData)
+   ===================================================== */
+.mca-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1.5rem;
+}
+
+.mca-modal-card {
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 520px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.animate-scale-up {
+    animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes scaleUp {
+    from { opacity: 0; transform: scale(0.88); }
+    to   { opacity: 1; transform: scale(1);    }
+}
+
+.mca-modal-header {
+    padding: 2.5rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.centered-header {
+    align-items: center;
+    text-align: center;
+}
+
+.modal-brain-logo-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(7, 175, 184, 0.12) 0%, rgba(145, 29, 128, 0.12) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(7, 175, 184, 0.25);
+}
+
+.modal-brain-logo {
+    font-size: 2.5rem;
+    color: #07afb8;
+}
+
+.mca-modal-title {
+    font-size: 1.35rem;
+    font-weight: 850;
+    color: #1f2937;
+    text-align: center;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.uppercase-title {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.mca-modal-body {
+    padding: 0.5rem 2.5rem 1.5rem;
+}
+
+.text-center-body {
+    text-align: center;
+}
+
+.questionnaire-instructions-text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #4b5563;
+    margin: 0;
+}
+
+.mca-modal-footer {
+    padding: 0.5rem 2rem 2.5rem;
+}
+
+.dual-buttons {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.modal-btn-action {
+    flex: 1;
+    height: 52px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cancel {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.btn-cancel:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-confirm-start {
+    background: linear-gradient(180deg, #07afb8 0%, #911d80 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(145, 29, 128, 0.22);
+}
+
+.btn-confirm-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(145, 29, 128, 0.32);
+}
+
+/* Floating background icon classes shared across pages */
+.patient-floating-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Welcome top bar shared */
+.welcome-top-bar {
+    width: 100%;
+    background: #07afb8;
+    display: flex;
+    align-items: center;
+    padding: 1.1rem 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 4px 16px rgba(7, 175, 184, 0.28);
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0;
+}
+
+.welcome-back-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    transition: opacity 0.2s;
+}
+
+.welcome-back-btn:hover {
+    opacity: 0.75;
+}
+
+.welcome-top-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* ── Sections loading overlay (shown while API fetches real section IDs) ── */
+.sections-loading-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.75);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.sections-spinner {
+    font-size: 1.2rem;
+    color: #07afb8;
+    animation: spin 0.9s linear infinite;
+}
+
+/* ══════════════════════════════════════════
+   MODO OSCURO — patient-dark-mode
+══════════════════════════════════════════ */
+.patient-dark-mode {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1030 50%, #0d1b2a 100%) !important;
+    color: #f1f5f9 !important;
+}
+
+.patient-dark-mode .patient-header-card,
+.patient-dark-mode .patient-consent-card,
+.patient-dark-mode .module-card,
+.patient-dark-mode .welcome-card-header,
+.patient-dark-mode .welcome-step-item {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #f1f5f9 !important;
+}
+
+.patient-dark-mode .patient-header-greeting,
+.patient-dark-mode .patient-header-name,
+.patient-dark-mode .module-title,
+.patient-dark-mode .module-desc,
+.patient-dark-mode .patient-section-title {
+    color: #f1f5f9 !important;
+}
+
+.patient-dark-mode .patient-floating-bg {
+    opacity: 0.15 !important;
+}
+
+/* ══════════════════════════════════════════
+   MODO DISLEXIA — patient-dyslexia
+══════════════════════════════════════════ */
+.patient-dyslexia,
+.patient-dyslexia * {
+    font-family: 'Open-Dyslexic', 'OpenDyslexic', 'Lexend', 'Arial', sans-serif !important;
+    letter-spacing: 0.04em;
+    word-spacing: 0.12em;
+    line-height: 1.75;
+}

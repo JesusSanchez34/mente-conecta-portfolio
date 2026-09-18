@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --color-fondo: #74D1FFC7;
+  --color-texto-negro: #000000;
+  --color-texto-blanco: #fffefe;
+  --color-texto-primario: #009688;
+  --color-botones-primario: #009688;
+  --color-botones-secundario: #4db6ac;
+  --color-elementos-extras: #4db6ac;
+  --color-texto-claro: #e0f2f1;
+  --color-lineas: #d9d9d9;
+  --color-fondo-intermedio: #4DB6AC57;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.landing-layout {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+}
+
+.landing-content {
+  flex: 1;
+}
+body.sep-dyslexia-font .login-layout * {
+  font-family: 'OpenDyslexic', sans-serif !important;
+}
+
+body {
+  font-size: 1rem;
+}

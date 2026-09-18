@@ -1,0 +1,192 @@
+.personalNX-container {
+    background: #f8f1f6;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.personalNX-header {
+    background: linear-gradient(135deg, #f3e8ff 0%, #ffffff 100%);
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e9d5ff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+    
+    h2 {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #4a1d6d; 
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        white-space: nowrap;
+    }    
+}
+
+.menu-icon-btn-personalNX {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    width: 5px; 
+
+    .bar {
+        width: 24px;
+        height: 3px;
+        background-color: #333333;
+        border-radius: 2px;
+    }
+    
+    &:hover .bar {
+        background-color: #8b4c95; 
+    }
+}
+
+.header-logo-container-personalNX {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 45px; 
+
+    img {
+        max-height: 40px;
+        max-width: 40px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.cards-container-personalNX {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.card-link-personalNX {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-item-personalNX {
+    position: relative;
+    border-radius: 20px; 
+    overflow: hidden;
+    height: 220px; 
+    width: 100%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
+    padding: 0 !important;
+    margin: 0;
+    transition: transform 0.2s ease;
+    isolation: isolate; 
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.card-item-personalNX img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-radius: 16px; 
+}
+
+.card-overlay-personalNX {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 16px; 
+}
+
+.card-overlay-personalNX h3 {
+    color: white;
+    font-size: 22px; 
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.border-azul       { border: 4px solid #3a86c8; }
+.border-verde      { border: 4px solid #2a9d8f; }
+.border-morado     { border: 4px solid #833ab4; }
+.border-amarillo   { border: 4px solid #e9c46a; }
+.border-azul-claro { border: 4px solid #4a90e2; } 
+.border-rojo       { border: 4px solid #e76f51; }
+.border-gris       { border: 4px solid rgba(0,0,0,0.06); }
+
+.loading-container-centered-personalNX {
+    position: fixed;
+    inset: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(255,255,255,0.6);
+}
+
+.loading-circle-centered-personalNX {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8b4c95;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+.loading-circle-centered-personalNX::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 6px solid rgba(139, 76, 149, 0.18);
+    border-top-color: #8b4c95;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- ESTILO PARA EL BOTÓN DE REGRESAR --- */
+.back-arrow-btn-personalNX {
+    border: none;
+    background: none;
+    font-size: 28px;
+    color: #8b4c95;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    padding: 0;
+    line-height: 1;
+    
+    &:hover {
+        transform: translateX(-4px);
+        opacity: 0.8;
+    }
+}

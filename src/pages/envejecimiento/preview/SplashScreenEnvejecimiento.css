@@ -1,0 +1,15 @@
+.env-splash-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Blanco puro según documentación */
+    overflow: hidden;
+}
+
+.env-splash-image {
+    width: 400px;
+    height: 400px;
+    object-fit: contain; /* Para que la imagen se ajuste dentro de los 400x400 sin distorsionarse */
+}

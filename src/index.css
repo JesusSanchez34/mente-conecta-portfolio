@@ -1,0 +1,921 @@
+html {
+  color-scheme: light;
+}
+
+.login-layout,
+.registro-sep-page {
+  --sep-primary-green: #62c254;
+  --sep-primary-orange: #ff9b44;
+  --sep-primary-blue: #0092b8;
+  --sep-header-bg: #62c254;
+  --sep-header-text: #ffffff;
+  --sep-layout-bg: linear-gradient(
+    180deg,
+    rgba(255, 248, 240, 0.9) 0%,
+    rgba(255, 213, 170, 0.6) 30%,
+    rgba(165, 214, 167, 0.6) 70%,
+    rgba(129, 199, 212, 0.7) 100%
+  );
+  --sep-page-bg: linear-gradient(
+    180deg,
+    rgba(255, 247, 235, 0.94) 0%,
+    rgba(251, 223, 189, 0.72) 30%,
+    rgba(207, 235, 204, 0.72) 70%,
+    rgba(151, 217, 226, 0.9) 100%
+  );
+  --sep-surface: #ffffff;
+  --sep-surface-panel: rgba(255, 255, 255, 0.92);
+  --sep-surface-strong: #ffffff;
+  --sep-surface-soft: #fafafa;
+  --sep-surface-tint: #edf7ed;
+  --sep-text-primary: #1f2933;
+  --sep-text-strong: #101010;
+  --sep-text-secondary: #52606d;
+  --sep-text-muted: #888888;
+  --sep-text-disabled: #aaaaaa;
+  --sep-border: #e0e0e0;
+  --sep-border-strong: #a7a7a7;
+  --sep-card-border: rgba(255, 255, 255, 0.96);
+  --sep-input-bg: #ffffff;
+  --sep-input-bg-soft: #fafafa;
+  --sep-input-border: #e0e0e0;
+  --sep-placeholder: #bbbbbb;
+  --sep-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --sep-card-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  --sep-modal-backdrop: rgba(17, 24, 39, 0.18);
+  --sep-deco-opacity: 0.58;
+  --sep-deco-filter: none;
+  --sep-success-bg: #e8f5e9;
+  --sep-success-text: #2e7d32;
+  --sep-error-bg: #ffebee;
+  --sep-error-text: #c62828;
+  --sep-info-bg: #e9f4ff;
+  --sep-info-text: #1f4f7a;
+  --sep-neutral-button-bg: #d9d9d9;
+  --sep-neutral-button-text: #68717d;
+}
+
+body.sep-dark-mode .login-layout,
+body.sep-dark-mode .registro-sep-page {
+  color-scheme: dark;
+  --sep-primary-green: #62c254;
+  --sep-primary-orange: #ff9f45;
+  --sep-primary-blue: #28b9cf;
+  --sep-header-bg: #1f8d49;
+  --sep-header-text: #f7fff9;
+  --sep-layout-bg: linear-gradient(
+    180deg,
+    #6a4838 0%,
+    #4f5c32 38%,
+    #27603d 68%,
+    #0f5b4c 100%
+  );
+  --sep-page-bg: linear-gradient(
+    180deg,
+    #6a4838 0%,
+    #4f5c32 38%,
+    #27603d 68%,
+    #0f5b4c 100%
+  );
+  --sep-surface: #080808;
+  --sep-surface-panel: rgba(8, 8, 8, 0.96);
+  --sep-surface-strong: #000000;
+  --sep-surface-soft: #171717;
+  --sep-surface-tint: #1d2d22;
+  --sep-text-primary: #f4fbf7;
+  --sep-text-strong: #ffffff;
+  --sep-text-secondary: #c7d8d4;
+  --sep-text-muted: #9fb2ae;
+  --sep-text-disabled: #728983;
+  --sep-border: #4a4a4a;
+  --sep-border-strong: #6b6b6b;
+  --sep-card-border: rgba(117, 221, 138, 0.34);
+  --sep-input-bg: #050505;
+  --sep-input-bg-soft: #101010;
+  --sep-input-border: #4b4b4b;
+  --sep-placeholder: #7f9994;
+  --sep-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+  --sep-card-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
+  --sep-modal-backdrop: rgba(2, 8, 11, 0.72);
+  --sep-deco-opacity: 0.28;
+  --sep-deco-filter: saturate(0.9) brightness(0.78);
+  --sep-success-bg: rgba(76, 175, 80, 0.18);
+  --sep-success-text: #9ee7a8;
+  --sep-error-bg: rgba(239, 83, 80, 0.16);
+  --sep-error-text: #ffb4ae;
+  --sep-info-bg: rgba(81, 201, 239, 0.14);
+  --sep-info-text: #a6e5ff;
+  --sep-neutral-button-bg: #25363b;
+  --sep-neutral-button-text: #c6d2d0;
+}
+
+body.sep-dark-mode .login-layout,
+body.sep-dark-mode .registro-sep-page {
+  background: var(--sep-layout-bg);
+  color: var(--sep-text-primary);
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('./fonts/opendyslexic.regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.cdnfonts.com/css/open-dyslexic');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* ── Dyslexia font ────────────────────────────────────────── */
+body.env-dyslexia-font,
+body.env-dyslexia-font * {
+  font-family: 'OpenDyslexic', sans-serif !important;
+}
+
+/* ── Dark mode (envejecimiento pages) ────────────────────── */
+body.env-dark-mode .cfg-bg,
+body.env-dark-mode .pp-bg,
+body.env-dark-mode .rp-bg,
+body.env-dark-mode .ci-bg,
+body.env-dark-mode .qlr-bg {
+  background-color: #000000;
+}
+
+body.env-dark-mode .cfg-title-card,
+body.env-dark-mode .pp-title-card,
+body.env-dark-mode .rp-title-card,
+body.env-dark-mode .ci-title-card,
+body.env-dark-mode .qlr-title-card {
+  background-color: #1a1a1a;
+}
+
+body.env-dark-mode .cfg-card,
+body.env-dark-mode .pp-card,
+body.env-dark-mode .rp-card,
+body.env-dark-mode .ci-content,
+body.env-dark-mode .qlr-card {
+  background-color: #1a1a1a;
+}
+
+body.env-dark-mode .cfg-title,
+body.env-dark-mode .cfg-label,
+body.env-dark-mode .cfg-toggle-label,
+body.env-dark-mode .cfg-font-btn-label,
+body.env-dark-mode .pp-title,
+body.env-dark-mode .pp-field-label,
+body.env-dark-mode .pp-field-readonly,
+body.env-dark-mode .pp-avatar-hint,
+body.env-dark-mode .rp-title,
+body.env-dark-mode .rp-info-row,
+body.env-dark-mode .rp-info-row strong,
+body.env-dark-mode .ci-title,
+body.env-dark-mode .ci-seccion-titulo,
+body.env-dark-mode .ci-parrafo,
+body.env-dark-mode .ci-lista li,
+body.env-dark-mode .ci-footer span,
+body.env-dark-mode .qlr-title,
+body.env-dark-mode .qlr-option-label {
+  color: #ffffff;
+}
+
+body.env-dark-mode .cfg-font-btn {
+  background: #2a2a2a;
+  border-color: #444444;
+  color: #ffffff;
+}
+
+body.env-dark-mode .cfg-font-btn--active {
+  border-color: #4a90e2;
+  background-color: #1e3a5f;
+}
+
+body.env-dark-mode .cfg-back-btn,
+body.env-dark-mode .pp-back-btn,
+body.env-dark-mode .rp-nav-back,
+body.env-dark-mode .qlr-back-btn {
+  color: #ffffff;
+}
+
+body.env-dark-mode .pp-input {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #555555;
+}
+
+body.env-dark-mode .ci-footer {
+  background-color: #1a1a1a;
+}
+
+body.env-dark-mode .ci-checkbox-row {
+  color: #ffffff;
+}
+
+body.env-dark-mode .qlr-option-btn {
+  background-color: #1e1e2e;
+  border-color: #444;
+}
+
+body.env-dark-mode .qlr-option-btn:hover {
+  background-color: #263050;
+}
+
+/* ── SeccionesScreen dark mode ───────────────────────────── */
+body.env-dark-mode .secciones-bg {
+  background-color: #000000;
+}
+
+body.env-dark-mode .secciones-header {
+  background-color: #000000;
+}
+
+body.env-dark-mode .secciones-header h1 {
+  color: #ffffff;
+}
+
+body.env-dark-mode .intro-modal-card {
+  background-color: #1a1a1a;
+}
+
+body.env-dark-mode .intro-modal-title,
+body.env-dark-mode .intro-modal-warning,
+body.env-dark-mode .intro-modal-checkbox-label {
+  color: #ffffff;
+}
+
+body.env-dark-mode .intro-modal-text {
+  color: #cccccc;
+}
+
+/* ── ForgotPassword / ValidarCodigo / NuevoPassword dark ── */
+body.env-dark-mode .forgot-pwd-bg {
+  background-color: #000000;
+}
+
+body.env-dark-mode .forgot-pwd-header h1,
+body.env-dark-mode .validar-codigo-header h1,
+body.env-dark-mode .nuevo-pwd-header h1 {
+  color: #ffffff;
+}
+
+body.env-dark-mode .forgot-pwd-back-btn {
+  color: #ffffff;
+}
+
+body.env-dark-mode .forgot-pwd-text,
+body.env-dark-mode .nuevo-pwd-label {
+  color: #cccccc;
+}
+
+body.env-dark-mode .forgot-pwd-input,
+body.env-dark-mode .validar-codigo-input,
+body.env-dark-mode .nuevo-pwd-input-wrapper input {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #555555;
+}
+
+body.env-dark-mode .nuevo-pwd-eye-btn {
+  color: #aaaaaa;
+}
+
+body.env-dark-mode .custom-modal-card {
+  background-color: #1a1a1a;
+}
+
+body.env-dark-mode .custom-modal-title {
+  color: #ffffff;
+}
+
+body.env-dark-mode .custom-modal-text {
+  color: #cccccc;
+}
+
+/* ── CuestionarioScreen dark mode ───────────────────────── */
+body.env-dark-mode .cuestionario-gen-bg,
+body.env-dark-mode .cuestionario-gen-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .cuestionario-gen-header h2,
+body.env-dark-mode .back-icon {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .cuestionario-card,
+body.env-dark-mode .cuestionario-item-card {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .cuestionario-card-content h3,
+body.env-dark-mode .cuestionario-item-titulo {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .cues-modal {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .cues-modal h3,
+body.env-dark-mode .cues-modal p {
+  color: #e0e0e0 !important;
+}
+
+/* ── PreguntasScreen dark mode ───────────────────────────── */
+body.env-dark-mode .preguntas-bg {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .preguntas-header {
+  background-color: #121212 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.env-dark-mode .preguntas-header h2,
+body.env-dark-mode .preguntas-back-icon {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .preguntas-info-btn {
+  border-color: #4a90e2 !important;
+  color: #4a90e2 !important;
+}
+
+body.env-dark-mode .preguntas-progress-bar {
+  background-color: #2a2a2a !important;
+}
+
+body.env-dark-mode .preguntas-progress-text {
+  color: #aaaaaa !important;
+}
+
+body.env-dark-mode .pregunta-card {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .pregunta-texto,
+body.env-dark-mode .respuesta-opcion span {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .pregunta-divider {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.env-dark-mode .respuesta-especificar,
+body.env-dark-mode .respuesta-input-directo {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+body.env-dark-mode .preguntas-page-btn {
+  background-color: #2a2a2a !important;
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .preguntas-page-btn.active {
+  background-color: #0461cc !important;
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .preguntas-modal {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .preguntas-modal h3,
+body.env-dark-mode .preguntas-modal p {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .preguntas-resultados-modal {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .preguntas-resultados-titulo {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .preguntas-resultado-item {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .preguntas-resultado-puntuacion,
+body.env-dark-mode .preguntas-resultado-diagnostico {
+  color: #cccccc !important;
+}
+
+body.env-dark-mode .preguntas-empty {
+  color: #aaaaaa !important;
+}
+
+/* ── CuestionarioSaludMentalScreen dark mode ─────────────── */
+body.env-dark-mode .salud-mental-bg,
+body.env-dark-mode .salud-mental-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .salud-mental-header h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .salud-mental-card {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .salud-mental-card-title {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .sm-finalizado-modal {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .sm-finalizado-modal h3 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .sm-finalizado-modal p {
+  color: #cccccc !important;
+}
+
+/* ── MarcadoresBiologicosScreen dark mode ────────────────── */
+body.env-dark-mode .marcadores-bg,
+body.env-dark-mode .marcadores-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .marcadores-header {
+  border-bottom-color: #333 !important;
+}
+
+body.env-dark-mode .marcadores-header h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .marcadores-card {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .marcadores-card-title {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .aviso-modal {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .aviso-text {
+  color: #cccccc !important;
+}
+
+/* ── DeterioroCognitivoScreen dark mode ─────────────────── */
+body.env-dark-mode .deterioro-bg {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .deterioro-header {
+  background-color: #1a1a1a !important;
+  border-bottom-color: #333 !important;
+}
+
+body.env-dark-mode .deterioro-back-icon,
+body.env-dark-mode .deterioro-header-left h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .deterioro-info-btn {
+  color: #4a90e2 !important;
+}
+
+body.env-dark-mode .deterioro-question-card {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .deterioro-question-text {
+  color: #c0d8f8 !important;
+}
+
+body.env-dark-mode .deterioro-option {
+  background-color: #2a2a2a !important;
+}
+
+body.env-dark-mode .deterioro-option.selected {
+  background-color: #1e2a3a !important;
+  border-color: #4a90e2 !important;
+}
+
+body.env-dark-mode .deterioro-option-text {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .deterioro-option.selected .deterioro-option-text {
+  color: #4a90e2 !important;
+}
+
+body.env-dark-mode .deterioro-page-dot {
+  background-color: #2a2a2a !important;
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .deterioro-page-dot.active {
+  background-color: #0461cc !important;
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .deterioro-modal-content {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .deterioro-modal-title {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .deterioro-modal-text {
+  color: #cccccc !important;
+}
+
+/* ── EdadCelularScreen dark mode ─────────────────────────── */
+body.env-dark-mode .edad-celular-bg,
+body.env-dark-mode .edad-celular-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .edad-celular-header h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .edad-celular-info-btn {
+  color: #4a90e2 !important;
+}
+
+body.env-dark-mode .grid-title,
+body.env-dark-mode .grid-label {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .grid-input-wrapper {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+}
+
+body.env-dark-mode .grid-input {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .edad-celular-info-box {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+  color: #aaaaaa !important;
+}
+
+/* ── GlucosaLabScreen dark mode ──────────────────────────── */
+body.env-dark-mode .glucosa-bg,
+body.env-dark-mode .glucosa-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .glucosa-header h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .glucosa-info-btn {
+  color: #4a90e2 !important;
+}
+
+body.env-dark-mode .glucosa-field-card {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .field-label {
+  color: #c0d8f8 !important;
+}
+
+body.env-dark-mode .field-input-row {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+}
+
+body.env-dark-mode .field-input,
+body.env-dark-mode .field-unit {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .glucosa-text-input {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+/* ── EnvejecimientoSaludableScreen dark mode ─────────────── */
+body.env-dark-mode .env-bg,
+body.env-dark-mode .env-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .env-header {
+  border-bottom-color: #333 !important;
+}
+
+body.env-dark-mode .env-header h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .env-card {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .env-card-title-row h3,
+body.env-dark-mode .env-solid-text {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .env-diff-label {
+  color: #cccccc !important;
+}
+
+body.env-dark-mode .env-bio-labels {
+  color: #aaaaaa !important;
+}
+
+body.env-dark-mode .env-no-data {
+  color: #777777 !important;
+}
+
+body.env-dark-mode .env-modal {
+  background-color: #1a1a1a !important;
+}
+
+/* ── SecuenciaVistasScreen dark mode ─────────────────────── */
+body.env-dark-mode .sv-bg {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .header-left h2,
+body.env-dark-mode .sv-words-ins,
+body.env-dark-mode .sv-clock-timer {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .sv-info-btn {
+  color: #4a90e2 !important;
+}
+
+body.env-dark-mode .sv-instructions-card {
+  background-color: #1e1e1e !important;
+}
+
+body.env-dark-mode .sv-instructions-card p {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .sv-audio-btn {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .sv-word-btn {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .sv-word-btn.selected {
+  background-color: #1e3a5f !important;
+  border-color: #4a90e2 !important;
+  color: #4a90e2 !important;
+}
+
+body.env-dark-mode .sv-clock-opt {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .sv-clock-opt.selected {
+  background-color: #2979ff !important;
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .sv-timer,
+body.env-dark-mode .sv-timer-grey {
+  color: #777777 !important;
+}
+
+body.env-dark-mode .sv-step-dot {
+  background-color: #444 !important;
+}
+
+body.env-dark-mode .sv-step-dot.active {
+  background-color: #2196F3 !important;
+}
+
+body.env-dark-mode .sv-step-dot.done {
+  background-color: #48bb78 !important;
+}
+
+/* ── GenotipoScreen dark mode ────────────────────────────── */
+body.env-dark-mode .geno-bg {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .geno-header {
+  background-color: #1a1a1a !important;
+  border-bottom-color: #333 !important;
+}
+
+body.env-dark-mode .geno-header h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .geno-instructions,
+body.env-dark-mode .geno-risk-msg {
+  color: #cccccc !important;
+}
+
+body.env-dark-mode .geno-dropdown-btn {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .geno-dropdown-menu {
+  background-color: #1e1e1e !important;
+}
+
+body.env-dark-mode .geno-dropdown-item {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .geno-dropdown-item:hover {
+  background-color: #2a2a2a !important;
+}
+
+body.env-dark-mode .geno-result-card {
+  background-color: #1e3a5f !important;
+}
+
+body.env-dark-mode .geno-combo {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .geno-footer {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .geno-modal-content {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .geno-modal-title {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .geno-modal-text {
+  color: #cccccc !important;
+}
+
+/* ── ValorLongitudRelativaScreen dark mode ───────────────── */
+body.env-dark-mode .vlr-bg,
+body.env-dark-mode .vlr-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .vlr-header {
+  border-bottom-color: #333 !important;
+}
+
+body.env-dark-mode .vlr-header h2 {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .vlr-result-card {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .vlr-lr-value {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .vlr-labels {
+  color: #aaaaaa !important;
+}
+
+body.env-dark-mode .vlr-ref-box {
+  background-color: #1a1a1a !important;
+  color: #cccccc !important;
+}
+
+body.env-dark-mode .vlr-loading,
+body.env-dark-mode .vlr-no-data {
+  color: #777777 !important;
+}
+
+/* ── ResultadoSecuenciasScreen dark mode ─────────────────── */
+body.env-dark-mode .res-bg,
+body.env-dark-mode .res-header {
+  background-color: #121212 !important;
+}
+
+body.env-dark-mode .res-header {
+  border-bottom-color: #333 !important;
+}
+
+body.env-dark-mode .res-header h2,
+body.env-dark-mode .res-eval-title {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .res-activities {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .res-divider {
+  background-color: #333 !important;
+}
+
+body.env-dark-mode .res-modal-content {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .res-modal-title {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .res-modal-text {
+  color: #cccccc !important;
+}
+
+/* ── SemaforoDeterioroScreen dark mode ───────────────────── */
+body.env-dark-mode .sem-bg {
+  background: linear-gradient(to bottom, #0a2a4a, #0d3d6b) !important;
+}
+
+body.env-dark-mode .sem-diag-card {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .sem-diag-text {
+  color: #e0e0e0 !important;
+}
+
+body.env-dark-mode .sem-btn-aceptar {
+  background-color: #1a1a1a !important;
+  color: #4a90e2 !important;
+}
+
+/* ── TutorialCarousel dark mode ──────────────────────────── */
+body.env-dark-mode .tutorial-carousel-container {
+  background-color: #0d0d0d !important;
+}
+
+/* ── AlertaModal dark mode ───────────────────────────────── */
+body.env-dark-mode .alerta-modal-container {
+  background-color: #1a1a1a !important;
+}
+
+body.env-dark-mode .alerta-modal-title {
+  color: #ffffff !important;
+}
+
+body.env-dark-mode .alerta-modal-desc {
+  color: #cccccc !important;
+}
+
+body.env-dark-mode .alerta-btn-secondary {
+  background-color: #1a1a1a !important;
+  color: #4a90e2 !important;
+  border-color: #4a90e2 !important;
+}
+
+/* ── FloatingActionMenu dark mode ────────────────────────── */
+body.env-dark-mode .fam-main-btn,
+body.env-dark-mode .fam-sub-btn {
+  background-color: rgba(30, 58, 95, 0.9) !important;
+}
+
+body.env-dark-mode .fam-main-btn:hover,
+body.env-dark-mode .fam-sub-btn:hover {
+  background-color: rgba(20, 40, 70, 0.95) !important;
+}

@@ -1,0 +1,1040 @@
+.evaluacion-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(
+        100vh - 100px
+    ); /* Ajustado asumiendo que tienes un header de aprox 100px */
+    background-color: #f8fafc;
+    padding: 20px;
+}
+
+.evaluacion-question-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.evaluacion-question-card h2 {
+    color: #0f172a;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.evaluacion-question-card p {
+    color: #64748b;
+}
+
+.btn-regresar {
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    color: #475569;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-regresar:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: #ffffff;
+    border-color: transparent;
+    transform: translateX(-4px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.mental-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.mental-button-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e9ebf0; /* Color parecido al de la aplicación */
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 24px 30px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.mental-button-card:hover {
+    background-color: #dbe1ec;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.mental-button-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+}
+
+.mental-button-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.mental-play-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.mental-button-card:hover .mental-play-icon {
+    transform: scale(1.15);
+}
+
+.mental-button-action-text {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #3b82f6; /* Azul que combina con el botón de reproducir */
+    letter-spacing: 1px;
+}
+
+/* Modal de Alerta de Salud Mental */
+.mental-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+.mental-modal-content {
+    background-color: white;
+    border-radius: 28px;
+    width: 90%;
+    max-width: 440px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mental-modal-header {
+    background-color: #fecb3e; /* Color amarillo de la aplicación */
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mental-modal-body {
+    padding: 30px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mental-modal-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.mental-modal-description {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 28px;
+    padding: 0 12px;
+}
+
+.mental-modal-btn {
+    background-color: #2196f3;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 12px 64px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+    transition: all 0.2s ease;
+}
+
+.mental-modal-btn:hover {
+    background-color: #1e88e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(33, 150, 243, 0.45);
+}
+
+.mental-modal-btn:active {
+    transform: translateY(1px);
+}
+
+/* Animaciones del Modal */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Animación del Foco y Rayos */
+.mental-modal-lightbulb {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+    animation: bulbFloat 3s ease-in-out infinite alternate;
+}
+
+.ray {
+    animation: rayGlow 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+.ray-top { animation-delay: 0.1s; }
+.ray-tr { animation-delay: 0.3s; }
+.ray-tl { animation-delay: 0.5s; }
+.ray-r { animation-delay: 0.2s; }
+.ray-l { animation-delay: 0.4s; }
+
+@keyframes bulbFloat {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+@keyframes rayGlow {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* Spinner de Cargando Preguntas (4 Puntos Girando) */
+.mental-loader-dots {
+    display: grid;
+    grid-template-columns: repeat(2, 16px);
+    grid-template-rows: repeat(2, 16px);
+    gap: 12px;
+    width: 44px;
+    height: 44px;
+    animation: googleRotate 1.6s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mental-loader-dot {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mental-modal-header.loader-bg {
+    background-color: #2196f3; /* Azul brillante */
+}
+
+.mental-loader-dots-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2196f3;
+    margin-top: -10px;
+    animation: pulseDots 1.2s infinite;
+}
+
+@keyframes googleRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseDots {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Botones y Footer del Modal de Salida */
+.exit-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.exit-modal-btn-cancel {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.exit-modal-btn-cancel:hover {
+    color: #64748b;
+    background-color: #f1f5f9;
+}
+
+.exit-modal-btn-exit {
+    background-color: #2196f3;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 12px 52px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+    transition: all 0.2s ease;
+}
+
+.exit-modal-btn-exit:hover {
+    background-color: #1e88e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(33, 150, 243, 0.45);
+}
+
+.exit-modal-btn-exit:active {
+    transform: translateY(1px);
+}
+
+/* Estilos para CuestionarioRenderer */
+.cuestionario-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-instrucciones {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #475569;
+    transition: all 0.2s;
+}
+
+.btn-instrucciones:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e2e8f0;
+    height: 18px;
+    border-radius: 9px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.progress-bar-fill {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    height: 100%;
+    border-radius: 9px;
+    transition: width 0.4s ease-out;
+}
+
+.progress-bar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-shadow: 0 0 2px rgba(255,255,255,0.8);
+}
+
+.preguntas-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.pregunta-card-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.2s ease;
+}
+
+.pregunta-card-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+}
+
+.pregunta-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.pregunta-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+}
+
+.pregunta-help-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+}
+
+/* Tooltip content styling */
+.pregunta-help-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Position above the icon */
+    right: 0;
+    background-color: #ffffff;
+    color: #1e293b;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 1px solid #e2e8f0;
+    width: 280px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    font-weight: normal;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    z-index: 100;
+    white-space: normal;
+}
+
+/* Tooltip arrow */
+.pregunta-help-icon::before {
+    content: "";
+    position: absolute;
+    bottom: 115%;
+    right: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    z-index: 101;
+}
+
+/* Hover states */
+.pregunta-help-icon:hover::after,
+.pregunta-help-icon:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pregunta-divider {
+    border: 0;
+    border-top: 1px solid #e2e8f0;
+    margin: 15px 0;
+}
+
+.respuestas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.respuesta-option-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.respuesta-option-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: white;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.respuesta-option-label:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.respuesta-option-label.selected {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.respuesta-radio-input {
+    width: 18px;
+    height: 18px;
+    accent-color: #3b82f6;
+    cursor: pointer;
+}
+
+.respuesta-option-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #334155;
+    text-align: left;
+}
+
+.respuesta-option-label.selected .respuesta-option-text {
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.especificar-text-wrapper {
+    width: 100%;
+    padding-left: 32px;
+    box-sizing: border-box;
+}
+
+.especificar-text-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.especificar-text-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.especificar-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.especificar-textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.cuestionario-footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination-arrows {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-paginator {
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    color: #475569;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-paginator:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+.btn-enviar-cuestionario {
+    background-color: #10b981; /* Verde esmeralda para el éxito */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 12px 36px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-enviar-cuestionario:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(16, 185, 129, 0.45);
+}
+
+.btn-enviar-cuestionario:active {
+    transform: translateY(1px);
+}
+
+.btn-enviar-cuestionario:disabled {
+    background-color: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+.mental-modal-header.finished-bg {
+    background-color: #2bd1b1;
+}
+
+.finished-concentric-rings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bulbFloat 3s ease-in-out infinite alternate;
+}
+
+.concentric-ring-outer {
+    stroke: rgba(255, 255, 255, 0.45);
+    stroke-width: 7;
+    fill: none;
+    transform-origin: center;
+}
+
+/* Card and Badge Styles */
+.mental-button-card.completo {
+    border-left: 6px solid #10b981;
+}
+
+.mental-button-card.realizar {
+    border-left: 6px solid #3b82f6;
+}
+
+.mental-button-card.completo:hover {
+    background-color: #ecfdf5;
+}
+
+.mental-completed-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.mental-completed-text {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #10b981;
+    letter-spacing: 1px;
+}
+
+.btn-ver-resultados {
+    background-color: #3b82f6;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease;
+    margin-top: 8px;
+}
+
+.btn-ver-resultados:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+/* Results Detail Modal Styling */
+.mental-results-header {
+    background-color: #2196f3;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mental-results-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.mental-result-card-item {
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.mental-result-card-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border-color: #cbd5e1;
+}
+
+.mental-result-card-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mental-result-check-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e6f7ed;
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.mental-result-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-transform: uppercase;
+}
+
+.mental-result-status-lbl {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #10b981;
+}
+
+/* Detailed Pre-Diagnostic View */
+.mental-detail-back-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 24px 0;
+    box-sizing: border-box;
+}
+
+.btn-modal-back {
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    color: #475569;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s;
+}
+
+.btn-modal-back:hover {
+    color: #0f172a;
+}
+
+.specialist-card-container {
+    background-color: #f1f5f9;
+    border-radius: 16px;
+    padding: 16px;
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.specialist-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.specialist-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.specialist-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.specialist-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.specialist-initials {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+.specialist-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.specialist-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.specialist-contact {
+    font-size: 0.85rem;
+    color: #475569;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* DISEÑO RESPONSIVO PARA EVALUACIONES */
+@media (max-width: 768px) {
+    .evaluacion-layout {
+        padding: 12px;
+        min-height: calc(100vh - 80px);
+    }
+
+    .evaluacion-question-card {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    .evaluacion-question-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .mental-buttons-container {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .mental-button-card {
+        padding: 18px 20px;
+        border-radius: 12px;
+    }
+
+    .mental-button-title {
+        font-size: 0.95rem;
+    }
+
+    .pregunta-card-item {
+        padding: 16px;
+        border-radius: 12px;
+        gap: 15px;
+    }
+
+    .pregunta-title {
+        font-size: 1.05rem;
+    }
+
+    .respuesta-option-label {
+        padding: 10px 14px;
+        gap: 10px;
+        border-radius: 10px;
+    }
+
+    .respuesta-option-text {
+        font-size: 0.95rem;
+    }
+
+    .especificar-text-wrapper {
+        padding-left: 12px;
+    }
+
+    .especificar-text-input {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .cuestionario-footer-buttons {
+        flex-direction: column-reverse;
+        gap: 16px;
+        align-items: stretch;
+        margin-top: 15px;
+    }
+
+    .pagination-arrows {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-paginator {
+        flex: 1;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .btn-enviar-cuestionario {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    /* Modal de salir y de instrucciones responsivo */
+    .mental-modal-content {
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    .mental-modal-header {
+        height: 140px;
+    }
+
+    .mental-modal-header svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mental-modal-body {
+        padding: 20px 16px;
+    }
+
+    .mental-modal-title {
+        font-size: 1.35rem;
+        margin-bottom: 12px;
+    }
+
+    .mental-modal-description {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .mental-modal-btn {
+        width: 100%;
+        padding: 10px 24px;
+        font-size: 1.05rem;
+    }
+
+    .exit-modal-footer {
+        flex-direction: column-reverse;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .exit-modal-btn-cancel {
+        width: 100%;
+        padding: 8px 24px;
+        font-size: 1rem;
+    }
+
+    .exit-modal-btn-exit {
+        width: 100%;
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pregunta-help-icon::after {
+        width: 240px;
+        right: -25px;
+        bottom: 130%;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .pregunta-help-icon::before {
+        right: 2px;
+    }
+    
+    .cuestionario-header-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn-regresar, .btn-instrucciones {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+}

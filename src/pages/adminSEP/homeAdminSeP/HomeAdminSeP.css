@@ -1,0 +1,13 @@
+/* Estilos básicos para las cajas (opcional, para que se vean) */
+.container-home-admin-fase-1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

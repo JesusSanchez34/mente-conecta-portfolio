@@ -1,0 +1,23 @@
+@use '../../../assets/stylesBasica/variables' as *;
+
+.status-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  &__inner {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(75.29deg, #53C055 10.71%, #FF9B44 89.65%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    svg {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}

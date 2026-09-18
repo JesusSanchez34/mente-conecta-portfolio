@@ -1,0 +1,110 @@
+.reporte-nom035-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+
+    .reporte-nom035-header {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .back-btn {
+            background-color: #5b4a9a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+        }
+
+        h1 {
+            margin: 0;
+            color: #4a4a4a;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    .reporte-nom035-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .guia-selector-nom035 {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+
+            .guia-selector-btn {
+                padding: 0.6rem 1.2rem;
+                border-radius: 20px;
+                border: 2px solid #5b4a9a;
+                background: white;
+                color: #5b4a9a;
+                font-weight: 600;
+                font-size: 0.9rem;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &:hover {
+                    background: #f3f0fa;
+                }
+
+                &.active {
+                    background: #5b4a9a;
+                    color: white;
+                }
+            }
+        }
+
+        .pdf-viewer-nom035 {
+            flex: 1;
+            width: 100%;
+            height: calc(100vh - 150px);
+            min-height: 600px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: none;
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            gap: 15px;
+
+            .spinner {
+                width: 50px;
+                height: 50px;
+                border: 5px solid #f3f3f3;
+                border-top: 5px solid #5b4a9a;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

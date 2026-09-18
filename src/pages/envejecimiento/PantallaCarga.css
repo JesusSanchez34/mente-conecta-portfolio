@@ -1,0 +1,30 @@
+.pc-blanco {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.pc-bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pc-spinner {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: conic-gradient(#355A8A 0% 72%, #1A1A1A 72% 100%);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 10px), #000 calc(100% - 10px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 10px), #000 calc(100% - 10px));
+    animation: pc-spin 1s linear infinite;
+}
+
+@keyframes pc-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

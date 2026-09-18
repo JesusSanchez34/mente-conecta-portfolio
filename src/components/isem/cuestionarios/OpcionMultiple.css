@@ -1,0 +1,104 @@
+.opcion-multiple__card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ede8e8;
+  margin-top: 10px;
+}
+
+.opcion-multiple__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0eaea;
+  transition: background 0.15s ease;
+  opacity: 1;
+}
+
+.opcion-multiple__row:last-child {
+  border-bottom: none;
+}
+
+.opcion-multiple__row:hover {
+  background: #fdf7f7;
+}
+
+/* Modifiers */
+.opcion-multiple__row--disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.opcion-multiple__row--disabled:hover {
+  background: transparent;
+}
+
+.opcion-multiple__label {
+  font-size: 15px;
+  color: #4a3f3f;
+  font-weight: 400;
+  flex: 1;
+}
+
+.opcion-multiple__check {
+  margin: 0;
+}
+
+.opcion-multiple__check .form-check-input {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c8b8b8 !important;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.opcion-multiple__check .form-check-input:checked {
+  background-color: #6b3a5c !important;
+  border-color: #6b3a5c !important;
+}
+
+.opcion-multiple__check .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(107, 58, 92, 0.2) !important;
+}
+
+/* Border radii for checkbox vs radio */
+.opcion-multiple__check-checkbox .form-check-input {
+  border-radius: 4px !important;
+}
+
+.opcion-multiple__check-radio .form-check-input {
+  border-radius: 50% !important;
+}
+
+.opcion-multiple__especificar-inline {
+  margin: 0 16px 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid #d4b8c8 !important;
+  font-size: 14px !important;
+  resize: none !important;
+  width: calc(100% - 32px) !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.opcion-multiple__especificar-inline:focus {
+  border-color: #6b3a5c !important;
+  box-shadow: 0 0 0 3px rgba(107, 58, 92, 0.15) !important;
+}
+
+.opcion-multiple__textarea-open {
+  margin-top: 12px !important;
+  border-radius: 10px !important;
+  border: 1.5px solid #d4b8c8 !important;
+  font-size: 14px !important;
+  min-height: 80px !important;
+  resize: vertical !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.opcion-multiple__textarea-open:focus {
+  border-color: #6b3a5c !important;
+  box-shadow: 0 0 0 3px rgba(107, 58, 92, 0.15) !important;
+}

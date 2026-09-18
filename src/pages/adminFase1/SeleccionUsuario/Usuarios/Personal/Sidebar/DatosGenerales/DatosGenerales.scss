@@ -1,0 +1,175 @@
+.datos-container {
+    min-height: 100vh;
+    background: #f7f1f6;
+    padding: 40px 50px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+}
+
+.datos-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%; 
+    position: relative; // Permite posicionar el botón de forma independiente si es necesario
+
+    h1 {
+        font-size: 38px;
+        font-weight: 600;
+        color: #2d232e;
+        margin: 0 auto; // El truco "auto" en los lados lo centra perfectamente en su espacio
+        text-align: center;
+    }
+}
+
+.back-btn {
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 14px;
+    background: #ffffff; // Fondo blanco solicitado
+    color: #4a324d;      // Icono o flecha en color oscuro para que contraste
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); // Sombra suave para que resalte el blanco
+    transition: all 0.2s ease;
+    
+    // Lo fijamos a la izquierda para que el título pueda centrarse libremente
+    position: absolute; 
+    left: 0;
+
+    &:hover {
+        background: #fcf8fc;
+        transform: translateX(-4px); 
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.datos-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; 
+    margin-top: 10px; // Un pequeño espacio extra respecto a la cabecera centrada
+}
+
+.datos-familiar-box {
+    margin-top: 24px;
+    width: 100%;
+}
+
+.datos-familiar-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4a324d;
+    margin-bottom: 10px;
+}
+
+.datos-familiar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.datos-familiar-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(90, 67, 94, 0.12);
+    box-shadow: 0 6px 18px rgba(90, 67, 94, 0.08);
+    min-width: 0;
+
+    .icon {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: #f2edf5;
+        color: #4a324d;
+        flex-shrink: 0;
+    }
+
+    strong {
+        display: block;
+        font-size: 18px;
+        color: #2d232e;
+        margin-bottom: 4px;
+    }
+
+    p {
+        margin: 0;
+        color: #5c6570;
+        font-size: 14px;
+    }
+
+    small {
+        display: inline-block;
+        margin-top: 4px;
+        color: #7d6b86;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+}
+
+.dato-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 30px; 
+    border-radius: 18px; 
+    font-size: 20px;
+    font-weight: 500;
+    color: #2d232e;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(90, 67, 94, 0.05); 
+    border: 1px solid rgba(90, 67, 94, 0.08); 
+    width: 100%; 
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: translateX(6px); 
+        border-color: rgba(90, 67, 94, 0.2);
+        box-shadow: 0 6px 24px rgba(90, 67, 94, 0.08);
+    }
+
+    .icon {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        flex-shrink: 0; 
+    }
+}
+
+.morado {
+    .icon {
+        background: #f3edf4;
+        color: #4a324d;
+    }
+}
+
+.gris {
+    .icon {
+        background: #f0f2f5;
+        color: #626f7a;
+    }
+}

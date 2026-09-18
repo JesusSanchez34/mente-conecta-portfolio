@@ -1,0 +1,78 @@
+.fam-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.fam-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.fam-main-btn,
+.fam-sub-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.fam-main-btn {
+    background-color: rgba(74, 144, 226, 0.75);
+    width: 56px;
+    height: 56px;
+}
+
+.fam-main-btn svg {
+    width: 26px;
+    height: 26px;
+    color: #ffffff;
+}
+
+.fam-main-btn--open {
+    background-color: rgba(74, 144, 226, 0.75);
+    transform: rotate(90deg);
+}
+
+.fam-main-btn:hover {
+    background-color: rgba(53, 90, 138, 0.9);
+    transform: scale(1.08);
+}
+
+.fam-main-btn--open:hover {
+    transform: rotate(90deg) scale(1.08);
+}
+
+.fam-sub-btn {
+    background-color: rgba(74, 144, 226, 0.75);
+    animation: fam-pop 0.18s ease forwards;
+}
+
+.fam-sub-btn svg {
+    width: 22px;
+    height: 22px;
+    color: #ffffff;
+}
+
+.fam-sub-btn:hover {
+    background-color: rgba(53, 90, 138, 0.9);
+    transform: scale(1.1);
+}
+
+@keyframes fam-pop {
+    from { opacity: 0; transform: scale(0.6) translateY(10px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}

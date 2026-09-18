@@ -1,0 +1,56 @@
+.demo-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #7999D9; /* Matching the landing page background */
+    position: relative;
+    overflow-x: hidden;
+}
+
+.demo-minimal-header {
+    padding: 15px 30px;
+    background: #4563BF; /* Header color from landing page */
+    display: flex;
+    justify-content: flex-start; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.demo-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    cursor: default;
+}
+
+.demo-top-wave-container {
+    width: 100%;
+    height: 140px;
+    background-color: #7999D9;
+    margin-bottom: -2px; /* Overlap with demo-content to eliminate the blue line */
+    line-height: 0;
+    font-size: 0;
+}
+
+.demo-bottom-wave-container {
+    width: 100%;
+    height: 130px;
+    background-color: #7999D9;
+    margin-top: -2px; /* Overlap with demo-content to eliminate the blue line */
+    line-height: 0;
+    font-size: 0;
+}
+
+.demo-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    background-color: #FFFFFF;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}

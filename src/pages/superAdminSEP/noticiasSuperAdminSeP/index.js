@@ -1,0 +1,1 @@
+export { NoticiasSuperAdminSeP } from './NoticiasSuperAdminSeP';

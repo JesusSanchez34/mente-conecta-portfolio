@@ -1,0 +1,32 @@
+/* ===================================================
+   ISEMPacienteLayout — Layout del paciente ISEM
+   =================================================== */
+
+.isem-paciente-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+.isem-paciente-layout__content {
+    flex: 1;
+    padding: 0;
+    overflow-y: auto;
+    min-height: calc(100vh - 80px);
+}
+
+/* ── Desktop: sin espacio izquierdo ya que el sidebar es colapsable ── */
+@media (min-width: 992px) {
+    .isem-paciente-layout__content {
+        margin-left: 0;
+        padding: 0;
+    }
+}
+
+/* ── Móvil: sin padding extra, el header institucional se encarga ── */
+@media (max-width: 991px) {
+    .isem-paciente-layout__content {
+        padding-top: 0;
+    }
+}

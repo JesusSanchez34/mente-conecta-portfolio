@@ -1,0 +1,6 @@
+export * from './bannerHeader'
+export * from './navBar'
+export * from './nosotros'
+export * from './preguntasFrecuentes'
+export * from './seccionDestacada'
+export * from './descripcionMente'

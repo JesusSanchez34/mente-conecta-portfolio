@@ -1,0 +1,101 @@
+/* --- Estilo Premium para ModalInstrucciones (Paridad Flutter) --- */
+
+.modal-instrucciones-dialog {
+  max-width: 360px;
+  margin: 1.75rem auto;
+}
+
+.modal-instrucciones-dialog .modal-content {
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal-instrucciones__header-custom {
+  background: #fbc02d; /* Caluroso amarillo/naranja dorado de Flutter QuickAlert */
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Ilustración decorativa del foco brillando */
+.modal-instrucciones__header-custom::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(8px);
+}
+
+.modal-instrucciones__icon-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  animation: floatLightbulb 3s ease-in-out infinite alternate;
+}
+
+.modal-instrucciones__body-custom {
+  padding: 24px 20px 24px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.modal-instrucciones__title-custom {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.5px;
+}
+
+.modal-instrucciones__text-custom {
+  font-size: 14px;
+  color: #616161;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  font-weight: 400;
+}
+
+.modal-instrucciones__btn-close-custom {
+  background: #2196f3 !important; /* Azul Flutter Premium */
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 10px 40px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.35) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.modal-instrucciones__btn-close-custom:hover {
+  background: #1e88e5 !important;
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.45) !important;
+  transform: translateY(-1px);
+}
+
+.modal-instrucciones__btn-close-custom:active {
+  transform: translateY(0);
+}
+
+@keyframes floatLightbulb {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}

@@ -1,0 +1,1 @@
+export { ColumbiaPageSeP } from './ColumbiaPageSeP';

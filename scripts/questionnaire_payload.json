@@ -1,0 +1,1603 @@
+{
+  "Sociodemográficos": [
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 1,
+      "pregunta": "¿Qué edad tiene usted?",
+      "respuestas": []
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 3,
+      "pregunta": "¿Cuál es su peso?",
+      "respuestas": []
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 4,
+      "pregunta": "¿Cuál es su estatura?",
+      "respuestas": []
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 5,
+      "pregunta": "¿En qué país nació?",
+      "respuestas": [
+        {
+          "id": 4,
+          "respuesta": "Otro"
+        },
+        {
+          "id": 3,
+          "respuesta": "México"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 6,
+      "pregunta": "Indique su fecha de Nacimiento",
+      "respuestas": []
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 7,
+      "pregunta": "¿Habla usted algún dialecto o lengua indígena?",
+      "respuestas": [
+        {
+          "id": 54,
+          "respuesta": "Si"
+        },
+        {
+          "id": 55,
+          "respuesta": "No"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 8,
+      "pregunta": "¿Usted se considera indígena?",
+      "respuestas": [
+        {
+          "id": 54,
+          "respuesta": "Si"
+        },
+        {
+          "id": 55,
+          "respuesta": "No"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 9,
+      "pregunta": "¿Con qué género se identifica mejor?",
+      "respuestas": [
+        {
+          "id": 1,
+          "respuesta": "Hombre"
+        },
+        {
+          "id": 2,
+          "respuesta": "Mujer"
+        },
+        {
+          "id": 3,
+          "respuesta": "No binario"
+        },
+        {
+          "id": 6,
+          "respuesta": "Prefiero no responder"
+        },
+        {
+          "id": 5,
+          "respuesta": "Ninguna de estas opciones me describe y quiero ver opciones adicionales"
+        },
+        {
+          "id": 4,
+          "respuesta": "Transgenero"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 11,
+      "pregunta": "¿Qué sexo biológico le fue asignado al nacer?",
+      "respuestas": [
+        {
+          "id": 15,
+          "respuesta": "Femenino"
+        },
+        {
+          "id": 16,
+          "respuesta": "Masculino"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 12,
+      "pregunta": "¿Cuál de estas opciones representa mejor su orientación sexual?",
+      "respuestas": [
+        {
+          "id": 20,
+          "respuesta": "Gay"
+        },
+        {
+          "id": 21,
+          "respuesta": "Lesbiana"
+        },
+        {
+          "id": 22,
+          "respuesta": "Heterosexual"
+        },
+        {
+          "id": 23,
+          "respuesta": "Bisexual"
+        },
+        {
+          "id": 24,
+          "respuesta": "Ninguna de estas me describe"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 13,
+      "pregunta": "¿Cuál de estas opciones se acerca más a cómo se considera en cuanto a su sexualidad?",
+      "respuestas": [
+        {
+          "id": 27,
+          "respuesta": "Asexual"
+        },
+        {
+          "id": 30,
+          "respuesta": "Mayormente heterosexual, pero a veces atraído a personas de su mismo sexo"
+        },
+        {
+          "id": 31,
+          "respuesta": "No considera que tenga una sexualidad"
+        },
+        {
+          "id": 35,
+          "respuesta": "Prefiero no responder"
+        },
+        {
+          "id": 285,
+          "respuesta": "Ninguna de estas opciones me describe y quiero especificar"
+        },
+        {
+          "id": 29,
+          "respuesta": "No ha descubierto o está en proceso de descubrir su sexualidad"
+        },
+        {
+          "id": 32,
+          "respuesta": "No usa etiquetas para identificarse"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 14,
+      "pregunta": "¿Cuál es el nivel más alto de educación que ha terminado?",
+      "respuestas": [
+        {
+          "id": 37,
+          "respuesta": "1° a 6° grado (Primaria)"
+        },
+        {
+          "id": 38,
+          "respuesta": "1° a 3° grado (Secundaria)"
+        },
+        {
+          "id": 40,
+          "respuesta": "1 a 3 años (Preparatoria o bachillerato completo o GED)"
+        },
+        {
+          "id": 42,
+          "respuesta": "3 años o más de universidad (graduado de la universidad)"
+        },
+        {
+          "id": 43,
+          "respuesta": "Estudios avanzados (Maestría, Doctorado, etc.)"
+        },
+        {
+          "id": 44,
+          "respuesta": "Prefiero no contestar"
+        },
+        {
+          "id": 36,
+          "respuesta": "Nunca fue a la escuela o solo fue al kínder"
+        },
+        {
+          "id": 39,
+          "respuesta": "1 a 2 años (Preparatoria o bachillerato incompleta)"
+        },
+        {
+          "id": 41,
+          "respuesta": "1 a 2 años de universidad (algunos estudios universitarios o de escuela técnica)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 15,
+      "pregunta": "¿Cuál es su estado civil actual?",
+      "respuestas": [
+        {
+          "id": 45,
+          "respuesta": "Casado/a"
+        },
+        {
+          "id": 46,
+          "respuesta": "Divorciado/a"
+        },
+        {
+          "id": 47,
+          "respuesta": "Viudo/a"
+        },
+        {
+          "id": 49,
+          "respuesta": "Soltero/a"
+        },
+        {
+          "id": 51,
+          "respuesta": "Prefiero no contestar"
+        },
+        {
+          "id": 48,
+          "respuesta": "Separado/a"
+        },
+        {
+          "id": 50,
+          "respuesta": "Vive en pareja sin estar casado/a / unión libre"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 16,
+      "pregunta": "Sin incluirse a usted, ¿cuántas personas viven actualmente en su hogar?",
+      "respuestas": []
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 17,
+      "pregunta": "De las personas que viven con usted, ¿cuántas tienen menos de 18 años?",
+      "respuestas": []
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 18,
+      "pregunta": "Las siguientes preguntas son sobre su trabajo, ingreso, y de donde vive.\n\nActualmente, ¿cuál es su situación laboral?\n",
+      "respuestas": [
+        {
+          "id": 57,
+          "respuesta": "Estudiante"
+        },
+        {
+          "id": 53,
+          "respuesta": "Trabajador/a independiente"
+        },
+        {
+          "id": 54,
+          "respuesta": "Desempleado/a por 1 año o más"
+        },
+        {
+          "id": 55,
+          "respuesta": "Desempleado/a por menos de 1 año"
+        },
+        {
+          "id": 58,
+          "respuesta": "Jubilado/a"
+        },
+        {
+          "id": 59,
+          "respuesta": "No puede trabajar (por discapacidad)"
+        },
+        {
+          "id": 60,
+          "respuesta": "Prefiero no contestar"
+        },
+        {
+          "id": 52,
+          "respuesta": "Formación de Empleado/a asalariado/a (tiempo parcial o tiempo completo)"
+        },
+        {
+          "id": 56,
+          "respuesta": "Soy una mujer u hombre que me ocupo de tareas de la casa / ama de casa"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 19,
+      "pregunta": "¿Su vivienda es propia, rentada o de otro tipo?",
+      "respuestas": [
+        {
+          "id": 71,
+          "respuesta": "Propia"
+        },
+        {
+          "id": 72,
+          "respuesta": "Alquilada (rentada)"
+        },
+        {
+          "id": 73,
+          "respuesta": "Otra situación de vivienda"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 41,
+      "pregunta": "¿Cuál es el ingreso mensual total de su hogar (incluyendo otras fuentes)?",
+      "respuestas": [
+        {
+          "id": 61,
+          "respuesta": "Menos que $10.000"
+        },
+        {
+          "id": 62,
+          "respuesta": "$10,000 - $24,999"
+        },
+        {
+          "id": 64,
+          "respuesta": "$35,000 - $49,999"
+        },
+        {
+          "id": 65,
+          "respuesta": "$50,000 - $74,999"
+        },
+        {
+          "id": 67,
+          "respuesta": "$100,000 o más"
+        },
+        {
+          "id": 63,
+          "respuesta": "$25,000 - $34,999"
+        },
+        {
+          "id": 66,
+          "respuesta": "$75,000 - $99,999"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 20,
+      "pregunta": "¿Cuántos años lleva viviendo en su domicilio actual?",
+      "respuestas": [
+        {
+          "id": 74,
+          "respuesta": "Menos de 1 año"
+        },
+        {
+          "id": 75,
+          "respuesta": "1 - 2 años"
+        },
+        {
+          "id": 76,
+          "respuesta": "3 - 5 años"
+        },
+        {
+          "id": 78,
+          "respuesta": "11 - 20 años"
+        },
+        {
+          "id": 77,
+          "respuesta": "6 - 10 años"
+        },
+        {
+          "id": 79,
+          "respuesta": "Más de 20 años"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 21,
+      "pregunta": "La siguiente pregunta es sobre el estrés que usted puede sentir sobre el dinero.\n\nEn los últimos 6 meses, ¿se ha sentido preocupado por no contar con una vivienda estable (propia, rentada o compartida)?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 23,
+      "pregunta": "La siguiente pregunta es sobre lo que hay en su vecindario. Al responder, piense en las áreas alrededor de su vivienda donde puede llegar caminando en 10 a 15 minutos.\n\n¿Cuál es el principal tipo de vivienda en su vecindario?",
+      "respuestas": [
+        {
+          "id": 82,
+          "respuesta": "Combinación de viviendas unifamiliares, casas dúplex, casas adosadas en línea, apartamentos o condominios"
+        },
+        {
+          "id": 83,
+          "respuesta": "Apartamentos o condominios de 4 - 12 pisos"
+        },
+        {
+          "id": 84,
+          "respuesta": "Apartamentos o condominios de más de 12 pisos"
+        },
+        {
+          "id": 85,
+          "respuesta": "No lo sé / no estoy seguro"
+        },
+        {
+          "id": 80,
+          "respuesta": "Casas unifamiliares (no comparten paredes con otras casas)"
+        },
+        {
+          "id": 81,
+          "respuesta": "Casas dúplex (dos o más casas pegadas), casas adosadas en línea (casas que comparten pared), apartamentos o condominios de 2-3 pisos"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 25,
+      "pregunta": "Mi vivienda está a unos 10-15 minutos caminando de una parada del transporte público (como autobús, metro, tren o tranvía). Estoy...",
+      "respuestas": [
+        {
+          "id": 142,
+          "respuesta": "Absolutamente en desacuerdo"
+        },
+        {
+          "id": 143,
+          "respuesta": "Algo en desacuerdo"
+        },
+        {
+          "id": 144,
+          "respuesta": "Algo de acuerdo"
+        },
+        {
+          "id": 145,
+          "respuesta": "Absolutamente de acuerdo"
+        },
+        {
+          "id": 146,
+          "respuesta": "No lo sé / no estoy seguro"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 26,
+      "pregunta": "En mi vecindario, la mayoría de las calles cuentan con aceras o banquetas (para caminar). Estoy...",
+      "respuestas": [
+        {
+          "id": 142,
+          "respuesta": "Absolutamente en desacuerdo"
+        },
+        {
+          "id": 143,
+          "respuesta": "Algo en desacuerdo"
+        },
+        {
+          "id": 144,
+          "respuesta": "Algo de acuerdo"
+        },
+        {
+          "id": 145,
+          "respuesta": "Absolutamente de acuerdo"
+        },
+        {
+          "id": 146,
+          "respuesta": "No lo sé / no estoy seguro"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 27,
+      "pregunta": "Cerca de mi hogar hay espacios para andar en bicicleta (ciclovías, senderos, caminos compartidos). Estoy...",
+      "respuestas": [
+        {
+          "id": 142,
+          "respuesta": "Absolutamente en desacuerdo"
+        },
+        {
+          "id": 143,
+          "respuesta": "Algo en desacuerdo"
+        },
+        {
+          "id": 144,
+          "respuesta": "Algo de acuerdo"
+        },
+        {
+          "id": 145,
+          "respuesta": "Absolutamente de acuerdo"
+        },
+        {
+          "id": 146,
+          "respuesta": "No lo sé / no estoy seguro"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 28,
+      "pregunta": "Mi vecindario tiene muchos lugares de recreo gratuitos o de bajo costo, como parques, senderos para caminar, carriles para bicicletas, centros recreativos, parques infantiles, piscinas públicas, etc. Estoy...",
+      "respuestas": [
+        {
+          "id": 142,
+          "respuesta": "Absolutamente en desacuerdo"
+        },
+        {
+          "id": 143,
+          "respuesta": "Algo en desacuerdo"
+        },
+        {
+          "id": 144,
+          "respuesta": "Algo de acuerdo"
+        },
+        {
+          "id": 145,
+          "respuesta": "Absolutamente de acuerdo"
+        },
+        {
+          "id": 146,
+          "respuesta": "No lo sé / no estoy seguro"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 29,
+      "pregunta": "Debido al índice de criminalidad en mi vecindario, no es seguro salir a caminar por las noches. Estoy...",
+      "respuestas": [
+        {
+          "id": 142,
+          "respuesta": "Absolutamente en desacuerdo"
+        },
+        {
+          "id": 143,
+          "respuesta": "Algo en desacuerdo"
+        },
+        {
+          "id": 144,
+          "respuesta": "Algo de acuerdo"
+        },
+        {
+          "id": 145,
+          "respuesta": "Absolutamente de acuerdo"
+        },
+        {
+          "id": 146,
+          "respuesta": "No lo sé / no estoy seguro"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 30,
+      "pregunta": "Debido al índice de criminalidad en mi vecindario, no es seguro salir a caminar durante el día. Estoy...",
+      "respuestas": [
+        {
+          "id": 142,
+          "respuesta": "Absolutamente en desacuerdo"
+        },
+        {
+          "id": 143,
+          "respuesta": "Algo en desacuerdo"
+        },
+        {
+          "id": 144,
+          "respuesta": "Algo de acuerdo"
+        },
+        {
+          "id": 145,
+          "respuesta": "Absolutamente de acuerdo"
+        },
+        {
+          "id": 146,
+          "respuesta": "No lo sé / no estoy seguro"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 31,
+      "pregunta": "Durante el último año, ¿cuántas veces se ha mudado usted o su familia de vivienda? \r\nCantidad de mudanzas en el último año. (cantidad)",
+      "respuestas": []
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 32,
+      "pregunta": "En su vivienda actual, ¿tiene alguno de los siguientes problemas? (Seleccione todas las opciones que correspondan)",
+      "respuestas": [
+        {
+          "id": 86,
+          "respuesta": "Plaga o infestación de insectos"
+        },
+        {
+          "id": 89,
+          "respuesta": "El horno o la estufa no funcionan"
+        },
+        {
+          "id": 91,
+          "respuesta": "Fugas de agua"
+        },
+        {
+          "id": 92,
+          "respuesta": "Ninguna de las anteriores"
+        },
+        {
+          "id": 87,
+          "respuesta": "Hongos o moho"
+        },
+        {
+          "id": 88,
+          "respuesta": "Pintura o tuberías con plomo"
+        },
+        {
+          "id": 90,
+          "respuesta": "No hay detector de humo o no funciona"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 33,
+      "pregunta": "¿Con qué frecuencia le ocurre lo siguiente?:\nSiento la presencia de Dios (o la de un poder superior)",
+      "respuestas": [
+        {
+          "id": 16,
+          "respuesta": "La mayoría de los días"
+        },
+        {
+          "id": 17,
+          "respuesta": "Algunos días"
+        },
+        {
+          "id": 18,
+          "respuesta": "De vez en cuando"
+        },
+        {
+          "id": 19,
+          "respuesta": "Nunca o casi nunca"
+        },
+        {
+          "id": 15,
+          "respuesta": "Todos los días"
+        },
+        {
+          "id": 14,
+          "respuesta": "Muchas veces al día"
+        },
+        {
+          "id": 20,
+          "respuesta": "No creo en Dios (o en un poder superior)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 34,
+      "pregunta": "¿Con qué frecuencia le ocurre lo siguiente?: Encuentro fortaleza y consuelo en mi religión",
+      "respuestas": [
+        {
+          "id": 16,
+          "respuesta": "La mayoría de los días"
+        },
+        {
+          "id": 17,
+          "respuesta": "Algunos días"
+        },
+        {
+          "id": 18,
+          "respuesta": "De vez en cuando"
+        },
+        {
+          "id": 19,
+          "respuesta": "Nunca o casi nunca"
+        },
+        {
+          "id": 15,
+          "respuesta": "Todos los días"
+        },
+        {
+          "id": 14,
+          "respuesta": "Muchas veces al día"
+        },
+        {
+          "id": 20,
+          "respuesta": "No creo en Dios (o en un poder superior)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 35,
+      "pregunta": "¿Con qué frecuencia le ocurre lo siguiente?: Siento una profunda paz interior o armonía",
+      "respuestas": [
+        {
+          "id": 16,
+          "respuesta": "La mayoría de los días"
+        },
+        {
+          "id": 17,
+          "respuesta": "Algunos días"
+        },
+        {
+          "id": 18,
+          "respuesta": "De vez en cuando"
+        },
+        {
+          "id": 19,
+          "respuesta": "Nunca o casi nunca"
+        },
+        {
+          "id": 15,
+          "respuesta": "Todos los días"
+        },
+        {
+          "id": 14,
+          "respuesta": "Muchas veces al día"
+        },
+        {
+          "id": 20,
+          "respuesta": "No creo en Dios (o en un poder superior)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 36,
+      "pregunta": "¿Con qué frecuencia le ocurre lo siguiente?: Deseo estar más cerca de Dios o en comunión con Él (o con un poder superior)",
+      "respuestas": [
+        {
+          "id": 16,
+          "respuesta": "La mayoría de los días"
+        },
+        {
+          "id": 17,
+          "respuesta": "Algunos días"
+        },
+        {
+          "id": 18,
+          "respuesta": "De vez en cuando"
+        },
+        {
+          "id": 19,
+          "respuesta": "Nunca o casi nunca"
+        },
+        {
+          "id": 15,
+          "respuesta": "Todos los días"
+        },
+        {
+          "id": 14,
+          "respuesta": "Muchas veces al día"
+        },
+        {
+          "id": 20,
+          "respuesta": "No creo en Dios (o en un poder superior)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 37,
+      "pregunta": "¿Con qué frecuencia le ocurre lo siguiente?: Siento el amor de Dios (o de un poder superior) hacia mí, directamente o a través de otros",
+      "respuestas": [
+        {
+          "id": 16,
+          "respuesta": "La mayoría de los días"
+        },
+        {
+          "id": 17,
+          "respuesta": "Algunos días"
+        },
+        {
+          "id": 18,
+          "respuesta": "De vez en cuando"
+        },
+        {
+          "id": 19,
+          "respuesta": "Nunca o casi nunca"
+        },
+        {
+          "id": 15,
+          "respuesta": "Todos los días"
+        },
+        {
+          "id": 14,
+          "respuesta": "Muchas veces al día"
+        },
+        {
+          "id": 20,
+          "respuesta": "No creo en Dios (o en un poder superior)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 38,
+      "pregunta": "¿Con qué frecuencia le ocurre lo siguiente?: Me siento espiritualmente conmovido por la belleza de la creación",
+      "respuestas": [
+        {
+          "id": 16,
+          "respuesta": "La mayoría de los días"
+        },
+        {
+          "id": 17,
+          "respuesta": "Algunos días"
+        },
+        {
+          "id": 18,
+          "respuesta": "De vez en cuando"
+        },
+        {
+          "id": 19,
+          "respuesta": "Nunca o casi nunca"
+        },
+        {
+          "id": 15,
+          "respuesta": "Todos los días"
+        },
+        {
+          "id": 14,
+          "respuesta": "Muchas veces al día"
+        },
+        {
+          "id": 20,
+          "respuesta": "No creo en Dios (o en un poder superior)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 39,
+      "pregunta": "¿Con qué frecuencia le ocurre lo siguiente?: ¿Asiste a reuniones o servicios religiosos?",
+      "respuestas": [
+        {
+          "id": 16,
+          "respuesta": "La mayoría de los días"
+        },
+        {
+          "id": 17,
+          "respuesta": "Algunos días"
+        },
+        {
+          "id": 18,
+          "respuesta": "De vez en cuando"
+        },
+        {
+          "id": 19,
+          "respuesta": "Nunca o casi nunca"
+        },
+        {
+          "id": 15,
+          "respuesta": "Todos los días"
+        },
+        {
+          "id": 14,
+          "respuesta": "Muchas veces al día"
+        },
+        {
+          "id": 20,
+          "respuesta": "No creo en Dios (o en un poder superior)"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 1,
+      "questionnaireName": "Sociodemográficos",
+      "questionId": 40,
+      "pregunta": "¿Habla inglés en su hogar?",
+      "respuestas": [
+        {
+          "id": 94,
+          "respuesta": "No"
+        },
+        {
+          "id": 95,
+          "respuesta": "Prefiero no responder"
+        },
+        {
+          "id": 286,
+          "respuesta": "Si"
+        }
+      ]
+    }
+  ],
+  "Salud Mental": [
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 42,
+      "pregunta": "¿Ha tenido 3 días o más en el que usted se sintió inusualmente alegre, irritable, enérgico o hiperactivo, se sintió diferente a su carácter normal?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 43,
+      "pregunta": "¿Ha tenido 3 días o más en el cual usted no necesitó mucho sueño (o nada de sueño) sin sentirse cansado, con más energía de lo normal?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 44,
+      "pregunta": "¿Durante ese mismo tiempo, habló más de lo normal? ¿Hizo muchas más actividades o tareas que pudieron haberlo metido en problemas (ejemplos: hipersexualidad, gastos excesivos, inversiones absurdas, otros comportamientos aventurados o imprudentes)?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 45,
+      "pregunta": "¿Alguna vez ha sido diagnosticado con trastorno bipolar (o trastorno maníaco depresivo)?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 46,
+      "pregunta": "¿Alguna vez ha recibido medicación psiquiátrica para el trastorno bipolar?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 47,
+      "pregunta": "¿Alguna vez has escuchado voces o visto cosas que nadie más podía oír o ver?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 48,
+      "pregunta": "¿Has tenido ideas o creencias que después descubriste que no eran reales? (Por ejemplo: creer que alguien quería hacerte daño, que eras una persona con problemas únicos o especiales, o que la TV o la radio te enviaban mensajes solo para ti y para nadie más).",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 49,
+      "pregunta": "¿Alguna vez sentiste que tu cuerpo se quedó en una posición muy extraña, no podías moverte o decías cosas sin sentido?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 50,
+      "pregunta": "¿Te ha diagnosticado un médico (psicólogo) alguna vez con esquizofrenia?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 51,
+      "pregunta": "¿Has tomado medicamentos para tratar la esquizofrenia?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 52,
+      "pregunta": "¿De repente te has sentido muy ansioso o asustado, con síntomas físicos como palpitaciones, dolor en el pecho, dificultad para respirar, náuseas, sudoración o miedo intenso de morir o volverte loco?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 53,
+      "pregunta": "¿Te ha pasado esto más de una vez y comenzaste a preocuparte mucho o cambiaste tu forma de actuar por miedo a que vuelva a pasar?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 54,
+      "pregunta": "¿Sueles tomar más de 4 o 5 bebidas alcohólicas en una ocasión? (Por ejemplo: más de 4 si eres mujer o más de 5 si eres hombre).",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 55,
+      "pregunta": "¿Has manejado o has hecho cosas de tu día a día (trabajar o ir a la escuela) cuando has consumido alcohol; al menos 3 veces o más?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 56,
+      "pregunta": "¿A menudo bebes mucho más alcohol del que pensaste que tomarías o tomas alcohol para calmarte (o relajarte)?",
+      "respuestas": [
+        {
+          "id": 138,
+          "respuesta": "Si"
+        },
+        {
+          "id": 139,
+          "respuesta": "No"
+        },
+        {
+          "id": 140,
+          "respuesta": "No aplica"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 57,
+      "pregunta": "¿Has intentado dejar de beber o tomar menos alcohol, pero no lo has logrado?",
+      "respuestas": [
+        {
+          "id": 138,
+          "respuesta": "Si"
+        },
+        {
+          "id": 139,
+          "respuesta": "No"
+        },
+        {
+          "id": 140,
+          "respuesta": "No aplica"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 58,
+      "pregunta": "¿Te ha molestado que otras personas critiquen la forma en que bebes?",
+      "respuestas": [
+        {
+          "id": 138,
+          "respuesta": "Si"
+        },
+        {
+          "id": 139,
+          "respuesta": "No"
+        },
+        {
+          "id": 140,
+          "respuesta": "No aplica"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 59,
+      "pregunta": "¿Alguna vez has tomado alcohol en la mañana para sentirte mejor o para aliviar la cruda?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 60,
+      "pregunta": "¿Has fumado más de 100 cigarrillos en toda tu vida?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 61,
+      "pregunta": "¿Alguna vez fumaste todos los días durante al menos un mes?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 62,
+      "pregunta": "¿Sueles fumar tu primer cigarro dentro de la primera hora después de despertar?",
+      "respuestas": [
+        {
+          "id": 138,
+          "respuesta": "Si"
+        },
+        {
+          "id": 139,
+          "respuesta": "No"
+        },
+        {
+          "id": 140,
+          "respuesta": "No aplica"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 63,
+      "pregunta": "¿Has querido dejar de fumar o lo has intentado, pero no pudiste?",
+      "respuestas": [
+        {
+          "id": 138,
+          "respuesta": "Si"
+        },
+        {
+          "id": 139,
+          "respuesta": "No"
+        },
+        {
+          "id": 140,
+          "respuesta": "No aplica"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 64,
+      "pregunta": "¿Te has sentido muy triste, desanimado o deprimido casi todos los días por dos semanas o más?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 65,
+      "pregunta": "¿Durante ese tiempo perdiste el interés en las cosas que antes disfrutabas? (Como tu trabajo, pasar tiempo con amigos o familia, hacer ejercicio, etc.)",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 66,
+      "pregunta": "¿Durante ese mismo periodo tuviste pensamientos de culpa, sentirte inútil o pensaste mucho en la muerte, el suicidio o en hacerte daño?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 67,
+      "pregunta": "¿También notaste cambios en tu apetito, peso, sueño o dificultad para concentrarte?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 68,
+      "pregunta": "¿Has tenido pensamientos o imágenes repetitivas e incómodas durante al menos una hora al día, que no podías controlar?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 69,
+      "pregunta": "¿Has sentido la necesidad de repetir ciertas acciones muchas veces al día, como lavarte las manos, revisar puertas, contar cosas o repetir palabras?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 70,
+      "pregunta": "¿Has fumado marihuana más de 21 veces en un mismo año?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 71,
+      "pregunta": "¿Has usado drogas recreativas más de 10 veces para sentirte bien o \"viajar\"? (Ejemplos: cristal, cocaína, heroína, benzodiacepinas, oxicodona, etc.)",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 72,
+      "pregunta": "¿Has intentado dejar de consumir drogas o reducir tu consumo, pero no lo lograste?",
+      "respuestas": [
+        {
+          "id": 138,
+          "respuesta": "Si"
+        },
+        {
+          "id": 139,
+          "respuesta": "No"
+        },
+        {
+          "id": 140,
+          "respuesta": "No aplica"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 73,
+      "pregunta": "¿Has tenido problemas por consumir drogas? (Problemas físicos, emocionales, familiares, escolares, laborales o legales).",
+      "respuestas": [
+        {
+          "id": 138,
+          "respuesta": "Si"
+        },
+        {
+          "id": 139,
+          "respuesta": "No"
+        },
+        {
+          "id": 140,
+          "respuesta": "No aplica"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 74,
+      "pregunta": "¿Has vivido un evento traumático en el que sentiste que tu vida o integridad estaban en peligro? (Ejemplo: accidentes graves, abusos, guerras, asaltos, desastres naturales, etc.)",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 75,
+      "pregunta": "¿Tienes recuerdos o imágenes de ese evento que vuelven de forma repentina, como pesadillas o pensamientos que no puedes controlar?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 76,
+      "pregunta": "¿Has evitado hablar, pensar o estar cerca de personas o lugares que te recuerdan ese evento?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 77,
+      "pregunta": "¿Después del evento tuviste problemas para dormir, concentrarte, te sentiste irritable, muy vigilante o asustado?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 78,
+      "pregunta": "¿Has pensado seriamente en suicidarte en los últimos meses?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 79,
+      "pregunta": "¿Has pensado que sería mejor estar muerto que seguir viviendo?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    },
+    {
+      "questionnaireId": 2,
+      "questionnaireName": "Sintomatología Psiquiátrica",
+      "questionId": 80,
+      "pregunta": "¿Has hecho algún plan para quitarte la vida en los últimos 12 meses?",
+      "respuestas": [
+        {
+          "id": 2,
+          "respuesta": "No"
+        },
+        {
+          "id": 1,
+          "respuesta": "Si"
+        }
+      ]
+    }
+  ]
+}

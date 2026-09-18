@@ -1,0 +1,5 @@
+export * from "./estadisticasFase1"
+export * from "./columbiaPage"
+export * from "./homeAdminFase1"
+export * from "./SeleccionUsuario"
+export * from "./QuejasTrabajador/QuejasTrabajador"

@@ -1,0 +1,225 @@
+.geno-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.geno-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    background: rgba(196, 202, 216, 0.5);
+    border-bottom: 1px solid #d0d8e8;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.geno-header h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin: 0;
+}
+
+.geno-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 28px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.geno-instructions {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.geno-selectors {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.geno-dropdown {
+    position: relative;
+    min-width: 120px;
+}
+
+.geno-dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #d0d8e8;
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.geno-chevron {
+    color: #90a4ae;
+    font-size: 0.8rem;
+}
+
+.geno-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 100;
+}
+
+.geno-dropdown-item {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.geno-dropdown-item:hover { background: #f5f5f5; }
+
+.geno-result-card {
+    background: rgba(176, 210, 250, 0.85);
+    border: 2px solid;
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.geno-result-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.geno-combo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.geno-color-chip {
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.geno-risk-label {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.geno-risk-msg {
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.geno-footer {
+    padding: 16px 24px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+.geno-btn {
+    background: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 50%;
+    min-width: 160px;
+    transition: background 0.2s;
+}
+
+.geno-btn:hover:not(:disabled) { background: #1976D2; }
+.geno-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.geno-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.geno-modal-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 90%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.geno-modal-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.geno-modal-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin: 0 0 12px 0;
+}
+
+.geno-modal-text {
+    font-size: 1.05rem;
+    color: #4a5568;
+    margin: 0 0 24px 0;
+    line-height: 1.4;
+}
+
+.geno-modal-btn {
+    background: #1976D2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}

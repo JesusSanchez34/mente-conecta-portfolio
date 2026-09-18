@@ -1,0 +1,569 @@
+/**
+ * FormLoginISEM.css
+ * ============================================================
+ * Estilos del formulario de login ISEM.
+ * Diseño tipo app móvil moderna de salud mental.
+ * Paleta institucional guinda/burgundy elegante.
+ * ============================================================
+ */
+
+/* ── CONTENEDOR DEL FORMULARIO ─────────────────────────────── */
+.form-login-isem {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ── TÍTULO DE LA TARJETA ──────────────────────────────────── */
+.isem-form-title {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 0.375rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.isem-form-subtitle {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #666666;
+  text-align: center;
+  margin: 0 0 2rem;
+  line-height: 1.4;
+}
+
+/* ── MODAL DE ERROR (overlay full-screen) ──────────────────── */
+.isem-error-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  animation: overlayFadeIn 0.25s ease;
+  padding: 1.5rem;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.isem-error-modal {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalPopIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Parte superior roja con ícono */
+.isem-error-modal__top {
+  background: linear-gradient(135deg, #E8364F 0%, #D42A42 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+}
+
+.isem-error-modal__icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: iconShake 0.4s ease 0.3s both;
+}
+
+@keyframes iconShake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+
+/* Parte inferior blanca */
+.isem-error-modal__bottom {
+  background: #ffffff;
+  padding: 2rem 2rem 2.25rem;
+  text-align: center;
+}
+
+.isem-error-modal__text {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1.5rem;
+  line-height: 1.4;
+}
+
+.isem-error-modal__btn {
+  display: inline-block;
+  padding: 0.8125rem 2.5rem;
+  background: #1d90f4;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(29, 144, 244, 0.3);
+}
+
+.isem-error-modal__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(29, 144, 244, 0.4);
+}
+
+.isem-error-modal__btn:active {
+  transform: translateY(0);
+}
+
+/* ── CAMPOS DEL FORMULARIO ─────────────────────────────────── */
+.isem-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.125rem;
+}
+
+.isem-field:last-of-type {
+  margin-bottom: 0.75rem;
+}
+
+.isem-field__label {
+  display: none; /* Labels ocultas, usando placeholders como la referencia */
+}
+
+.isem-field__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.isem-field__icon {
+  display: none; /* Sin íconos izquierdos, diseño limpio como la referencia */
+}
+
+.isem-field__input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.isem-field__input::placeholder {
+  color: #aaaaaa;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.isem-field__input:focus {
+  border-color: #8B1A2B;
+  box-shadow: 0 0 0 3px rgba(139, 26, 43, 0.12);
+}
+
+.isem-field__input:disabled {
+  background-color: #f8f8f8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Input de contraseña — padding derecho para el botón toggle */
+.isem-field__input[type="password"],
+.isem-field__input-wrapper:has(.isem-field__toggle-pw) .isem-field__input {
+  padding-right: 3.25rem;
+}
+
+/* ── TOGGLE MOSTRAR CONTRASEÑA ─────────────────────────────── */
+.isem-field__toggle-pw {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #aaaaaa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.isem-field__toggle-pw:hover {
+  color: #666666;
+}
+
+/* ── ESTADO DE ERROR EN CAMPO ──────────────────────────────── */
+.isem-field--error .isem-field__input {
+  border-color: #e53e3e;
+  background-color: #fffafa;
+}
+
+.isem-field--error .isem-field__input:focus {
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.isem-field__error {
+  font-size: 0.78125rem;
+  color: #e53e3e;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.375rem;
+  padding-left: 0.25rem;
+}
+
+.isem-field__error::before {
+  content: '⚠';
+  font-size: 0.7rem;
+}
+
+/* ── FILA DE OPCIONES (Recordarme + Olvidé contraseña) ─────── */
+.isem-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ── CHECKBOX RECORDARME ───────────────────────────────────── */
+.isem-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.isem-remember__checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d0d0d0;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  accent-color: #8B1A2B;
+  transition: border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.isem-remember__checkbox:checked {
+  border-color: #8B1A2B;
+}
+
+.isem-remember__text {
+  font-size: 0.875rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+/* ── LINK OLVIDÉ CONTRASEÑA ────────────────────────────────── */
+.isem-forgot-link {
+  font-size: 0.875rem;
+  color: #8B6914;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
+.isem-forgot-link:hover {
+  color: #6B4F0E;
+  text-decoration: underline;
+}
+
+/* ── BOTÓN PRINCIPAL ───────────────────────────────────────── */
+.isem-btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #8B1A2B 0%, #A52238 50%, #B83050 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(139, 26, 43, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.isem-btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent);
+  pointer-events: none;
+}
+
+.isem-btn-primary:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(139, 26, 43, 0.4);
+}
+
+.isem-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.isem-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.isem-btn-primary__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+/* ── SPINNER ───────────────────────────────────────────────── */
+.isem-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: isemSpin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes isemSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── SEPARADOR ─────────────────────────────────────────────── */
+.isem-form-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #bbbbbb;
+  font-size: 0.8125rem;
+  margin-bottom: 1rem;
+}
+
+.isem-form-divider::before,
+.isem-form-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e8e8e8;
+}
+
+/* ── REGISTRO LINK ─────────────────────────────────────────── */
+.isem-register-row {
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #666666;
+  margin-top: 0.25rem;
+}
+
+.isem-register-link {
+  color: #8B6914;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
+.isem-register-link:hover {
+  color: #6B4F0E;
+  text-decoration: underline;
+}
+
+/* ── BOTÓN SECUNDARIO (Regresar) ───────────────────────────── */
+.isem-btn-secondary {
+  display: none; /* Oculto — reemplazado por link de registro en el nuevo diseño */
+}
+
+/* ── ANIMACIONES ───────────────────────────────────────────── */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── RESPONSIVE: MOBILE ────────────────────────────────────── */
+@media (max-width: 480px) {
+  .isem-form-title {
+    font-size: 1.375rem;
+  }
+
+  .isem-form-subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .isem-field__input {
+    padding: 0.875rem 1rem;
+    font-size: 1rem; /* evita zoom en iOS */
+    border-radius: 12px;
+  }
+
+  .isem-field__input::placeholder {
+    font-size: 0.875rem;
+  }
+
+  .isem-btn-primary {
+    padding: 0.875rem;
+    font-size: 0.9375rem;
+    border-radius: 12px;
+  }
+
+  .isem-options-row {
+    gap: 0.375rem;
+  }
+
+  .isem-remember__text,
+  .isem-forgot-link {
+    font-size: 0.8125rem;
+  }
+
+  .isem-register-row {
+    font-size: 0.875rem;
+  }
+}
+
+/* ── OVERLAY DE PRE-CARGA FLUTTER (QuickAlert.loading paridad) ── */
+.qalert-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeInOverlay 0.2s ease;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.qalert-loading-box {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.25);
+    max-width: 320px;
+    width: 90%;
+    overflow: hidden;
+    transform: scale(0.9);
+    animation: scaleUpBox 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scaleUpBox {
+    to { transform: scale(1); }
+}
+
+.qalert-loading-header {
+    background: #00a2ff; /* Bright blue solid matching user image loader */
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qalert-loading-body {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.qalert-loading-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.qalert-loading-body p {
+    font-size: 1.1rem;
+    color: #777;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ── 4 DOTS ROTATING LOADER (QuickAlert.loading paridad) ── */
+.qalert-loading-dots {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    animation: qalertSpin 1.4s linear infinite;
+}
+
+.qalert-loading-dots .dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.dot--1 { top: 0; left: 0; }
+.dot--2 { top: 0; right: 0; }
+.dot--3 { bottom: 0; left: 0; }
+.dot--4 { bottom: 0; right: 0; }
+
+@keyframes qalertSpin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

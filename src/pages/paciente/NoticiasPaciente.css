@@ -1,0 +1,622 @@
+.news-landing-container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #f5e3fc 0%, #e0c3fc 40%, #cde4ff 100%);
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+
+/* ── Top Header Bar ── */
+.news-top-bar {
+    width: 100%;
+    background: #07afb8;
+    display: flex;
+    align-items: center;
+    padding: 1.1rem 1.5rem;
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(7, 175, 184, 0.3);
+}
+
+.news-back-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.news-back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.news-top-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    padding-right: 2.2rem; /* compensate back-btn size to center title */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* ── Floating Background Icons ── */
+.news-floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.news-floating-icon {
+    position: absolute;
+    color: #7c4dff;
+    opacity: 0.08;
+    animation: newsFloat 15s ease-in-out infinite alternate;
+}
+
+.n-icon-1 { font-size: 8rem; top: 10%; left: 5%; animation-duration: 12s; }
+.n-icon-2 { font-size: 6rem; top: 25%; right: 5%; animation-duration: 16s; animation-direction: reverse; }
+.n-icon-3 { font-size: 7rem; bottom: 20%; left: 8%; animation-duration: 14s; }
+.n-icon-4 { font-size: 9rem; bottom: 10%; right: 6%; animation-duration: 18s; animation-direction: reverse; }
+.n-icon-5 { font-size: 5rem; top: 45%; left: 40%; animation-duration: 20s; }
+.n-icon-6 { font-size: 4rem; bottom: 45%; right: 40%; animation-duration: 13s; animation-direction: reverse; }
+
+@keyframes newsFloat {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(10px) rotate(-10deg); }
+}
+
+/* ── Content Container ── */
+.news-content-container {
+    width: 100%;
+    max-width: 680px;
+    padding: 2rem 1.5rem 6rem;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .news-content-container {
+        max-width: 1200px;
+    }
+}
+
+/* ── News Tabs ── */
+.news-page-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.news-page-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border-radius: 10px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.news-page-tab-btn:hover {
+    color: #0f172a;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.news-page-tab-btn.active {
+    color: #00a896;
+    background: rgba(0, 168, 150, 0.08);
+    box-shadow: inset 0 -2px 0 #00a896;
+}
+
+.news-page-tab-content {
+    width: 100%;
+}
+
+/* ── News List ── */
+.news-page-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* ── News Card (Mobile Style) ── */
+.news-page-card {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(142, 97, 219, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .news-page-card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-page-card {
+        width: calc(33.333% - 1.34rem);
+    }
+}
+
+.news-page-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 168, 150, 0.15);
+    border-color: rgba(0, 168, 150, 0.2);
+}
+
+.news-page-card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #f1f5f9;
+}
+
+.news-page-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.news-page-card:hover .news-page-card-img {
+    transform: scale(1.03);
+}
+
+.news-page-card-body {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.news-page-card-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.3;
+}
+
+.news-page-card-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.news-page-card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 1rem;
+}
+
+.news-page-card-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #64748b;
+    width: 100%;
+}
+
+.news-page-card-link {
+    color: #00a896;
+    font-weight: 700;
+    font-size: 0.88rem;
+    transition: color 0.2s ease;
+    display: none;
+}
+
+.news-page-card:hover .news-page-card-link {
+    color: #007a6d;
+}
+
+/* ── Help Lines List ── */
+.news-page-help-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.news-page-help-card {
+    background: #ffffff;
+    padding: 1.5rem 1.8rem;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 30px rgba(142, 97, 219, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .news-page-help-card {
+        width: calc(50% - 0.75rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-page-help-card {
+        width: calc(33.333% - 1rem);
+    }
+}
+
+.news-page-help-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: #7c3aed;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.news-page-help-tag.emergency {
+    background: #ef4444;
+}
+
+.news-page-help-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.news-page-help-content {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.news-page-help-link {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #07afb8;
+    text-decoration: none;
+    margin-top: 0.4rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+.news-page-help-link:hover {
+    text-decoration: underline;
+}
+
+/* ── Spinner / Loader ── */
+.news-page-loading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem;
+    gap: 1.2rem;
+}
+
+.news-page-spinner {
+    width: 44px;
+    height: 44px;
+    border: 4px solid rgba(0, 168, 150, 0.15);
+    border-radius: 50%;
+    border-top-color: #00a896;
+    animation: newsPageSpin 0.8s linear infinite;
+}
+
+@keyframes newsPageSpin {
+    to { transform: rotate(360deg); }
+}
+
+.news-page-no-data {
+    color: #64748b;
+    font-size: 1rem;
+    padding: 5rem 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ── Full News Detail Page ── */
+.news-full-detail-card {
+    background: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(142, 97, 219, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-detail-page-img-wrapper {
+    width: 100%;
+    max-height: 380px;
+    overflow: hidden;
+    background: #f1f5f9;
+}
+
+.news-detail-page-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-detail-page-body {
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news-detail-page-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.35;
+}
+
+.news-detail-page-date {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.news-detail-divider {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 0.5rem 0;
+}
+
+.news-detail-page-content {
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.news-detail-page-content p {
+    margin-bottom: 1.2rem;
+}
+
+/* ── Accessibility: Text Sizes ── */
+.patient-text-sm .news-top-title { font-size: 1.15rem; }
+.patient-text-sm .news-page-tab-btn { font-size: 0.95rem; }
+.patient-text-sm .news-page-card-title { font-size: 1.15rem; }
+.patient-text-sm .news-page-card-desc { font-size: 0.88rem; }
+.patient-text-sm .news-page-help-title { font-size: 1.05rem; }
+.patient-text-sm .news-page-help-content { font-size: 0.85rem; }
+.patient-text-sm .news-detail-page-title { font-size: 1.4rem; }
+.patient-text-sm .news-detail-page-content { font-size: 0.95rem; }
+
+.patient-text-lg .news-top-title { font-size: 1.5rem; }
+.patient-text-lg .news-page-tab-btn { font-size: 1.15rem; }
+.patient-text-lg .news-page-card-title { font-size: 1.45rem; }
+.patient-text-lg .news-page-card-desc { font-size: 1.05rem; }
+.patient-text-lg .news-page-help-title { font-size: 1.25rem; }
+.patient-text-lg .news-page-help-content { font-size: 1rem; }
+.patient-text-lg .news-detail-page-title { font-size: 1.8rem; }
+.patient-text-lg .news-detail-page-content { font-size: 1.15rem; }
+
+/* ── Accessibility: High Contrast ── */
+.patient-high-contrast {
+    background: #000000 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+.patient-high-contrast .news-top-bar {
+    background: #111111 !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+
+.patient-high-contrast .news-back-btn:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.patient-high-contrast .news-page-tab-btn {
+    color: #ffffff !important;
+}
+
+.patient-high-contrast .news-page-tab-btn.active {
+    color: #000000 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.patient-high-contrast .news-page-card,
+.patient-high-contrast .news-page-help-card,
+.patient-high-contrast .news-full-detail-card {
+    background: #111111 !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.patient-high-contrast .news-page-card-title,
+.patient-high-contrast .news-page-card-desc,
+.patient-high-contrast .news-page-card-date,
+.patient-high-contrast .news-page-card-link,
+.patient-high-contrast .news-page-help-title,
+.patient-high-contrast .news-page-help-content,
+.patient-high-contrast .news-page-help-link,
+.patient-high-contrast .news-detail-page-title,
+.patient-high-contrast .news-detail-page-date,
+.patient-high-contrast .news-detail-page-content {
+    color: #ffffff !important;
+}
+
+.patient-high-contrast .news-page-help-tag {
+    border: 1px solid #ffffff !important;
+}
+
+.patient-high-contrast .news-detail-divider {
+    border-top: 2px solid #ffffff !important;
+}
+
+.patient-high-contrast .news-floating-bg {
+    display: none !important;
+}
+
+/* ── Responsiveness ── */
+@media (max-width: 600px) {
+    .news-content-container {
+        padding: 1.5rem 1rem 5rem;
+    }
+
+    .news-page-tabs {
+        gap: 0.8rem;
+    }
+
+    .news-page-tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .news-page-card {
+        border-radius: 20px;
+    }
+
+    .news-page-card-img-wrapper {
+        height: 160px;
+    }
+
+    .news-page-card-body {
+        padding: 1.2rem;
+    }
+
+    .news-page-card-title {
+        font-size: 1.1rem;
+    }
+
+    .news-page-card-desc {
+        font-size: 0.88rem;
+    }
+
+    .news-page-help-card {
+        padding: 1.2rem;
+        border-radius: 18px;
+    }
+
+    .news-full-detail-card {
+        border-radius: 20px;
+    }
+
+    .news-detail-page-body {
+        padding: 1.5rem;
+    }
+
+    .news-detail-page-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* ══════════════════════════════════════════
+   MODO OSCURO — patient-dark-mode
+══════════════════════════════════════════ */
+.patient-dark-mode {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1030 50%, #0d1b2a 100%) !important;
+    color: #f1f5f9 !important;
+}
+
+.patient-dark-mode .news-top-bar {
+    background: #05878e !important;
+}
+
+.patient-dark-mode .news-page-card,
+.patient-dark-mode .news-page-help-card,
+.patient-dark-mode .news-full-detail-card {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.patient-dark-mode .news-page-card-title,
+.patient-dark-mode .news-page-card-desc,
+.patient-dark-mode .news-page-card-date,
+.patient-dark-mode .news-detail-page-title,
+.patient-dark-mode .news-detail-page-content,
+.patient-dark-mode .news-page-help-title,
+.patient-dark-mode .news-page-help-content {
+    color: #f1f5f9 !important;
+}
+
+.patient-dark-mode .news-page-tab-btn {
+    color: #94a3b8 !important;
+}
+
+.patient-dark-mode .news-page-tab-btn.active {
+    color: #07afb8 !important;
+    background: rgba(7, 175, 184, 0.15) !important;
+}
+
+/* ══════════════════════════════════════════
+   MODO DISLEXIA — patient-dyslexia
+══════════════════════════════════════════ */
+.patient-dyslexia,
+.patient-dyslexia * {
+    font-family: 'Open-Dyslexic', 'OpenDyslexic', 'Lexend', 'Arial', sans-serif !important;
+    letter-spacing: 0.04em;
+    word-spacing: 0.12em;
+    line-height: 1.75;
+}

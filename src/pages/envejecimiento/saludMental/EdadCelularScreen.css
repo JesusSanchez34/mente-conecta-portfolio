@@ -1,0 +1,179 @@
+.edad-celular-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #e3effa;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.edad-celular-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #e3effa;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.edad-celular-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.edad-celular-header h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #1a202c;
+    margin: 0;
+}
+
+.edad-celular-info-btn {
+    background: none;
+    border: none;
+    color: #1976D2;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.back-icon { position: static !important;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #1a202c;
+}
+
+.edad-celular-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.edad-celular-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.grid-header-row {
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.grid-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.grid-empty {
+    width: 30px;
+}
+
+.grid-input-row {
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.grid-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+
+.grid-input-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.grid-input-wrapper.has-error {
+    border-color: #d32f2f;
+    border-width: 1.5px;
+}
+
+.grid-input-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-input-error-text {
+    color: #d32f2f;
+    font-size: 1rem;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.grid-input-wrapper.has-range-error {
+    border-color: #e53e3e;
+}
+
+.grid-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    background: transparent;
+}
+
+.edad-celular-info-box {
+    background-color: #f5f5f5;
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #888;
+    font-size: 1rem;
+    border: 1px solid #eaeaea;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    color: #888;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.edad-celular-btn {
+    background: #1976D2;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 24px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: background 0.2s;
+    width: 200px;
+    align-self: center;
+}
+
+.edad-celular-btn:hover:not(:disabled) { background: #1565C0; }
+.edad-celular-btn:disabled { opacity: 0.6; cursor: not-allowed; }

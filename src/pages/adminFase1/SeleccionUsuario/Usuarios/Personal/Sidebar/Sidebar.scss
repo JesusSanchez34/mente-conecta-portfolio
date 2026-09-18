@@ -1,0 +1,132 @@
+// ==========================================
+// ESTILOS EXCLUSIVOS DEL MENÚ LATERAL (SIDEBAR)
+// ==========================================
+
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Escondido a la izquierda por defecto */
+    width: 290px;
+    height: 100vh;
+    background-color: #fffbfd; /* Fondo claro con toque lila muy sutil */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    transition: left 0.3s ease-in-out; /* Transición suave para el deslizamiento */
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+
+    /* Clase activa que inyecta React al dar click en la hamburguesa */
+    &.open {
+        left: 0; 
+    }
+
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        padding: 24px 20px;
+        gap: 12px;
+
+        .sidebar-logo {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e293b; /* Gris oscuro estético */
+            flex: 1;
+        }
+
+        .sidebar-close-btn {
+            background: none;
+            border: none;
+            font-size: 26px;
+            color: #94a3b8;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #64748b;
+            }
+        }
+    }
+
+    .sidebar-divider {
+        border: 0;
+        height: 1px;
+        background-color: #f1e4f2; /* Línea divisoria lila suave */
+        margin: 0 20px;
+    }
+
+    .sidebar-nav {
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: 100%; /* Ocupa el espacio disponible */
+
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: none;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 20px;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 500;
+            color: #334155;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            .icon {
+                font-size: 16px;
+                display: inline-block;
+            }
+
+            &:hover {
+                background-color: #f5ebf6;
+                color: #581c66;
+            }
+
+            /* Estilo de la opción activa (Seleccionar otra persona) */
+            &.active {
+                background-color: #f6e3f8; 
+                color: #581c66;
+                font-weight: 600;
+            }
+
+            /* Botón de cerrar sesión empujado de forma automática al fondo */
+            &.logout {
+                margin-top: auto; 
+                margin-bottom: 20px;
+                color: #e11d48; /* Color rojizo/rosa de alerta */
+                
+                &:hover {
+                    background-color: #fff1f2;
+                    color: #be123c;
+                }
+            }
+        }
+    }
+}
+
+/* Capa translúcida de fondo (Overlay) que oscurece las tarjetas */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.24); /* Desenfoque sutil */
+    backdrop-filter: blur(1px);
+    z-index: 99; /* Justo debajo del menú lateral */
+}

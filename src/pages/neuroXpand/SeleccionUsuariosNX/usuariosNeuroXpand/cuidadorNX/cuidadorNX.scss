@@ -1,0 +1,67 @@
+@import "../familiarNX/familiarNX.scss";
+
+.cuidadorNX-container {
+  background: #fbf8fc;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cuidadorNX-header {
+  background: linear-gradient(135deg, #f3e8ff 0%, #ffffff 100%);
+  border-bottom: 1px solid #e9d5ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.btn-cuidadorNX-register {
+  background: #f6edf7;
+  color: #8b4c95;
+  border: none;
+  padding: 14px 44px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+  margin-top: 24px;
+  box-shadow: 0 4px 12px rgba(139, 76, 149, 0.05);
+
+  &:hover {
+    background: #f0deec;
+    box-shadow: 0 6px 16px rgba(139, 76, 149, 0.1);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.cuidadorNX-header-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f1a38;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.cuidadorNX-register-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f1a38;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  margin-top: 10px;
+}

@@ -1,0 +1,178 @@
+/**
+ * QuienRealizaPage.css
+ * ============================================================
+ * Estilos para la pantalla de selección "¿Quién lo realizará?"
+ * Diseño mobile-first, estilo app institucional ISEM.
+ * ============================================================
+ */
+
+/* ── CONTENEDOR PRINCIPAL ──────────────────────────────────── */
+.quien-realiza-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ── HEADER ────────────────────────────────────────────────── */
+.quien-realiza-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 480px;
+  padding: 16px 20px 8px;
+  box-sizing: border-box;
+}
+
+.quien-realiza-page__header-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+.quien-realiza-page__header-counter {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* ── TÍTULO ────────────────────────────────────────────────── */
+.quien-realiza-page__title-wrapper {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 20px 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.quien-realiza-page__title {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0;
+  padding: 14px 28px;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  background-color: #ffffff;
+  animation: quienTitleFadeIn 0.5s ease-out;
+}
+
+/* ── CONTENEDOR DE TARJETAS ────────────────────────────────── */
+.quien-realiza-page__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 20px 40px;
+  box-sizing: border-box;
+  animation: quienCardsFadeUp 0.6s ease-out 0.15s both;
+}
+
+/* ── TARJETA INDIVIDUAL ────────────────────────────────────── */
+.quien-realiza-card {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quien-realiza-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+.quien-realiza-card:active {
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ── IMAGEN DE FONDO ───────────────────────────────────────── */
+.quien-realiza-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ── OVERLAY FRANJA OSCURA ──────────────────────────────────── */
+.quien-realiza-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+/* ── LABEL DE LA TARJETA ───────────────────────────────────── */
+.quien-realiza-card__label {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+/* ── ANIMACIONES ───────────────────────────────────────────── */
+@keyframes quienTitleFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes quienCardsFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .quien-realiza-card {
+    height: 260px;
+  }
+
+  .quien-realiza-page__title {
+    font-size: 26px;
+    padding: 16px 36px;
+  }
+
+  .quien-realiza-card__label {
+    font-size: 26px;
+  }
+}

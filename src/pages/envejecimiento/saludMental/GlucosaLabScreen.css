@@ -1,0 +1,155 @@
+.glucosa-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #e3effa;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.glucosa-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #e3effa;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.glucosa-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.glucosa-header h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #1a202c;
+    margin: 0;
+}
+
+.glucosa-info-btn {
+    background: none;
+    border: none;
+    color: #1976D2;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.back-icon { position: static !important;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #1a202c;
+}
+
+.glucosa-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.glucosa-field-card {
+    background: #b2cce4;
+    border-radius: 10px;
+    padding: 12px 15px 15px 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.glucosa-field-card.has-error .field-input-row {
+    border-color: #f39c12;
+}
+
+.glucosa-field-card.has-range-error .field-input-row {
+    border-color: #e53e3e;
+}
+
+.field-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #001b6b;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.field-input-row {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.field-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    background: transparent;
+}
+
+.field-unit {
+    padding: 0 15px;
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.field-error {
+    display: block;
+    font-size: 0.95rem;
+    color: #f39c12;
+    margin-top: 5px;
+}
+
+.field-range-error {
+    display: block;
+    font-size: 0.95rem;
+    color: #e53e3e;
+    margin-top: 5px;
+}
+
+.glucosa-text-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.glucosa-btn {
+    background: #1976D2;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 24px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: background 0.2s;
+    width: 200px;
+    align-self: center;
+}
+
+.glucosa-btn:hover:not(:disabled) { background: #1565C0; }
+.glucosa-btn:disabled { opacity: 0.6; cursor: not-allowed; }

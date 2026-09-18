@@ -1,0 +1,26 @@
+/* Estilos básicos para las cajas (opcional, para que se vean) */
+.container-home-admin-fase-1 {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    padding: 20px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-tabs .nav-link {
+    background-color: #f8f9fa; 
+    color: #6c757d;
+    border: none;
+    margin: 0 2px;
+}
+
+.custom-tabs .nav-link.active {
+    background-color: #3182ce !important; 
+    color: white !important;
+    border-radius: 8px;
+}

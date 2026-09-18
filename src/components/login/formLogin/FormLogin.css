@@ -1,0 +1,1057 @@
+.login-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #04547B, #6EC1E4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.login-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  margin-bottom: 1.5rem;
+}
+
+.login-header h2 {
+  color: #04547B;
+  margin: 0;
+}
+
+.login-header p {
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.logo-circle {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #e8f4fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 80%;
+  object-fit: contain;
+}
+
+.login-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-btn {
+  margin-top: 1rem;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #6EC1E4, #4DAED9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-btn-secondary {
+  margin-top: 0.6rem;
+  background: white;
+  color: #04547B;
+  border: 2px solid #6EC1E4;
+}
+
+.login-footer {
+  margin-top: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  color: #666;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* --- ESTILOS EXCLUSIVOS CONASAMA (typeLogin === 3) --- */
+
+.mca-login-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: linear-gradient(135deg, #FFF5FE 0%, #F5F9FF 50%, #F0FBFB 100%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: 'Inter', 'Roboto', 'Outfit', sans-serif;
+  color: #333;
+}
+
+/* Cabecera turquesa */
+.mca-header {
+  background-color: #00AAB0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.mca-back-btn {
+  background: none;
+  border: none;
+  color: #1A365D; /* Tono oscuro para flecha de regreso en la captura */
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.mca-header-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+  color: #1A365D; /* Texto oscuro */
+  text-align: center;
+  flex: 1;
+}
+
+.mca-lang-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.mca-lang-container:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mca-lang-text {
+  font-size: 1.1rem;
+}
+
+.mca-lang-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #2F2F2F;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 140px;
+  overflow: hidden;
+  z-index: 110;
+  animation: mcaFadeIn 0.2s ease;
+}
+
+.mca-lang-option {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.mca-lang-option:hover {
+  background-color: #444;
+}
+
+/* Siluetas flotantes */
+.mca-floating-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.mca-floating-icon {
+  position: absolute;
+  opacity: 0.08;
+  color: #9b51e0;
+  transform: rotate(-15deg);
+}
+
+.mca-floating-heart-left {
+  top: 10%;
+  left: 5%;
+  font-size: 7rem;
+  color: #9b51e0;
+}
+
+.mca-floating-brain-right {
+  top: 15%;
+  right: -5%;
+  font-size: 8rem;
+  color: #9b51e0;
+}
+
+.mca-floating-heart-bottom {
+  bottom: 5%;
+  left: 8%;
+  font-size: 6rem;
+  color: #0070f3;
+}
+
+.mca-floating-brain-bottom {
+  bottom: 8%;
+  right: 5%;
+  font-size: 7.5rem;
+  color: #9b51e0;
+}
+
+/* Cuerpo principal */
+.mca-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  z-index: 2;
+  gap: 25px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
+.mca-card {
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  padding: 30px 25px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.mca-welcome-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mca-logo {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.mca-welcome-title {
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.mca-welcome-desc {
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Formulario */
+.mca-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mca-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mca-input-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #2F80ED;
+  margin: 0;
+}
+
+.mca-input-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mca-input-icon-left {
+  position: absolute;
+  left: 18px;
+  color: #666;
+  font-size: 1.15rem;
+  pointer-events: none;
+}
+
+.mca-input-control {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  border-radius: 30px;
+  border: 1.5px solid #E2E8F0;
+  background-color: #FAFBFD;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.mca-input-control:focus {
+  outline: none;
+  border-color: #00AAB0;
+  box-shadow: 0 0 0 3px rgba(0, 170, 176, 0.15);
+  background-color: #fff;
+}
+
+.mca-input-control.has-error {
+  border-color: #EB5757;
+}
+
+.mca-input-control.has-error:focus {
+  box-shadow: 0 0 0 3px rgba(235, 87, 87, 0.15);
+}
+
+.mca-password-toggle {
+  position: absolute;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.mca-password-toggle:hover {
+  color: #666;
+}
+
+/* Fila de opciones */
+.mca-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.mca-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  color: #333;
+}
+
+.mca-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid #2F80ED;
+  cursor: pointer;
+}
+
+.mca-forgot-link {
+  color: #2F80ED;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mca-forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Botón principal */
+.mca-btn-gradient {
+  background: linear-gradient(90deg, #C259D4 0%, #00AAB0 100%);
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+  box-shadow: 0 8px 20px rgba(194, 89, 212, 0.25);
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.mca-btn-gradient:hover:not(:disabled) {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.mca-btn-gradient:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.mca-btn-gradient:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mca-error-msg {
+  color: #EB5757;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+
+/* Vista de Éxito / Ya iniciaste sesión */
+.mca-success-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.mca-success-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #E6FFFA;
+  color: #00AAB0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 170, 176, 0.15);
+}
+
+.mca-success-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #000;
+  margin: 0;
+}
+
+.mca-success-info {
+  background-color: #F8FAFC;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid #E2E8F0;
+  text-align: left;
+}
+
+.mca-info-item {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.mca-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.mca-info-label {
+  color: #718096;
+  font-weight: 600;
+}
+
+.mca-info-val {
+  font-weight: 700;
+  color: #1A202C;
+}
+
+.mca-btn-secondary {
+  background: white;
+  border: 2.5px solid #00AAB0;
+  color: #00AAB0;
+  border-radius: 30px;
+  padding: 12px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mca-btn-secondary:hover {
+  background-color: #F0FBFB;
+}
+
+@keyframes mcaFadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ESTILOS ADICIONALES PARA LA VERIFICACIÓN OTP --- */
+
+.mca-otp-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otp-input-field {
+  text-align: center;
+  font-size: 2rem !important;
+  letter-spacing: 0.25em;
+  padding: 10px 15px 10px 25px !important;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.mca-simulation-badge {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.mca-otp-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Modal Overlay & Card for Custom Error Warning */
+.mca-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+.mca-modal-card {
+  background: white;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 380px;
+  padding: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  animation: modalScaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mca-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mca-modal-warning-icon {
+  font-size: 1.8rem;
+}
+
+.mca-modal-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #eb5757;
+  margin: 0;
+}
+
+.mca-modal-body p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: left;
+}
+
+.mca-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.mca-modal-btn {
+  background: #111111;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mca-modal-btn:hover {
+  background: #4a2893;
+  transform: translateY(-1px);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* --- ESTILOS PARA EL OVERLAY DE INICIANDO SESIÓN --- */
+.mca-loading-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20000;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+.mca-loading-card {
+  background: white;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 320px;
+  padding: 35px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  animation: modalScaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mca-loading-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  text-align: center;
+  font-family: inherit;
+}
+
+.mca-loading-spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 170, 176, 0.1);
+  border-top: 5px solid #2F80ED;
+  animation: mcaSpin 1s linear infinite;
+}
+
+@keyframes mcaSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- Forgot Password flow styles --- */
+
+.mca-recovery-card {
+  align-items: center;
+  text-align: center;
+  padding: 35px 28px;
+}
+
+.mca-recovery-icon-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.mca-recovery-icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 10px rgba(155, 81, 224, 0.15);
+}
+
+.key-circle, .envelope-circle, .lock-circle {
+  background-color: #F3E5F5;
+  color: #9b51e0;
+}
+
+.mca-recovery-email-highlight {
+  color: #00AAB0;
+  font-weight: 700;
+}
+
+.mca-btn-purple {
+  margin-top: 1rem;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  background-color: #9b51e0;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mca-btn-purple:hover:not(:disabled) {
+  background-color: #823ec9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(155, 81, 224, 0.3);
+}
+
+.mca-btn-cyan {
+  margin-top: 1rem;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  background-color: #00AAB0;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mca-btn-cyan:hover:not(:disabled) {
+  background-color: #008d92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 170, 176, 0.3);
+}
+
+.mca-password-criteria-box {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.mca-criteria-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.mca-criteria-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #495057;
+  transition: color 0.2s ease;
+}
+
+.mca-criteria-item.valid {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.mca-criteria-item.invalid {
+  color: #777;
+}
+
+.criteria-circle-bullet {
+  color: #ced4da;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.criteria-icon.valid-icon {
+  color: #2e7d32;
+  font-size: 1rem;
+}
+
+/* Modals extra styling */
+.mca-sent-modal-card {
+  align-items: center;
+  text-align: center;
+  padding: 35px 28px;
+}
+
+.mca-sent-logo-wrapper {
+  margin-bottom: 15px;
+}
+
+.centered-header {
+  justify-content: center;
+  width: 100%;
+}
+
+.success-title {
+  color: #2e7d32 !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.mca-modal-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.centered-footer {
+  justify-content: center !important;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Reset password success modal */
+.mca-success-reset-modal {
+  padding: 0 !important;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+.mca-success-modal-header {
+  background: linear-gradient(135deg, #00AAB0 0%, #9b51e0 100%);
+  height: 120px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mca-success-check-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-check-icon {
+  color: #2e7d32;
+  font-size: 1.8rem;
+}
+
+.mca-success-modal-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mca-success-modal-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1A365D;
+  margin-bottom: 5px;
+  font-family: inherit;
+}
+
+.mca-success-modal-subtitle {
+  font-size: 0.95rem;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.mca-shield-info-box {
+  background-color: #E3F2FD;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.mca-shield-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #BBDEFB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mca-shield-icon {
+  color: #1976D2;
+  font-size: 1.25rem;
+}
+
+.mca-shield-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mca-shield-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1565C0;
+  margin: 0;
+  font-family: inherit;
+}
+
+.mca-shield-desc {
+  font-size: 0.8rem;
+  color: #1E88E5;
+  margin: 0;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.mca-success-login-btn {
+  background-color: #00AAB0;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.mca-success-login-btn:hover {
+  background-color: #008d92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 170, 176, 0.3);
+}
+
+.btn-login-icon {
+  font-size: 1.1rem;
+}
+
+.mca-success-home-btn {
+  background-color: white;
+  color: #111111;
+  border: 2px solid #E0E0E0;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.mca-success-home-btn:hover {
+  background-color: #F5F5F5;
+  border-color: #999999;
+  transform: translateY(-1px);
+}
+
+.mca-success-modal-footer {
+  width: 100%;
+  padding: 15px 0 25px 0;
+  border-top: 1px solid #F0F0F0;
+  display: flex;
+  justify-content: center;
+  background-color: #FAFAFA;
+}
+
+.mca-footer-help-text {
+  font-size: 0.82rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.mca-footer-help-link {
+  color: #00AAB0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.mca-footer-help-link:hover {
+  color: #008d92;
+  text-decoration: underline;
+}

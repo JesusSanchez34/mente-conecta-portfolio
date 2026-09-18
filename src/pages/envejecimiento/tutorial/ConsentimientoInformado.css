@@ -1,0 +1,142 @@
+.ci-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #E6EDF2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 20px 60px;
+    box-sizing: border-box;
+}
+
+.ci-wrapper {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ci-title-card {
+    background-color: #FFF9FA;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ci-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.ci-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ci-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ci-seccion-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.ci-parrafo {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.ci-lista {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ci-lista li {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.65;
+}
+
+.ci-footer {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ci-checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.ci-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #2d6fa0;
+    flex-shrink: 0;
+}
+
+.ci-checkbox-row span {
+    font-size: 0.95rem;
+    color: #222;
+    font-weight: 500;
+}
+
+.ci-error {
+    font-size: 0.88rem;
+    color: #c0392b;
+    margin: 0;
+}
+
+.ci-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2d6fa0;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.ci-btn:hover:not(:disabled) {
+    background-color: #245d8a;
+}
+
+.ci-btn:disabled {
+    background-color: #a0b8cb;
+    cursor: not-allowed;
+    opacity: 0.7;
+}

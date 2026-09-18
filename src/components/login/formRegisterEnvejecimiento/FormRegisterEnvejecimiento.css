@@ -1,0 +1,440 @@
+/* Contenedor de registro de Envejecimiento */
+.env-register-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #1b689a 0%, #3ca0cc 50%, #7bc2e2 100%);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    overflow-y: auto;
+}
+
+.env-register-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+}
+
+/* Tarjeta principal */
+.env-register-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2rem 1.8rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Header */
+.env-register-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.env-register-header h2 {
+    color: #0c4f70;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.env-register-header p {
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 300px;
+}
+
+.env-register-logo {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.env-register-logo img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+/* Formulario */
+.env-register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+/* Fila de dos columnas */
+.env-register-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+/* Grupo de input */
+.env-reg-input-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.env-reg-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.env-reg-input-wrapper:focus-within {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.env-reg-input-wrapper input,
+.env-reg-input-wrapper select {
+    border: none;
+    outline: none;
+    font-size: 0.92rem;
+    color: #2d3748;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    font-family: inherit;
+}
+
+.env-reg-input-wrapper select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.env-reg-input-wrapper input::placeholder,
+.env-reg-input-wrapper select option[value=""] {
+    color: #a0aec0;
+}
+
+/* Etiqueta flotante */
+.env-reg-floating-label {
+    position: absolute;
+    top: -9px;
+    left: 14px;
+    background: #ffffff;
+    padding: 0 6px;
+    font-size: 0.75rem;
+    color: #718096;
+    font-weight: 500;
+    z-index: 1;
+}
+
+/* Teléfono */
+.env-reg-phone-prefix {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #4a5568;
+    font-size: 0.92rem;
+    font-weight: 500;
+    user-select: none;
+    position: relative;
+    padding: 2px 4px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.env-reg-phone-prefix:hover {
+    background-color: #f7fafc;
+}
+
+.env-reg-phone-prefix .arrow {
+    font-size: 0.65rem;
+    color: #718096;
+}
+
+.env-reg-phone-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #cbd5e0;
+    margin: 0 10px;
+}
+
+/* Dropdown de países */
+.env-reg-country-dropdown {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 260px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cbd5e0;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+}
+
+.env-reg-country-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.env-reg-country-item:hover {
+    background-color: #f7fafc;
+}
+
+.env-reg-country-flag {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.env-reg-country-name {
+    flex: 1;
+    color: #2d3748;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.env-reg-country-dial {
+    color: #718096;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Contador de caracteres */
+.env-reg-char-counter {
+    font-size: 0.72rem;
+    color: #a0aec0;
+    text-align: right;
+    margin-top: 3px;
+    padding-right: 4px;
+}
+
+/* Botón mostrar/ocultar contraseña */
+.env-reg-toggle-password {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #4a5568;
+    padding: 0;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    transition: color 0.2s;
+}
+
+.env-reg-toggle-password:hover {
+    color: #2d3748;
+}
+
+/* Errores */
+.env-reg-error {
+    color: #e53e3e;
+    font-size: 0.72rem;
+    margin-top: 3px;
+    padding-left: 4px;
+}
+
+/* Botón Registrarse (Píldora Lavanda) */
+.env-btn-registrarse {
+    background-color: #f4eef7;
+    color: #74438b;
+    border: none;
+    border-radius: 50px;
+    height: 48px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.env-btn-registrarse:hover:not(:disabled) {
+    background-color: #ebdcf2;
+    box-shadow: 0 4px 10px rgba(116, 67, 139, 0.12);
+}
+
+.env-btn-registrarse:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.env-btn-registrarse:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Botón Volver (Bordeado Píldora) */
+.env-btn-volver {
+    background-color: transparent;
+    color: #74438b;
+    border: 1px solid #74438b;
+    border-radius: 50px;
+    height: 48px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+    width: 100%;
+}
+
+.env-btn-volver:hover:not(:disabled) {
+    background-color: rgba(116, 67, 139, 0.05);
+}
+
+.env-btn-volver:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.env-btn-volver:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Select con flecha custom */
+.env-reg-select-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.env-reg-select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 12px;
+    font-size: 0.6rem;
+    color: #718096;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .env-register-row {
+        grid-template-columns: 1fr;
+    }
+
+    .env-register-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .env-register-wrapper {
+        max-width: 100%;
+    }
+}
+
+/* Language toggle */
+.env-reg-lang-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 6px 12px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: background 0.2s;
+    z-index: 10001;
+}
+.env-reg-lang-toggle:hover { background: rgba(255, 255, 255, 0.4); }
+.env-reg-lang-flag { font-size: 1.25rem; line-height: 1; }
+.env-reg-lang-globe { font-size: 1rem; color: #ffffff; }
+
+/* Emoji flag in phone prefix */
+.env-reg-flag-emoji { font-size: 1.2rem; line-height: 1; }
+
+/* Country dropdown with search */
+.env-reg-country-dropdown {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+    border: 1px solid #e2e8f0;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.env-reg-country-search-wrapper {
+    padding: 10px 10px 6px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+.env-reg-country-search {
+    width: 100%;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-size: 0.88rem;
+    color: #2d3748;
+    outline: none;
+    box-sizing: border-box;
+    background: #f7fafc;
+}
+.env-reg-country-search:focus { border-color: #3182ce; background: #ffffff; }
+.env-reg-country-list { max-height: 200px; overflow-y: auto; padding: 4px 0; }
+.env-reg-country-no-results { padding: 12px 16px; color: #a0aec0; font-size: 0.88rem; text-align: center; }
+.env-reg-country-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+.env-reg-country-item:hover { background-color: #ebf8ff; }
+.env-reg-country-item.selected { background-color: #e6f0ff; }
+.env-reg-country-name { flex: 1; color: #2d3748; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.env-reg-country-dial { color: #718096; font-size: 0.85rem; font-weight: 500; }
+.env-reg-char-counter-error { color: #e53e3e; font-weight: 600; }

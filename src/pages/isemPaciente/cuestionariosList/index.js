@@ -1,0 +1,1 @@
+export { CuestionariosListPage } from './CuestionariosListPage';

@@ -1,0 +1,6 @@
+export * from "./homeSuperAdminCona"
+export * from "./graficasSuperAdminCona"
+export * from "./pacientesSuperAdminCona"
+export * from "./gestoresSuperAdminCona"
+export * from "./noticiasSuperAdminCona"
+export * from "./reportesSuperAdminCona"

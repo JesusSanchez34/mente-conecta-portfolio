@@ -1,0 +1,5 @@
+.filter {
+    & .filter-button {
+        font-weight: 700;
+    }
+}

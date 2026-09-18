@@ -1,0 +1,111 @@
+.modal-confirmar-salida .modal-content {
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modal-confirmar-salida__header-yellow {
+  background: #ffb822 !important; /* solid QuickAlert yellow bulb header */
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal-confirmar-salida__header-yellow svg {
+  animation: bulbDropConfirm 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes bulbDropConfirm {
+  0% {
+      transform: translateY(-90px) scaleY(0.7);
+      opacity: 0;
+  }
+  55% {
+      transform: translateY(15px) scaleY(1.25);
+      opacity: 1;
+  }
+  75% {
+      transform: translateY(-8px) scaleY(0.85);
+  }
+  90% {
+      transform: translateY(3px) scaleY(1.05);
+  }
+  100% {
+      transform: translateY(0) scaleY(1);
+  }
+}
+
+.modal-confirmar-salida__body {
+  padding: 2.2rem 2rem 1.5rem !important;
+  text-align: center;
+}
+
+.modal-confirmar-salida__title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+}
+
+.modal-confirmar-salida__description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+.modal-confirmar-salida__footer {
+  border-top: none !important;
+  padding: 0 2rem 2.2rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal-confirmar-salida__btn-cancel {
+  border: none !important;
+  background: transparent !important;
+  color: #9e9e9e !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  padding: 0.6rem 1rem !important;
+  transition: color 0.2s ease !important;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-confirmar-salida__btn-cancel:hover {
+  color: #757575 !important;
+  text-decoration: underline;
+}
+
+.modal-confirmar-salida__btn-salir {
+  border: none !important;
+  background: #2196f3 !important; /* bright blue pill button matching QuickAlert confirm action */
+  color: white !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  padding: 0.6rem 2rem !important;
+  font-size: 1rem !important;
+  box-shadow: 0 4px 14px rgba(33, 150, 243, 0.35) !important;
+  transition: all 0.2s ease !important;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-confirmar-salida__btn-salir:hover {
+  background: #1e88e5 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(33, 150, 243, 0.45) !important;
+}

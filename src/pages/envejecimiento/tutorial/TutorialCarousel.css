@@ -1,0 +1,244 @@
+.tutorial-carousel-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.tutorial-carousel-container .carousel,
+.tutorial-carousel-container .carousel-inner,
+.tutorial-carousel-container .carousel-item {
+    height: 100%;
+}
+
+.tutorial-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Contenedor relativo para posicionar overlays */
+.tutorial-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Opacidad / oscurecimiento para la primera imagen */
+.tutorial-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Oscurecimiento de la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* Opacidad mayor para la última imagen (70%) y justificación */
+.tutorial-overlay-darker {
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: flex-start;
+    padding-top: 10vh;
+}
+
+/* Texto del título */
+.tutorial-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Texto de párrafo/descripción */
+.tutorial-text {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.4;
+    padding: 0 20px;
+    white-space: pre-line;
+}
+
+/* Indicadores personalizados */
+.tutorial-carousel-container .carousel-indicators {
+    bottom: 15%;
+    margin-bottom: 0;
+    z-index: 20;
+}
+
+.tutorial-carousel-container .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 5px;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.tutorial-carousel-container .carousel-indicators .active {
+    background-color: #ea91ff; /* Color lila/rosa de la imagen */
+    width: 25px; /* Alargado tipo píldora */
+    border-radius: 10px;
+    transform: none;
+}
+
+/* Contenedor del botón inferior */
+.tutorial-action-container {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+
+/* Zonas de clic transparentes */
+.tutorial-click-area {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 33.33%;
+    z-index: 15; /* Por encima de la imagen pero debajo de botones e indicadores */
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tutorial-click-left {
+    left: 0;
+}
+
+.tutorial-click-right {
+    right: 0;
+}
+
+/* Botones con estilos redondeados tipo app móvil */
+.tutorial-btn-primary {
+    background-color: #6a538b; /* Color morado suave de la imagen */
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 85%; /* Bastante ancho, como en la imagen */
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s;
+    cursor: pointer;
+}
+
+.tutorial-btn-primary:hover {
+    transform: translateY(-2px);
+    background-color: #5c4578;
+}
+
+/* Estilos de la lista de tarjetas (Imagen 5) */
+.tutorial-cards-list {
+    width: 90%;
+    max-width: 450px;
+    height: auto;
+    max-height: 55vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -ms-overflow-style: none;  /* IE y Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.tutorial-cards-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
+}
+
+/* Diseño individual de cada tarjeta */
+.tutorial-card {
+    position: relative;
+    width: 100%;
+    min-height: 85px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.tutorial-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.tutorial-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.tutorial-card-content {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.tutorial-card-title {
+    flex: 1;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.tutorial-card-time {
+    white-space: nowrap;
+}
+
+/* Language toggle button */
+.tut-lang-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 6px 12px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: background 0.2s;
+    z-index: 10001;
+}
+.tut-lang-toggle:hover { background: rgba(255, 255, 255, 0.4); }
+.tut-lang-flag { font-size: 1.25rem; line-height: 1; }
+.tut-lang-globe { font-size: 1rem; color: #ffffff; }

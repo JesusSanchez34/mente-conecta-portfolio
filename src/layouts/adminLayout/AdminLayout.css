@@ -1,0 +1,25 @@
+.admin-layout {
+    width: 100%;
+
+    &__menu {
+        grid-area: menu;
+    }
+
+    &__main-content {
+        grid-area: content;
+    }
+
+    &__sidebar {
+        padding: 0 !important;
+        z-index: 1000;
+    }
+}
+
+.layout-tablas {
+    width: 100%;
+}
+
+.divi {
+    display: flex;
+    padding: 1%;
+}
